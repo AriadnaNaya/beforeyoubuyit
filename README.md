@@ -1,6 +1,6 @@
 # Before u Buy it | Marketplace de Videojuegos
 
-![](https://www.digitalhouse.com/ar/logo-DH.png)
+<img src="https://www.digitalhouse.com/ar/logo-DH.png" width="150px">
 
 [![Build Status](https://travis-ci.org/AriadnaNaya/Proyecto-Integrador---E-Commerce.svg?branch=master)](https://travis-ci.org/github/AriadnaNaya/Proyecto-Integrador---E-Commerce)
 
