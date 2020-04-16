@@ -4,8 +4,8 @@
 
 [![Build Status](https://travis-ci.org/AriadnaNaya/Proyecto-Integrador---E-Commerce.svg?branch=master)](https://travis-ci.org/github/AriadnaNaya/Proyecto-Integrador---E-Commerce)
 
->>**Es un marketplace de videojuegos que engloba las plataformas más utilizadas del mercado, PC, PS4, Xbox One y Nintendo Switch.**
->>No solo se trata de comprar, el valor agregado de *Before u Buy it* ó *BuB* es ofrecer al comprador toda la info necesaria antes de adquirir el juego que tanto estaba esperando.
+>**Es un marketplace de videojuegos que engloba las plataformas más utilizadas del mercado, PC, PS4, Xbox One y Nintendo Switch.**
+>No solo se trata de comprar, el valor agregado de *Before u Buy it* ó *BuB* es ofrecer al comprador toda la info necesaria antes de adquirir el juego que tanto estaba esperando.
 
 #### Features de lanzamiento
 - Plataformas disponibles y si soporta *cross-play*.
@@ -28,13 +28,16 @@
 #### ¿Para quién es *BuB*?
 Para usar *BuB* solo tienes que tener una conexión a internet y que minimamente te gusten los videojuegos. *BuB* está dirigido a todo público y no te preocupes, si eres menor de edad no podrás ver el contenido de adultos.
 
-Puedes visualizar todo el proceso de prototipado en [enlace]()
-Nuestro repositorio está disponible en: [Github](https://github.com/Yanioconjota/Proyecto-Integrador---E-Commerce)
+##### Puedes visualizar todo el proceso de prototipado en: 
+[Figma](https://www.figma.com/proto/zse18BbOkFbvIqQHmgsASB/Desktop-view?node-id=41%3A2023&viewport=-11185%2C316%2C0.7564056515693665&scaling=min-zoom)
 
-#### Para poder colaborar con nuestro código deberás instalar:
+##### Nuestro repositorio está disponible en:    
+[Github](https://github.com/Yanioconjota/Proyecto-Integrador---E-Commerce)
+
+##### Para poder colaborar con nuestro código deberás instalar:
 [Node.js](https://nodejs.org/) v4+
 
-#### Instalar las respectivas dependencias con:
+##### Instalar las respectivas dependencias con:
 ```sh
 $ cd bub
 $ npm install
