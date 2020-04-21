@@ -31,8 +31,8 @@ Para usar *BuB* solo tienes que tener una conexión a internet y que minimamente
 ##### Puedes visualizar todo el proceso de prototipado en: 
 [Figma](https://www.figma.com/proto/zse18BbOkFbvIqQHmgsASB/Desktop-view?node-id=41%3A2023&viewport=-11185%2C316%2C0.7564056515693665&scaling=min-zoom)
 
-##### Nuestro repositorio está disponible en:    
-[Github](https://github.com/Yanioconjota/Proyecto-Integrador---E-Commerce)
+##### Puedes ver el avance de nuestro proyecto en:    
+[Trello](https://trello.com/b/AlFf7ezV/proyecto-integrador-dh)
 
 ##### Para poder colaborar con nuestro código deberás instalar:
 [Node.js](https://nodejs.org/) v4+
