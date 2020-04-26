@@ -1,0 +1,96 @@
+//Random palette
+$greenapple : #8ede4d;
+$cyan: #5cd0fe;
+$lightblue: #53aeff;
+$shipcove: #7b80a1;
+$sunflower: #FDB913;
+$aqua: #38d8ae;
+$purple: #6a82f5;
+$indigo: #4da8f9;
+$pink: #ff94b9;
+$berry: #ff7474;
+$orange: #e6612c;
+
+//Bootstrap variables override
+$success: #48ce65;
+$danger: #e72323;
+$info: #237fe7;
+$primary: #5936ce;
+$default: $primary;
+$input-group-addon-bg: $default;
+$input-border-color: $default;
+
+$grid-gutter-width: 20px !default;
+
+//Bootstrap Import
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Font names
+$font:'OpenSans';
+$font-bold:'OpenSans-Bold';
+$font-bold-italic:'OpenSans-BoldItalic';
+$font-extra-bold:'OpenSans-Extrabold';
+$font-italic: 'OpenSans-Italic';
+$font-light: 'OpenSans-Light';
+$font-semibold: 'OpenSans-Semibold';
+$font-semibold-italic: 'OpenSans-Semibolditalic';
+$font-light-italic: 'OpenSansLight-Italic';
+$font-brand: 'LeagueGothic-CondensedRegular';
+$bub: 'bub';
+
+//Custom colors
+$clear: transparent;
+$black: #222;
+$lite-gray: #f5f5f5;
+$wizard-blue: #6a82f5;
+$border-card: #c2c2c2;
+$facebook: #425eac;
+$twitter: #03a9f4;
+$whatsapp: #7ad06d;
+$overlay: rgba(0, 0, 0, 0.20);
+$shadow-home: rgba(0, 0, 0, 0.12);
+$gray: $gray-400; //#ced4da
+$mid-gray: $gray-500; //adb5bd
+
+$pale-gray: rgba(0, 0, 0, 0.06);
+$paler-gray: rgba(0, 0, 0, 0.04);
+$dark-gray: #7f7f7f;
+$default-gray: #efefef;
+
+
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "wizard-blue": $wizard-blue,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "default": $default,
+    "light": $light,
+    "dark": $dark,
+    "black": $black,
+    "gray": $gray-400,
+    "dark-gray": $dark-gray,
+    "mid-gray": $mid-gray,
+    "lite-gray": $lite-gray,
+    "pale-gray": $pale-gray,
+    "greenapple": $greenapple,
+    "cyan": $cyan,
+    "shipcove": $shipcove,
+    "sunflower": $sunflower,
+    "aqua": $aqua,
+    "purple": $purple,
+    "indigo": $indigo,
+    "pink": $pink,
+    "berry": $berry,
+    "orange": $orange,
+    "teal": $teal,
+    "blue": $blue), $theme-colors);
+//stylelint-enable
+
+//Custom sizes
+$menu-mobile: 250px;
+

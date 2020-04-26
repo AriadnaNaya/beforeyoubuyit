@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <!-- navbar header -->
+  <%- include('../partials/header') %>
+  <!-- /.navbar header -->
+
+  <!-- home content -->
+  <div class="container">
+    <h6 class="text-pink p-2">There are: <%= gameList.count %> results in this API</h6>
+    <div class="row">
+      <%- include('../partials/game-card') %>
+    </div>
+  </div>
+  <!-- /.home content -->
+
+  <%- include('../partials/scripts') %>
+</body>
+
+</html>

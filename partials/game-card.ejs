@@ -1,0 +1,25 @@
+<% for(var i = 0; i < gameList.results.length; i++) { %>
+  <a href="javascript:void(0)" class="col-3">
+    <div class="card">
+      <div class="card-img" style="background-image: url('<%=  gameList.results[i].background_image %>');">
+        <p class="card-title"><%=  gameList.results[i].name %></p>
+      </div>
+      <div class="card-body">
+        <% for (var j=0; j< gameList.results[i].stores.length; j++) { %>
+          <% if ( gameList.results[i].stores[j].store.slug === 'steam') { %>
+            <i class="icon-steam"></i>
+          <% } %>
+          <% if ( gameList.results[i].stores[j].store.slug === 'epic-games') { %>
+            <i class="icon-epic"></i>
+          <% } %>
+          <% if ( gameList.results[i].stores[j].store.slug === 'gog') { %>
+            <i class="icon-gog"></i>
+          <% } %>
+          <% if ( gameList.results[i].stores[j].store.slug === 'xbox-store') { %>
+            <i class="icon-xbox"></i>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  </a>
+<% } %>
