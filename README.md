@@ -34,13 +34,22 @@ Para usar *BuB* solo tienes que tener una conexión a internet y que minimamente
 ##### Puedes ver el avance de nuestro proyecto en:    
 [Trello](https://trello.com/b/AlFf7ezV/proyecto-integrador-dh)
 
-##### Para poder colaborar con nuestro código deberás instalar:
-[Node.js](https://nodejs.org/) v4+
-
-##### Instalar las respectivas dependencias con:
+##### Para utlizar este template debes tener instalado Node, Sass y LiveReload:
+- Primero instalar [Node.js](https://nodejs.org/) v4+
+- Agregar la extensión de chrome [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) *"Recarga el browser automáticamente al realizarse cambios en el código"*
+- Luego Sass, *nuestro compilador de css* ejecutando el siguiente comando desde la consola:  
 ```sh
-$ cd bub
+$ npm install -g sass
+```
+
+##### Instalar las respectivas dependencias con:  
+```sh
+$ cd <ruta del template>
 $ npm install
+```
+
+##### Poner en marcha el servidor:  
+```sh
 $ npm start
 ```
 
