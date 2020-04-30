@@ -140,6 +140,21 @@ i {
     }
   }
 }
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20%;
+    .card {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+}
 
 .card {
   @include border-radius(0);

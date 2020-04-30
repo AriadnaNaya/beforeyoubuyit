@@ -19094,6 +19094,19 @@ i {
   .custom-card-wrapper .card {
     margin-top: 1em; } }
 
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+  .custom-row .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20%; }
+    .custom-row .card-wrapper .card {
+      width: 100%;
+      margin: 10px; }
+
 .card {
   border-radius: 0;
   min-height: 255px;
