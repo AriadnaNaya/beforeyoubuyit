@@ -1,6 +1,3 @@
-let fs = require('fs');
-let request = require("request");
-
 let options = {
   method: 'GET',
   url: 'https://rawg-video-games-database.p.rapidapi.com/games',
@@ -10,6 +7,4 @@ let options = {
   }
 };
 
-exports.all = request(options, function (error, response, body) {
-  return body
-});
+module.exports = options;
