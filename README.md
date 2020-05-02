@@ -25,13 +25,13 @@
 #### ¿Para quién es *BuB*?
 Para usar *BuB* solo tienes que tener una conexión a internet y que minimamente te gusten los videojuegos. *BuB* está dirigido a todo público y no te preocupes, si eres menor de edad no podrás ver el contenido de adultos.
 
-##### Puedes visualizar todo el proceso de prototipado en: 
+#### Puedes visualizar todo el proceso de prototipado en: 
 [Figma](https://www.figma.com/proto/zse18BbOkFbvIqQHmgsASB/Desktop-view?node-id=41%3A2023&viewport=-11185%2C316%2C0.7564056515693665&scaling=min-zoom)
 
-##### Puedes ver el avance de nuestro proyecto en:    
+#### Puedes ver el avance de nuestro proyecto en:    
 [Trello](https://trello.com/b/AlFf7ezV/proyecto-integrador-dh)
 
-##### Para utlizar este template debes tener instalado Node, Sass y LiveReload:
+#### Para utlizar este template debes tener instalado Node, Sass y LiveReload:
 - Primero instalar [Node.js](https://nodejs.org/) v4+
 - Agregar la extensión de chrome [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) *"Recarga el browser automáticamente al realizarse cambios en el código"*
 - Luego Sass, *nuestro compilador de css* ejecutando el siguiente comando desde la consola:  
@@ -39,17 +39,17 @@ Para usar *BuB* solo tienes que tener una conexión a internet y que minimamente
 $ npm install -g sass
 ```
 
-##### Instalar las respectivas dependencias con:
+#### Instalar las respectivas dependencias con:
 ```sh
 $ cd <ruta del template>
 $ npm install
 ```
 
-##### Poner en marcha el servidor:  
+#### Poner en marcha el servidor:  
 ```sh
 $ npm start
 ```
-##### Arquitectura:
+#### Arquitectura:
 La arquitectura de la aplicación está hecha con *[Node.js](https://nodejs.org/) v4+*, *[express](https://expressjs.com/en/4x/api.html)* y *[ejs]((https://ejs.co/)*
 
 Dada la estructura de *[ejs](https://expressjs.com/en/starter/generator.html)* tenemos una conjunto de ***“reglas”*** para manipular nuestra app según el ***patrón MVC***.
@@ -98,7 +98,7 @@ Notese que se está importando un ***modelo***, este es el que se encarga de hac
 Acá iteramos sobre la data que nos trae ***gameList*** en el array ***results*** y mostramos lo que nos interesa en los respectivos ***tags HTML***.
 *card-img* muestra la imagen pricipal accediendo al contenido de ***background_image***, en ***card-title*** colocamos el nombre y para los íconos iteramos de nuevo en otro array dentro de otro array llamado ***stores*** que está dentro de ***results***. Luego condicionamos para que nos muestre el ícono de nuestro store según creamos conveniente.
 
-##### API:
+#### API:
 Para el contenido utilizamos la *[API RAWG Video Games Database](https://rapidapi.com/accujazz/api/rawg-video-games-database)* y visualizamos la respuesta a través de la herramienta *[Postman](https://www.postman.com/)*.
 
 ***RAWG Video Games***
@@ -109,13 +109,14 @@ Ahí obtenemos la ***url*** y los ***headers*** que usaremos para visualizar la 
 ![](http://janioisacura.com/images/bub/postman.png)
 Una vez cofigurada la ***url*** y los ***headers*** presionamos send para visualizar la ***respuesta*** y utlizarla en nuestro código
 
-##### Estilos:
+#### Estilos:
 Utilizamos *[bootstrap 4](https://getbootstrap.com/)* y *[sass](https://sass-lang.com/)*.
+**IMPORTANTE**: Los estilos deben ser editados en ***public/scss/main.scss***, nunca tocar la carpeta ***build*** ni la ruta ***public/css***
 
-##### Fonts e íconos:
+#### Fonts e íconos:
 Las fonts se usan localmente. La fuente principal es *OpenSans* de *[Google Fonts](https://fonts.google.com/specimen/Open+Sans?query=open+sa)* y para el logo *League Gothic* de *[Font squirrel](https://www.fontsquirrel.com/fonts/league-gothic)* y finalmente *[Font awesome](https://fontawesome.com/v4.7.0/cheatsheet/)*, *[Material icons](https://material.io/resources/icons/?style=baseline)* y una font creada en *[Fontello](http://fontello.com/)* para los íconos.
 
-##### Comandos npm
+#### Comandos npm
 A través del comando*** npm start***, configurado en ***package.json***, la app mira ***“watch”*** constantemente la ruta ***public*** y compila los estilos de la ruta ***public/scss*** en ***build/css***, de igual forma lo hace con los scripts de ***public/js*** al archivo ***scripts.js*** en la ruta ***build/js***. En resumen mira todos lo cambios en archivos ***ejs***, ***js*** y ***scss***, los compila y levanta un servidor recargando el browser en cada cambio. Para esto último dependemos de la extensión de chrome *[LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)*.
 
 Todos los ***scripts*** tienen una función configurada y se ejecutan de forma simultánea con el comando ***npm start***. Lo que hace ***npm start*** a través de la ejecución de estos comandos es lo siguiente:
