@@ -4,9 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// LiveReload dependencies
 var connectLivereload = require("connect-livereload");
 const livereload = require('livereload');
 
+// Controllers
 var indexRouter = require('./routes/index');
 var registroRouter = require('./routes/registro');
 var usersRouter = require('./routes/users');
@@ -15,11 +17,13 @@ var homeRouter = require('./routes/home');
 var app = express();
 app.use(connectLivereload());
 
+// Trhird party and custom js
 app.use('/assets', [
   express.static(__dirname + '/build/js'),
   express.static(__dirname + '/node_modules/jquery/dist/'),
   express.static(__dirname + '/node_modules/bootstrap/dist/js/')
 ]);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -39,7 +43,7 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
-
+// Navigation
 app.use('/', indexRouter);
 app.use('/registro', registroRouter);
 app.use('/users', usersRouter);
