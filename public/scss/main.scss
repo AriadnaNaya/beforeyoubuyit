@@ -2,7 +2,7 @@
 // --------------------------------------------------
 @import "variables";
 @import "mixins";
-@import "fontface"; // @import "emoji";
+@import "fontface";
 @import "../../node_modules/font-awesome/scss/font-awesome.scss"; // --------------------------------------------------
 html,body {
   width: 100%;
@@ -148,7 +148,16 @@ i {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 20%;
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 20%;
+    }
+    //xs - md - lg - xl
     .card {
       width: 100%;
       margin: 10px;

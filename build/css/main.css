@@ -19102,7 +19102,13 @@ i {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 20%; }
+    width: 100%; }
+    @media (min-width: 768px) {
+      .custom-row .card-wrapper {
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .custom-row .card-wrapper {
+        width: 20%; } }
     .custom-row .card-wrapper .card {
       width: 100%;
       margin: 10px; }
