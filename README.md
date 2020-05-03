@@ -116,6 +116,14 @@ Utilizamos *[bootstrap 4](https://getbootstrap.com/)* y *[sass](https://sass-lan
 #### Fonts e íconos:
 Las fonts se usan localmente. La fuente principal es *OpenSans* de *[Google Fonts](https://fonts.google.com/specimen/Open+Sans?query=open+sa)* y para el logo *League Gothic* de *[Font squirrel](https://www.fontsquirrel.com/fonts/league-gothic)* y finalmente *[Font awesome](https://fontawesome.com/v4.7.0/cheatsheet/)*, *[Material icons](https://material.io/resources/icons/?style=baseline)* y una font creada en *[Fontello](http://fontello.com/)* para los íconos.
 
+Para agregar una font al proyecto es necesario descargar los formatos necesarios para renderizarlos en cada navegador, estos serían ***ttf***, ***eot***, ***woff*** y ***svg***. Estos archivos deben agregarse a la ruta ***public/fonts***. Luego en el archivo ***variables.scss*** se debe declarar una variable por cada ***font-style*** disponible. Ej:
+
+![](http://janioisacura.com/images/bub/nombreFonts.png)
+
+En archivo ***fontface.scss*** cada variable se convertirá en un ***array*** donde se iterará en la ruta asignada buscando los formatos mencionados anteriormente.
+
+![](http://janioisacura.com/images/bub/fontFace.png)
+
 #### Comandos npm
 A través del comando*** npm start***, configurado en ***package.json***, la app mira ***“watch”*** constantemente la ruta ***public*** y compila los estilos de la ruta ***public/scss*** en ***build/css***, de igual forma lo hace con los scripts de ***public/js*** al archivo ***scripts.js*** en la ruta ***build/js***. En resumen mira todos lo cambios en archivos ***ejs***, ***js*** y ***scss***, los compila y levanta un servidor recargando el browser en cada cambio. Para esto último dependemos de la extensión de chrome *[LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)*.
 
