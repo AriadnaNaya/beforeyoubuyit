@@ -1,0 +1,139 @@
+// @import "custom-variables";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin border-radius-alt($topleft, $topright, $bottomright, $bottomleft) {
+	border-top-left-radius: $topleft;
+	border-top-right-radius: $topright;
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+	-webkit-border-top-left-radius: $topleft;
+	-webkit-border-top-right-radius: $topright;
+	-webkit-border-bottom-right-radius: $bottomright;
+	-webkit-border-bottom-left-radius: $bottomleft;
+	-moz-border-radius-topleft: $topleft;
+	-moz-border-radius-topright: $topright;
+	-moz-border-radius-bottomright: $bottomright;
+	-moz-border-radius-bottomleft: $bottomleft;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin border($color, $width, $style){
+  border : {
+    color: $color;
+    width: $width;
+    style: $style;
+  }
+}
+
+@mixin gradient($color1, $color2) {
+  background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+  background: -webkit-gradient(linear, right left, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+  background: -webkit-linear-gradient(left, $color1 0%,$color2 100%);
+  background: -o-linear-gradient(left, $color1 0%,$color2 100%);
+}
+
+@mixin background-img($imgpath,$position:center,$repeat: no-repeat,$size:contain) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+    size: $size;
+  }
+}
+
+@mixin background($position:center,$repeat: no-repeat,$size:contain) {
+  background: {
+    position: $position;
+    repeat: $repeat;
+    size: $size;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin no-shadow($value){
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin blur ($radius) {
+	-webkit-filter: blur($radius+px); /* Chrome, Safari */
+	-ms-filter: blur($radius+px); /* IE12? */
+	filter: url("data:image/svg+xml;utf8,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"#{$radius}\" /></filter></svg>#blur"); /* Firefox, Safari, Chrome*/
+	filter: progid:DXImageTransform.Microsoft.Blur(Strength=$radius); /* IE9 */
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+@mixin no-transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+// --------------------------------------------------------
+// arrows
+// --------------------------------------------------------
+// $direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
+// $color: hex, rgb or rbga
+// $size: px or em
+// @example
+// .element{
+//     @include arrow(top, #000, 50px);
+// }
+@mixin arrow($direction, $color, $size){
+  position: absolute;
+
+    @if $direction == 'top' {
+        border-left: $size solid transparent;
+    	border-right: $size solid transparent;
+    	border-bottom: $size solid $color;
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    	border-left: $size solid $color;
+    } @else if $direction == 'bottom' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent;
+    	border-right: $size solid $color;
+    	border-bottom: $size solid transparent;
+    } @else if $direction == 'top-left' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'top-right' {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+    } @else if $direction == 'bottom-left' {
+        border-bottom: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'bottom-right' {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    }
+}

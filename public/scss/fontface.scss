@@ -1,0 +1,80 @@
+@import "variables";
+
+@each $font-face in $font,
+$font-bold,
+$font-bold-italic,
+$font-extra-bold,
+$font-italic,
+$font-light,
+$font-semibold,
+$font-semibold-italic,
+$font-light-italic,
+$font-brand,
+$bub {
+  @font-face {
+    font-family: $font-face; font-style: normal; font-weight: normal;
+    src: url('../fonts/#{$font-face}.eot');
+    src: url('../fonts/#{$font-face}.eot?') format('eot'),
+         url('../fonts/#{$font-face}.woff') format('woff'),
+         url('../fonts/#{$font-face}.ttf')  format('truetype'),
+         url('../fonts/#{$font-face}.svg##{$font}') format('svg');
+  }
+}
+
+
+//icons
+ [class^="icon-"]:before,
+ [class*=" icon-"]:before {
+   font-family: "bub";
+   font-style: normal;
+   font-weight: normal;
+   speak: none;
+
+   display: inline-block;
+   text-decoration: inherit;
+   width: 1em;
+   margin-right: .2em;
+   text-align: center;
+   /* opacity: .8; */
+
+   /* For safety - reset parent styles, that can break glyph codes*/
+   font-variant: normal;
+   text-transform: none;
+
+   /* fix buttons height, for twitter bootstrap */
+   line-height: 1em;
+
+   /* Animation center compensation - margins should be symmetric */
+   /* remove if not needed */
+   margin-left: .2em;
+
+   /* you can be more comfortable with increased icons size */
+   /* font-size: 120%; */
+
+   /* Font smoothing. That was taken from TWBS */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   /* Uncomment for 3D effect */
+   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+ }
+
+ .icon-epic:before {
+   content: '\e800';
+ }
+
+ .icon-gog:before {
+   content: '\e801';
+ }
+
+ .icon-xbox:before {
+   content: '\e802';
+ }
+
+ .icon-steam:before {
+   content: '\e803';
+ }
+
+ .icon-bub:before {
+   content: '\e804';
+ }

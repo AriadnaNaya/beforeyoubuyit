@@ -1,0 +1,42 @@
+{
+  "name": "beforeyoubuyit",
+  "version": "1.0.0",
+  "description": "Marketplace de videojuegos",
+  "main": "app.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss public/scss/main.scss build/css/main.css",
+    "build-js": "browserify public/js/main.js>build/js/scripts.js",
+    "build": "npm run build-css && npm run build-js",
+    "server": "nodemon bin/www",
+    "start": "nodemon -e ejs,js,scss -x \"npm run build && npm run server\" --ignore build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AriadnaNaya/beforeyoubuyit.git"
+  },
+  "author": "Ariadna Naya, Ezequiel Turchetti y Janio Isacura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AriadnaNaya/beforeyoubuyit/issues"
+  },
+  "homepage": "https://github.com/AriadnaNaya/beforeyoubuyit#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "font-awesome": "^4.7.0",
+    "http-errors": "~1.6.3",
+    "jquery": "3.4.1",
+    "jsdom": "^16.2.2",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.1",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.1",
+    "node-sass": "^4.14.0",
+    "nodemon": "^2.0.3"
+  }
+}
