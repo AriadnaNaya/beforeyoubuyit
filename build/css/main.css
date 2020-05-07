@@ -19023,6 +19023,19 @@ body {
   color: #fff; }
 
 /* Modificacion Ari */
+.segunda {
+  margin-top: 25px; }
+  .segunda .infoBase {
+    margin-top: 20px; }
+  .segunda .IzqColumna .puntaje {
+    display: flex;
+    justify-content: center; }
+  .segunda .DerColumna .imagen img {
+    width: 100%; }
+  .segunda .DerColumna .cambiarImg {
+    margin-top: 20px;
+    margin-left: 10px; }
+
 .top-content {
   padding-top: 15px; }
   .top-content .filtros {

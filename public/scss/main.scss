@@ -17,6 +17,32 @@ body {
 
 /* Modificacion Ari */
 
+.segunda {
+  margin-top: 25px;
+  .infoBase {
+    margin-top: 20px;
+  }
+  .IzqColumna {
+    .puntaje {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .DerColumna {
+    .imagen {
+      img {
+        width: 100%;
+
+      }
+    }
+    .cambiarImg {
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
 .top-content {
   padding-top: 15px;
   .filtros {
