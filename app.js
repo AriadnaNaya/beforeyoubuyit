@@ -13,6 +13,7 @@ var indexRouter = require('./routes/index');
 var registroRouter = require('./routes/registro');
 var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
+var carritoRouter = require('./routes/carrito');
 
 var app = express();
 app.use(connectLivereload());
@@ -48,6 +49,7 @@ app.use('/', indexRouter);
 app.use('/registro', registroRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
+app.use('/carrito', carritoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

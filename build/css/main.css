@@ -19132,3 +19132,26 @@ i {
     font-size: 80%;
     text-transform: uppercase;
     font-family: "OpenSans-Semibolditalic"; }
+
+.tituloJuego {
+  display: flex; }
+
+.prodCarrito {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.r-prodCarrito {
+  margin-top: 50px;
+  align-items: center; }
+
+.r-prodCarrito img {
+  width: 80%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: block; }
+
+@media (max-width: 576px) {
+  .r-prodCarrito img {
+    width: 80%;
+    margin: 0 auto;
+    display: block; } }

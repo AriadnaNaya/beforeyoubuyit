@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <!-- navbar header -->
+  <%- include('../partials/header') %>
+
+  <!-- Productos en Carrito de Compras -->
+
+
+  <section class="Prod-En-Carrito py-4 mt-50">
+
+    <div class="container">
+      <h1>CARRITO DE COMPRA</h1>
+
+      <div class="prodCarrito">
+        
+        <div class="r-prodCarrito row">
+
+          <% for(var i = 0; i < carritoList.results.length; i++) { %>
+          
+          <div class=" col-12 col-sm-3 mt-10">
+            <img class="img-fluid"
+              src="<%=  carritoList.results[i].background_image%>"
+              alt="imagen Producto">
+          </div>
+
+          <div class="col-12  col-sm-9 col-md-5 text-center text-md-left">
+
+            <p class="font-weight-bold"><%=  carritoList.results[i].name%></p>
+
+            <p>Una vez comprado el juego tendras que activarlo en STEAM con la llave y las instrucciones qie verás a continuación </p>
+
+          </div>
+          
+      
+
+        <div class="Precio col-6  col-md-2">
+          <h6>ARS <%=  carritoList.results[i].price%></h6>
+
+        </div>
+      
+        <div class="col-6 col-md-2">
+          <a href="#" class="btn btn-primary">Eliminar</a>
+        </div>
+      <% } %>    
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+  <section class="compra-Carrito mt-50">
+
+    <div class="container">
+
+
+      <div class="row">
+
+        <div class="col-12 col-sm-4 col-lg-4">
+          <h12>Todos Los Medios de Pago :</h12>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-4">
+          <h6>ARS 2.500</h6>
+        </div>
+
+        <div class="col-6 col-sm-4 col-lg-4">
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <a href="/beforeyoubuyit/views/home.ejs">Seguir Comprando</a>
+
+  <%- include('../partials/scripts') %>
+</body>
+
+</html>
