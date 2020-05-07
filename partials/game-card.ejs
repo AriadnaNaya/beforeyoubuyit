@@ -1,5 +1,5 @@
 <% for(var i = 0; i < gameList.results.length; i++) { %>
-  <a href="javascript:void(0)" class="card-wrapper">
+  <a href="/detalle/<%= i %>" class="card-wrapper">
     <div class="card">
       <div class="card-img" style="background-image: url('<%=  gameList.results[i].background_image %>');">
         <p class="card-title"><%=  gameList.results[i].name %></p>

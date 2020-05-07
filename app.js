@@ -13,6 +13,9 @@ var indexRouter = require('./routes/index');
 var registroRouter = require('./routes/registro');
 var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
+var detalleRouter = require('./routes/detalle');
+var keyRouter = require('./routes/key');
+var cargaRouter = require('./routes/carga');
 
 var app = express();
 app.use(connectLivereload());
@@ -21,7 +24,8 @@ app.use(connectLivereload());
 app.use('/assets', [
   express.static(__dirname + '/build/js'),
   express.static(__dirname + '/node_modules/jquery/dist/'),
-  express.static(__dirname + '/node_modules/bootstrap/dist/js/')
+  express.static(__dirname + '/node_modules/bootstrap/dist/js/'),
+  express.static(__dirname + '/node_modules/material-design-icons/iconfont/'),
 ]);
 
 // view engine setup
@@ -48,6 +52,9 @@ app.use('/', indexRouter);
 app.use('/registro', registroRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
+app.use ('/detalle', detalleRouter);
+app.use ('/key', keyRouter);
+app.use ('/carga', cargaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

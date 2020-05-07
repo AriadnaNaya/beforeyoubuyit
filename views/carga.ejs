@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include('../partials/head') %>
+
+</head>
+
+<body>
+
+    <!-- navbar header -->
+    <%- include('../partials/header') %>
+    <!-- /.navbar header -->
+
+    <!-- home content -->
+
+    <section>
+        <div class="cargaProdu container">
+
+            <div class="row">
+
+                <div class="primerFila col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+
+                    <h1>CARGA DE PRODUCTO</h1>
+
+
+                </div>
+
+            </div>
+
+            <div class="segunda row">
+
+                <div class="IzqColumna col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                    <form action="cargaOk.html" method="GET">
+
+                        <label for="key">
+                            <h5>LLAVE DEL PRODUCTO</h5>
+                        </label> <br>
+                        <input type="text" id="key" name="key">
+                        <input type="submit" value="Validar">
+
+                    </form>
+
+                    <div class="infoBase">
+
+                        <h3>Plataforma</h3>
+                        <p>Steam</p><br>
+                    </div>
+
+
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        Datos principales
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Civilization VI offers new ways to interact with your world, expand your empire
+                                    across the map, advance your culture, and compete against history’s greatest leaders
+                                    to build a civilization that will stand the test of time. Play as one of 20
+                                    historical leaders including Roosevelt (America) and Victoria (England).
+                                    Developers: Firaxis Games, Aspyr, Aspyr (Mac)
+                                    Fecha de Lanzamiento: Octubre 21, 2016
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Categorias
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Estrategia | Estrategia por turnos | Histórico | 4X <button type="button"
+                                        class="btn btn-light ml-2"> + </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Acerca de este juego
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Civilization, creado originalmente por Sid Meier, el legendario diseñador de
+                                    videojuegos, es un juego de estrategia por turnos en el que tu objetivo es construir
+                                    un imperio que resista el paso del tiempo. Conquista el mundo entero estableciendo y
+                                    liderando tu propia civilización desde la Edad de Piedra hasta la Era de la
+                                    Información. Libra guerras, utiliza la diplomacia, fomenta el progreso de tu cultura
+                                    y enfréntate cara a cara a los líderes más importantes de la historia para crear la
+                                    civilización más grande jamás conocida.
+
+                                    Civilization VI ofrece nuevas maneras de interactuar con tu mundo: ahora las
+                                    ciudades se expanden físicamente en el mapa, la investigación activa de tecnología y
+                                    cultura desbloquea nuevos potenciales y los líderes actúan en función de sus rasgos
+                                    históricos mientras intentas conseguir la victoria de una de las cinco maneras
+                                    posibles.
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Requisitos del sistema
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <div class="minimo col-6">
+                                            <h3>MINIMO</h3>
+
+                                            <ul>
+                                                <li>Requiere un procesador y un sistema operativo de 64 bits</li>
+                                                <li>SO: Windows 7x64 / Windows 8.1x64 / Windows 10x64</li>
+                                                <li>Procesador: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or
+                                                    greater
+                                                </li>
+                                                <li>Memoria: 4 GB de RAM</li>
+                                                <li>Gráficos: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics
+                                                    530
+                                                </li>
+                                                <li>DirectX: Versión 11</li>
+                                                <li>Almacenamiento: 12 GB de espacio disponible</li>
+                                                <li>Tarjeta de sonido: DirectX Compatible Sound Device</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="maximo col-6">
+
+                                            <h3>RECOMENDADO</h3>
+
+                                            <ul>
+                                                <li>Requiere un procesador y un sistema operativo de 64 bits</li>
+                                                <li>SO: Windows 7x64 / Windows 8.1x64 / Windows 10x64</li>
+                                                <li>Procesador: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or
+                                                    greater
+                                                </li>
+                                                <li>Memoria: 4 GB de RAM</li>
+                                                <li>Gráficos: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics
+                                                    530
+                                                </li>
+                                                <li>DirectX: Versión 11</li>
+                                                <li>Almacenamiento: 12 GB de espacio disponible</li>
+                                                <li>Tarjeta de sonido: DirectX Compatible Sound Device</li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Valoración
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="hero-item">
+                                        <div class="row">
+
+                                            <div class="hero-item col-4">
+                                                <div class="alert alert-primary" role="alert">
+                                                    <h1>7.8</h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 ">
+                                                <div class="lugar">
+                                                    <h1>IGN</h1>
+                                                </div>
+
+                                                <div class="cantUsu">
+                                                    <p>de 93 usuarios</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="DerColumna col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                    <h1>SID MEIER’S CIVILIZATION VI</h1>
+
+                    <div class="imagen col-12">
+
+                        <img src="<%=gameList.results[0].background_image %>" alt="Imagen juego cargado">
+
+                    </div>
+
+                    <div class="cambiarImg btn-group">
+                        <button type="button" class="btn btn-info">Cambiar Imagen</button>
+                    </div>
+
+                    <div class="formularioCarga">
+
+                        <form action="cargaOK.html">
+
+                            <div class="row">
+
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+
+                                    <br> <br>
+                                    <label for="price">
+                                        <h4>Precio en ARS$</h4>
+                                    </label> <br>
+                                    <input type="text" id="price" name="price">
+
+
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                    
+                                    <br> <br>
+                                    <label for="descuento">
+                                        <h4>Descuento (%)</h4>
+                                    </label> <br>
+                                    <input type="text" id="descuento" name="descuento"> 
+
+
+                                </div>
+
+                            </div>
+                            <div>
+                                
+                                <br>
+
+                                <label for="trailer">
+                                    <h4>URL Trailer - Campo obligatorio</h4>
+                                </label> <br>
+                                <input type="text" id="trailer" name="trailer" style="width: 100%;">
+
+                                 <br><br>
+    
+                                <label for="gameplay">
+                                    <h4>URL Gameplay</h4>
+                                </label> 
+
+                                <br>
+
+                                <input type="text" id="gameplay" name="gameplay"style="width: 100%;" >
+
+                                 <br><br>
+    
+                                <label for="review">
+                                    <h4>URL Review</h4>
+                                </label> 
+                                
+                                <br>
+
+                                <input type="text" id="review" name="review" style="width: 100%;"> 
+                                
+                                <br><br>
+    
+                                <input type="submit" value="CARGAR PRODUCTO">
+
+                            </div>
+                            
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- /.home content -->
+
+    <%- include('../partials/scripts') %>
+</body>
+
+</html>
