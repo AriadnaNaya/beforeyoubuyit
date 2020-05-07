@@ -1,7 +1,6 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 $(document).ready(function () {
   
-
   // Login form validation to check if fields are empty
   const loginForm = $('#loginForm');
   const loginSubmit = $('#loginSubmit');
@@ -10,6 +9,14 @@ $(document).ready(function () {
   const email = $('input[name=email]');
   const user = $('input[name=user]');
   const password = $('input[name=password]');
+
+  const trailer = $('button[id=trailer]');
+  const gameplay = $('button[id=gameplay]');
+  const honest = $('button[id=honest]');
+
+  const trailerTitle = $('.trailer');
+  const gameplayTitle = $('.gameplay');
+  const honestTitle = $('.honest');
 
   const dniMessage = $('.message.dni');
   const emailMessage = $('.message.email');
@@ -20,6 +27,26 @@ $(document).ready(function () {
   emailMessage.css('display', 'none');
   userMessage.css('display', 'none');
   passwordMessage.css('display', 'none');
+
+  trailerTitle.css('display', 'block');
+  gameplayTitle.css('display', 'none');
+  honestTitle.css('display', 'none');
+
+  trailer.bind('click', () => {
+    trailerTitle.css('display', 'block');
+    gameplayTitle.css('display', 'none');
+    honestTitle.css('display', 'none');
+  })
+  gameplay.bind('click', () => {
+    trailerTitle.css('display', 'none');
+    gameplayTitle.css('display', 'block');
+    honestTitle.css('display', 'none');
+  })
+  honest.bind('click', () => {
+    trailerTitle.css('display', 'none');
+    gameplayTitle.css('display', 'none');
+    honestTitle.css('display', 'block');
+  })
 
   loginSubmit.bind('click', function () {
     event.preventDefault();

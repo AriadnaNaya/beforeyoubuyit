@@ -24,7 +24,8 @@ app.use(connectLivereload());
 app.use('/assets', [
   express.static(__dirname + '/build/js'),
   express.static(__dirname + '/node_modules/jquery/dist/'),
-  express.static(__dirname + '/node_modules/bootstrap/dist/js/')
+  express.static(__dirname + '/node_modules/bootstrap/dist/js/'),
+  express.static(__dirname + '/node_modules/material-design-icons/iconfont/'),
 ]);
 
 // view engine setup
