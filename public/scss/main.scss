@@ -17,6 +17,21 @@ body {
 
 /* Modificacion Ari */
 
+/* Key page */
+
+.validaKey {
+  .ingresaKey {
+    margin-top: 25px;
+    .validaKey {
+      margin-left: 10px;
+    }
+  }
+  .avisoImportante {
+    margin-top: 40px;
+  }
+}
+
+/* Carga page */
 .segunda {
   margin-top: 25px;
   .infoBase {
@@ -42,7 +57,7 @@ body {
   }
 }
 
-
+/* Detalle page */
 .top-content {
   padding-top: 15px;
   .filtros {
@@ -59,7 +74,6 @@ body {
     }
   }
 }
-
 
 .infoPrincipal {
   margin-top: 15px;

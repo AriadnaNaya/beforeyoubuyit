@@ -14,6 +14,7 @@ var registroRouter = require('./routes/registro');
 var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var detalleRouter = require('./routes/detalle');
+var keyRouter = require('./routes/key');
 var cargaRouter = require('./routes/carga');
 
 var app = express();
@@ -51,6 +52,7 @@ app.use('/registro', registroRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use ('/detalle', detalleRouter);
+app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
 
 // catch 404 and forward to error handler

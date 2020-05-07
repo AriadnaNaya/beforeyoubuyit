@@ -19023,6 +19023,16 @@ body {
   color: #fff; }
 
 /* Modificacion Ari */
+/* Key page */
+.validaKey .ingresaKey {
+  margin-top: 25px; }
+  .validaKey .ingresaKey .validaKey {
+    margin-left: 10px; }
+
+.validaKey .avisoImportante {
+  margin-top: 40px; }
+
+/* Carga page */
 .segunda {
   margin-top: 25px; }
   .segunda .infoBase {
@@ -19036,6 +19046,7 @@ body {
     margin-top: 20px;
     margin-left: 10px; }
 
+/* Detalle page */
 .top-content {
   padding-top: 15px; }
   .top-content .filtros {
