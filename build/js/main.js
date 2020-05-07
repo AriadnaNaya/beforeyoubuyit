@@ -1,33 +1,8 @@
 $(document).ready(function () {
   alert('Connected');
-  //Horizontal collapsible menu
-  const sideslider = $('[data-toggle=collapse-side]');
-  const sel = sideslider.attr('data-target');
-  const sel2 = sideslider.attr('data-target-2');
-  let url = window.location.href;
-  sideslider.click(function (event) {
-    $(sel).toggleClass('in');
-    $(sel2).toggleClass('out');
-  });
-
-  // Add margin top to navbar on login scree
-  const header = $('header');
-  const sidecollapse = $('.side-collapse-container');
-  if (header.hasClass('navbar-fixed-top')) {
-    sidecollapse.css('margin-top', '60px');
-  }
-
-  const home = $('body');
-  const categoryShow = $('[data-target=category-section]');
-  const categorySection = $('#category-section');
-
-  if (home.hasClass('home')) {
-    categorySection.hide();
-  }
-  categoryShow.bind('click', function () {
-    categorySection.toggle('slow');
-  });
-
+  iframe.contentDocument.getElementById("trailer").checked = true;
+  iframe.contentWindow.speaker[0].muted = true
+  iframe.contentWindow.speaker[1].muted = true
   // Login form validation to check if fields are empty
   const loginForm = $('#loginForm');
   const loginSubmit = $('#loginSubmit');
