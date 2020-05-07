@@ -15,8 +15,8 @@
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 videos">
+            <div class="detalleJuego row">
+                <div class="videos col-xl-7 col-lg-7 col-md-7 col-sm-12">
                     <div class="top-content">
                         <div class="container">
                             <div class="row">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 infoPrincipal">
+                <div class="infoPrincipal col-xl-5 col-lg-5 col-md-5 col-sm-12">
                     <div class="imagen">
                         <img src="<%=juego.background_image %>" alt="Imagen civ">
                     </div>
@@ -134,20 +134,23 @@
                             </div>
 
                             <div class="precio">
-                                <p>ARS$ 1.200,00</p>
+                                <p>ARS$ 1.200,00 <button type="button" class="btn btn-info">Info</button> </p>
                             </div>
-
+<!--
                             <div class="btn-group">
                                 <button type="button" class="btn btn-info">Info</button>
                             </div>
-
+-->
                             <div class="btn-group">
-                                <button type="button" class="btn btn-info">Info</button>
+                                <button type="button" class="btn btn-info"><a href="">Demo</a></button>
+                                
                             </div>
 
-                            <div class="LinkDemo">
+                            <!-- <div class="LinkDemo">
                                 <a href="">Demo</a>
                             </div>
+                        -->
+                            
 
                         </div>
                     </div>
@@ -155,7 +158,7 @@
 
                 </div>
 
-                <div class="row resenas">
+                <div class="resenas row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 resena">
                         <div class="puntaje col-xl-4 col-lg-4 col-md-4 col-sm-4">
                             <div class="alert alert-primary" role="alert">
@@ -193,7 +196,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="acercaDeEsteJuego row">
                     <div class="acercaDelJuego col-xl-8 col-lg-8 col-md-7 col-sm-12">
                         <h1>ACERCA DE ESTE JUEGO</h1>
                         <br> </br>
@@ -250,7 +253,7 @@
                     <h1>REQUISITOS DEL SISTEMA</h1>
                 </div>
 
-                <div class="row">
+                <div class="reuisitos row">
                     <div class="minimo col-xl-6 col-lg-6 col-md-12 col-sm-12">
                         <h2>MINIMO</h2>
 
@@ -324,7 +327,7 @@
                     <h1>COMENTARIOS DEL USUARIO</h1>
                 </div>
 
-                <div class="row">
+                <div class="comentarios row">
                     <div class="usuario col-xl-4 col-lg-4 col-md-2 col-sm-2">
                         <i class="fa fa-facebook"></i>
                     </div>

@@ -19047,48 +19047,47 @@ body {
     margin-left: 10px; }
 
 /* Detalle page */
-.top-content {
-  padding-top: 15px; }
-  .top-content .filtros {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px; }
-    .top-content .filtros .carousel-indicators {
-      position: relative;
-      margin: 0px;
-      justify-content: flex-start; }
-      .top-content .filtros .carousel-indicators .trailer, .top-content .filtros .carousel-indicators .gameplay, .top-content .filtros .carousel-indicators .honest {
-        padding: 15px 10px 10px 0px; }
+.tituloRequisitos, .tituloComentarios {
+  margin-bottom: 20px;
+  margin-top: 10px; }
 
-.infoPrincipal {
-  margin-top: 15px; }
-  .infoPrincipal img {
-    width: 100%; }
-
-.infoImportante .btn-group, .infoImportante .precio {
+.detalleJuego {
   padding: 10px;
-  align-items: center; }
-
-.infoImportante .LinkDemo {
-  display: flex;
-  align-items: center; }
-
-.resenas {
-  margin: 20px;
-  width: 100%; }
-  .resenas .resena {
-    display: flex;
-    flex-direction: row;
-    padding: 20px; }
-    .resenas .resena .puntaje {
-      display: flex;
-      justify-content: center; }
-
-section {
   margin: 10px; }
-  section .tituloRequisitos, section .tituloComentarios {
-    margin-bottom: 20px;
-    margin-top: 10px; }
+  .detalleJuego .top-content {
+    padding-top: 15px; }
+    .detalleJuego .top-content .filtros {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0px; }
+      .detalleJuego .top-content .filtros .carousel-indicators {
+        position: relative;
+        margin: 0px;
+        justify-content: flex-start; }
+        .detalleJuego .top-content .filtros .carousel-indicators .trailer, .detalleJuego .top-content .filtros .carousel-indicators .gameplay, .detalleJuego .top-content .filtros .carousel-indicators .honest {
+          padding: 15px 10px 10px 0px; }
+  .detalleJuego .infoPrincipal {
+    margin-top: 15px; }
+    .detalleJuego .infoPrincipal img {
+      width: 100%; }
+  .detalleJuego .infoImportante .btn-group, .detalleJuego .infoImportante .precio {
+    padding: 10px;
+    align-items: center; }
+  .detalleJuego .infoImportante .precio p {
+    margin: 0px; }
+  .detalleJuego .infoImportante .LinkDemo {
+    display: flex;
+    align-items: center; }
+  .detalleJuego .resenas {
+    margin: 20px;
+    width: 100%; }
+    .detalleJuego .resenas .resena {
+      display: flex;
+      flex-direction: row;
+      padding: 20px; }
+      .detalleJuego .resenas .resena .puntaje {
+        display: flex;
+        justify-content: center; }
 
 /* Fin modificacion Ari*/
 h1, h2, h3, h4, h5, h6 {

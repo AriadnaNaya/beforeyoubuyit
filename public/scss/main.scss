@@ -58,63 +58,72 @@ body {
 }
 
 /* Detalle page */
-.top-content {
-  padding-top: 15px;
-  .filtros {
-    display: flex;
-    justify-content:flex-start;
-    margin: 0px;
-    .carousel-indicators {
-      position: relative;
+
+.tituloRequisitos , .tituloComentarios {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.detalleJuego {
+  padding: 10px;
+  margin: 10px;
+  .top-content {
+    padding-top: 15px;
+    .filtros {
+      display: flex;
+      justify-content:flex-start;
       margin: 0px;
-      justify-content: flex-start;
-      .trailer , .gameplay , .honest {
-        padding: 15px 10px 10px 0px;
+      .carousel-indicators {
+        position: relative;
+        margin: 0px;
+        justify-content: flex-start;
+        .trailer , .gameplay , .honest {
+          padding: 15px 10px 10px 0px;
+        }
+      }
+    }
+  }
+
+  .infoPrincipal {
+    margin-top: 15px;
+    img {
+      width: 100%;
+    }
+  }
+  .infoImportante {
+    .btn-group, .precio {
+      padding: 10px;
+      align-items: center;
+      
+    }
+
+    .precio {
+      p {
+        margin: 0px;
+      }
+    }
+  
+    .LinkDemo {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .resenas {
+    margin: 20px;
+    width: 100%;
+    .resena {
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      .puntaje {
+        display: flex;
+        justify-content: center;
       }
     }
   }
 }
 
-.infoPrincipal {
-  margin-top: 15px;
-  img {
-    width: 100%;
-  }
-}
-
-.infoImportante {
-  .btn-group, .precio {
-    padding: 10px;
-    align-items: center;
-  }
-
-  .LinkDemo {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.resenas {
-  margin: 20px;
-  width: 100%;
-  .resena {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    .puntaje {
-      display: flex;
-      justify-content: center;
-    }
-  }
-}
-
-section {
-  margin: 10px;
-  .tituloRequisitos , .tituloComentarios {
-    margin-bottom: 20px;
-    margin-top: 10px;
-   }
-}
 /* Fin modificacion Ari*/
 
 h1,
