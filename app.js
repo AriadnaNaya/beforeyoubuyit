@@ -1,24 +1,27 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
 
 // LiveReload dependencies
-var connectLivereload = require("connect-livereload");
+const connectLivereload = require("connect-livereload");
 const livereload = require('livereload');
 
 // Controllers
-var indexRouter = require('./routes/index');
-var registroRouter = require('./routes/registro');
-var usersRouter = require('./routes/users');
-var homeRouter = require('./routes/home');
-var detalleRouter = require('./routes/detalle');
-var keyRouter = require('./routes/key');
-var cargaRouter = require('./routes/carga');
+const indexRouter = require('./routes/index');
+const registroRouter = require('./routes/registro');
+const usersRouter = require('./routes/users');
+const homeRouter = require('./routes/home');
+const detalleRouter = require('./routes/detalle');
+const keyRouter = require('./routes/key');
+const cargaRouter = require('./routes/carga');
 
-var app = express();
+const app = express();
 app.use(connectLivereload());
+
+app.use(methodOverride('_method'));
 
 // Trhird party and custom js
 app.use('/assets', [
@@ -38,7 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'build')));
-var liveReloadServer = livereload.createServer();
+const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, 'build'));
 
 liveReloadServer.server.once("connection", () => {
