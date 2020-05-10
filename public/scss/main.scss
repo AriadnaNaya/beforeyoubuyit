@@ -138,12 +138,7 @@ i {
   .card {
     min-height: 10rem;
     @extend .p-2;
-  }
-
-  @include media-breakpoint-between(xs, md) {
-    .card {
-      margin-top: 1em;
-    }
+    @extend .my-2;
   }
 }
 
@@ -167,6 +162,12 @@ i {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: calc(#{$game-card-height} + 7rem);
+    &.hover {
+      .card {
+        max-height: $card-end-height;
+      }
+    }
     @include media-breakpoint-up(xs) {
       width: 100%;
     }
@@ -178,37 +179,77 @@ i {
     }
     //xs - md - lg - xl
     .card {
+      @include border-radius(0);
+      transition: all 0.3s ease-out;
+      //min-height: 255px;
       width: 100%;
       margin: 10px;
-    }
-  }
-}
+      max-height: $card-start-height;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      border-color: $pink;
+      .card-img {
+        @include background(center, no-repeat, cover);
+        @include border-radius(0);
+        height: 180px;
+        position: relative;
+      }
 
-.card {
-  @include border-radius(0);
-  min-height: 255px;
-  margin-bottom: 2rem;
-  border-color: $pink;
-  .card-img {
-    @include background(center, no-repeat, cover);
-    @include border-radius(0);
-    height: 180px;
-    position: relative;
-  }
-  .card-body {
-    background-color: $black;
-    color: $pink;
-  }
-  .card-title {
-    position: absolute;
-    color: $pink;
-    background-color: $black;
-    padding: 8px 12px;
-    bottom: 0;
-    margin: 0;
-    font-size: 80%;
-    text-transform: uppercase;
-    font-family: $font-semibold-italic;
+      .card-body {
+        background-color: $black;
+        color: $pink;
+        padding: 10px 12px;
+        .price {
+           @extend .d-flex;
+           @extend .justify-content-between;
+           text-transform: uppercase;
+           padding-bottom: .5rem;
+           border-bottom: 1px dashed transparentize($pink, .5);
+           margin-bottom: .85rem;
+          .value {
+            @extend .d-flex;
+            @extend .flex-column;
+            p {
+              margin-bottom: 0;
+              font-family: $font-bold;
+            }
+            .discount {
+              position: relative;
+              top: -5px;
+
+              small {
+                text-decoration: line-through;
+              }
+            }
+          }
+          i {
+            @extend .align-self-start;
+            font-size: 1.25rem;
+            padding: 7px;
+            background-color: lighten($black, 5);
+            border-radius: 50%;
+            position: relative;
+          }
+        }
+        .legend {
+          margin: 0;
+          font-family: $font-italic;
+        }
+      }
+
+      .card-title {
+        position: absolute;
+        color: $pink;
+        background-color: $black;
+        padding: 8px 12px;
+        bottom: 0;
+        margin: 0;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-family: $font-semibold-italic;
+      }
+    }
   }
 }
 

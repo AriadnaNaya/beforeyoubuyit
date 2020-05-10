@@ -4869,7 +4869,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .login-screen {
+.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value {
   display: flex !important; }
 
 .d-inline-flex {
@@ -5012,7 +5012,7 @@ button.bg-dark:focus {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .custom-row .card-wrapper .card .card-body .price .value {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -5054,7 +5054,7 @@ button.bg-dark:focus {
 .justify-content-center, .login-screen {
   justify-content: center !important; }
 
-.justify-content-between {
+.justify-content-between, .custom-row .card-wrapper .card .card-body .price {
   justify-content: space-between !important; }
 
 .justify-content-around {
@@ -5096,7 +5096,7 @@ button.bg-dark:focus {
 .align-self-auto {
   align-self: auto !important; }
 
-.align-self-start {
+.align-self-start, .custom-row .card-wrapper .card .card-body .price i {
   align-self: flex-start !important; }
 
 .align-self-end {
@@ -5607,7 +5607,8 @@ button.bg-dark:focus {
   margin: 0.5rem !important; }
 
 .mt-2,
-.my-2 {
+.my-2,
+.custom-card-wrapper .card {
   margin-top: 0.5rem !important; }
 
 .mr-2,
@@ -5615,7 +5616,8 @@ button.bg-dark:focus {
   margin-right: 0.5rem !important; }
 
 .mb-2,
-.my-2 {
+.my-2,
+.custom-card-wrapper .card {
   margin-bottom: 0.5rem !important; }
 
 .ml-2,
@@ -14148,7 +14150,7 @@ button.bg-blue:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .login-screen {
+.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value {
   display: flex !important; }
 
 .d-inline-flex {
@@ -14303,7 +14305,7 @@ button.bg-blue:focus {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, .custom-row .card-wrapper .card .card-body .price .value {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -14345,7 +14347,7 @@ button.bg-blue:focus {
 .justify-content-center, .login-screen {
   justify-content: center !important; }
 
-.justify-content-between {
+.justify-content-between, .custom-row .card-wrapper .card .card-body .price {
   justify-content: space-between !important; }
 
 .justify-content-around {
@@ -14387,7 +14389,7 @@ button.bg-blue:focus {
 .align-self-auto {
   align-self: auto !important; }
 
-.align-self-start {
+.align-self-start, .custom-row .card-wrapper .card .card-body .price i {
   align-self: flex-start !important; }
 
 .align-self-end {
@@ -14898,7 +14900,8 @@ button.bg-blue:focus {
   margin: 0.5rem !important; }
 
 .mt-2,
-.my-2 {
+.my-2,
+.custom-card-wrapper .card {
   margin-top: 0.5rem !important; }
 
 .mr-2,
@@ -14906,7 +14909,8 @@ button.bg-blue:focus {
   margin-right: 0.5rem !important; }
 
 .mb-2,
-.my-2 {
+.my-2,
+.custom-card-wrapper .card {
   margin-bottom: 0.5rem !important; }
 
 .ml-2,
@@ -19093,10 +19097,6 @@ i {
 .custom-card-wrapper .card {
   min-height: 10rem; }
 
-@media (max-width: 991.98px) {
-  .custom-card-wrapper .card {
-    margin-top: 1em; } }
-
 .badge-secondary {
   color: #222; }
 
@@ -19113,7 +19113,10 @@ i {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: calc(242px + 7rem);
     width: 100%; }
+    .custom-row .card-wrapper.hover .card {
+      max-height: 325px; }
     @media (min-width: 768px) {
       .custom-row .card-wrapper {
         width: 50%; } }
@@ -19121,34 +19124,58 @@ i {
       .custom-row .card-wrapper {
         width: 20%; } }
     .custom-row .card-wrapper .card {
+      border-radius: 0;
+      transition: all 0.3s ease-out;
       width: 100%;
-      margin: 10px; }
-
-.card {
-  border-radius: 0;
-  min-height: 255px;
-  margin-bottom: 2rem;
-  border-color: #ff94b9; }
-  .card .card-img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0;
-    height: 180px;
-    position: relative; }
-  .card .card-body {
-    background-color: #222;
-    color: #ff94b9; }
-  .card .card-title {
-    position: absolute;
-    color: #ff94b9;
-    background-color: #222;
-    padding: 8px 12px;
-    bottom: 0;
-    margin: 0;
-    font-size: 80%;
-    text-transform: uppercase;
-    font-family: "OpenSans-Semibolditalic"; }
+      margin: 10px;
+      max-height: 242px;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      border-color: #ff94b9; }
+      .custom-row .card-wrapper .card .card-img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0;
+        height: 180px;
+        position: relative; }
+      .custom-row .card-wrapper .card .card-body {
+        background-color: #222;
+        color: #ff94b9;
+        padding: 10px 12px; }
+        .custom-row .card-wrapper .card .card-body .price {
+          text-transform: uppercase;
+          padding-bottom: .5rem;
+          border-bottom: 1px dashed rgba(255, 148, 185, 0.5);
+          margin-bottom: .85rem; }
+          .custom-row .card-wrapper .card .card-body .price .value p {
+            margin-bottom: 0;
+            font-family: "OpenSans-Bold"; }
+          .custom-row .card-wrapper .card .card-body .price .value .discount {
+            position: relative;
+            top: -5px; }
+            .custom-row .card-wrapper .card .card-body .price .value .discount small {
+              text-decoration: line-through; }
+          .custom-row .card-wrapper .card .card-body .price i {
+            font-size: 1.25rem;
+            padding: 7px;
+            background-color: #2f2f2f;
+            border-radius: 50%;
+            position: relative; }
+        .custom-row .card-wrapper .card .card-body .legend {
+          margin: 0;
+          font-family: "OpenSans-Italic"; }
+      .custom-row .card-wrapper .card .card-title {
+        position: absolute;
+        color: #ff94b9;
+        background-color: #222;
+        padding: 8px 12px;
+        bottom: 0;
+        margin: 0;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-family: "OpenSans-Semibolditalic"; }
 
 /* Modificacion Ari */
 /* Key page */

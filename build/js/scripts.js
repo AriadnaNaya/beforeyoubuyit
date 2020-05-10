@@ -23,6 +23,20 @@ $(document).ready(function () {
   const userMessage = $('.message.user');
   const passwordMessage = $('.message.password');
 
+  const getCard = document.getElementsByClassName('card-wrapper');
+
+  for (let i = 0; i < getCard.length; i++) {
+    const element = getCard[i];
+    element.addEventListener('mouseenter', () => {
+      element.classList.add('hover')
+    });
+
+    element.addEventListener('mouseleave', () => {
+      element.classList.remove('hover')
+    });
+
+  }
+
   dniMessage.css('display', 'none');
   emailMessage.css('display', 'none');
   userMessage.css('display', 'none');

@@ -12,7 +12,7 @@ const livereload = require('livereload');
 // Controllers
 const indexRouter = require('./routes/index');
 const registroRouter = require('./routes/registro');
-const usersRouter = require('./routes/users');
+const juegosRouter = require('./routes/juegos');
 const homeRouter = require('./routes/home');
 const detalleRouter = require('./routes/detalle');
 const keyRouter = require('./routes/key');
@@ -53,7 +53,7 @@ liveReloadServer.server.once("connection", () => {
 // Navigation
 app.use('/', indexRouter);
 app.use('/registro', registroRouter);
-app.use('/users', usersRouter);
+app.use('/juegos', juegosRouter);
 app.use('/home', homeRouter);
 app.use ('/detalle', detalleRouter);
 app.use ('/key', keyRouter);

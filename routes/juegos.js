@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
   request(JuegosModel, function (error, response, body) {
     let data = JSON.parse(body);
     if (error) throw new Error(error);
-      res.render('users', {
+      res.render('juegos', {
         nombre: 'Homero',
         apellido: 'Thompson',
         title: 'GAME List',
