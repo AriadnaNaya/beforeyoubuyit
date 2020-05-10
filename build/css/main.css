@@ -19150,8 +19150,22 @@ i {
   margin-bottom: 10px;
   display: block; }
 
+.r-prodCarrito .btn {
+  margin-bottom: 10px; }
+
+.compra-Carrito {
+  margin-top: 10px; }
+  .compra-Carrito .totalPrice {
+    margin-top: 15px; }
+    .compra-Carrito .totalPrice .btn {
+      margin-top: 12px; }
+
 @media (max-width: 576px) {
   .r-prodCarrito img {
     width: 80%;
     margin: 0 auto;
-    display: block; } }
+    display: block; }
+  .consumo {
+    display: flex;
+    margin: 5px;
+    justify-content: space-around; } }

@@ -18,70 +18,84 @@
       <h1>CARRITO DE COMPRA</h1>
 
       <div class="prodCarrito">
-        
+
         <div class="r-prodCarrito row">
 
           <% for(var i = 0; i < carritoList.results.length; i++) { %>
-          
+
           <div class=" col-12 col-sm-3 mt-10">
-            <img class="img-fluid"
-              src="<%=  carritoList.results[i].background_image%>"
-              alt="imagen Producto">
+            <img class="img-fluid" src="<%=  carritoList.results[i].background_image%>" alt="imagen Producto">
           </div>
 
           <div class="col-12  col-sm-9 col-md-5 text-center text-md-left">
 
-            <p class="font-weight-bold"><%=  carritoList.results[i].name%></p>
+            <p class="font-weight-bold mt-4 mb-4"><%=  carritoList.results[i].name%></p>
 
-            <p>Una vez comprado el juego tendras que activarlo en STEAM con la llave y las instrucciones qie verás a continuación </p>
+            <p class="h6">Una vez comprado el juego tendras que activarlo en STEAM con la llave y las instrucciones qie
+              verás a continuación </p>
 
           </div>
           
-      
+          <div class="Precio col-12 col-md-2 mb-10 text-center">
+            <h6>ARS <%=  carritoList.results[i].price%></h6>
+          </div>
 
-        <div class="Precio col-6  col-md-2">
-          <h6>ARS <%=  carritoList.results[i].price%></h6>
+          <div class="consumo col-12 col-md-2 col-lg-1 mb-10">
+            
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cantidad 
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
 
+            <a href="#" class="btn btn-warning">Comprar</a>
+            <a href="#">Eliminar</a>
+          </div>
+
+          <% } %>
         </div>
-      
-        <div class="col-6 col-md-2">
-          <a href="#" class="btn btn-primary">Eliminar</a>
-        </div>
-      <% } %>    
+
       </div>
-      </div>
+
     </div>
 
     </div>
 
   </section>
+
   <section class="compra-Carrito mt-50">
-
     <div class="container">
-
-
       <div class="row">
 
         <div class="col-12 col-sm-4 col-lg-4">
           <h12>Todos Los Medios de Pago :</h12>
         </div>
-        <div class="col-6 col-sm-4 col-lg-4">
-          <h6>ARS 2.500</h6>
+        <div class="totalPrice col-6 col-sm-4 col-lg-4">
+          <h6>ARS 4000</h6>
         </div>
 
         <div class="col-6 col-sm-4 col-lg-4">
-          <a href="#" class="btn btn-primary">Comprar</a>
+          <a href="#" class="btn btn-warning">Compra Todos</a>
         </div>
 
       </div>
     </div>
   </section>
 
+  <section class="link">
+    <div class="container">
+      <div class="row col-12">
 
+        <a class="Juegos" href="users">Seguir comprando</a>
 
+      </div>
+    </div>
 
-
-  <a href="/beforeyoubuyit/views/home.ejs">Seguir Comprando</a>
+  </section>
 
   <%- include('../partials/scripts') %>
 </body>
