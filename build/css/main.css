@@ -19215,7 +19215,7 @@ i {
 .badge-secondary {
   color: #222; }
 
-.btn-group i.material-icons {
+a i.material-icons, .btn i.material-icons, .navbar .navbar-nav .nav-link.cart i.material-icons, .btn-group i.material-icons {
   font-size: inherit;
   position: relative;
   top: 2px; }
