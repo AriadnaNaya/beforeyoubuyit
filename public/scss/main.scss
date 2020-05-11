@@ -118,6 +118,17 @@ i {
   }
 }
 
+.dinamic-img-bg {
+  @include background(center, no-repeat, cover);
+  @include border-radius(0);
+  height: 180px;
+  position: relative;
+}
+
+.cta {
+  padding: 0 10px;
+}
+
 .custom-card-wrapper {
   > * {
     @extend .my-1;
@@ -200,10 +211,7 @@ i {
       margin-bottom: 2rem;
       border-color: $pink;
       .card-img {
-        @include background(center, no-repeat, cover);
-        @include border-radius(0);
-        height: 180px;
-        position: relative;
+        @extend .dinamic-img-bg;
       }
 
       .card-body {
@@ -400,6 +408,10 @@ i {
     align-items: center;
   }
 }
+.tituloJuego{
+  display: flex;
+  
+}
 
 .screenshots {
   margin-top: 1rem;
@@ -467,3 +479,36 @@ i {
 }
 
 /* Fin modificacion Ari*/
+.cart-wrapper {
+  padding: 1rem;
+  background-color: lighten($black, 5);
+  margin: 1rem 10px;
+  .in-cart {
+    @extend .d-flex;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed transparentize($pink, .5);
+
+    .img-wrapper {
+      @extend .dinamic-img-bg;
+      height: 130px;
+    }
+
+    .in-cart-title {
+      font-family: $font-bold;
+    }
+
+    .price {
+      @extend .align-self-end;
+      @extend .text-right;
+    }
+  }
+  .purchase {
+    @extend .d-flex;
+    @extend .justify-content-between;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+

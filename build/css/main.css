@@ -4914,7 +4914,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value {
+.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value, .cart-wrapper .in-cart, .cart-wrapper .purchase {
   display: flex !important; }
 
 .d-inline-flex {
@@ -5099,7 +5099,7 @@ button.bg-dark:focus {
 .justify-content-center, .login-screen {
   justify-content: center !important; }
 
-.justify-content-between, .custom-row .card-wrapper .card .card-body .price {
+.justify-content-between, .custom-row .card-wrapper .card .card-body .price, .cart-wrapper .purchase {
   justify-content: space-between !important; }
 
 .justify-content-around {
@@ -5144,7 +5144,7 @@ button.bg-dark:focus {
 .align-self-start, .custom-row .card-wrapper .card .card-body .price i {
   align-self: flex-start !important; }
 
-.align-self-end {
+.align-self-end, .cart-wrapper .in-cart .price {
   align-self: flex-end !important; }
 
 .align-self-center {
@@ -6990,7 +6990,7 @@ button.bg-dark:focus {
 .text-left {
   text-align: left !important; }
 
-.text-right {
+.text-right, .cart-wrapper .in-cart .price {
   text-align: right !important; }
 
 .text-center {
@@ -14240,7 +14240,7 @@ button.bg-blue:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value {
+.d-flex, .login-screen, .custom-row .card-wrapper .card .card-body .price, .custom-row .card-wrapper .card .card-body .price .value, .cart-wrapper .in-cart, .cart-wrapper .purchase {
   display: flex !important; }
 
 .d-inline-flex {
@@ -14437,7 +14437,7 @@ button.bg-blue:focus {
 .justify-content-center, .login-screen {
   justify-content: center !important; }
 
-.justify-content-between, .custom-row .card-wrapper .card .card-body .price {
+.justify-content-between, .custom-row .card-wrapper .card .card-body .price, .cart-wrapper .purchase {
   justify-content: space-between !important; }
 
 .justify-content-around {
@@ -14482,7 +14482,7 @@ button.bg-blue:focus {
 .align-self-start, .custom-row .card-wrapper .card .card-body .price i {
   align-self: flex-start !important; }
 
-.align-self-end {
+.align-self-end, .cart-wrapper .in-cart .price {
   align-self: flex-end !important; }
 
 .align-self-center {
@@ -16328,7 +16328,7 @@ button.bg-blue:focus {
 .text-left {
   text-align: left !important; }
 
-.text-right {
+.text-right, .cart-wrapper .in-cart .price {
   text-align: right !important; }
 
 .text-center {
@@ -19188,6 +19188,17 @@ i {
 .input-group i {
   color: #fff; }
 
+.dinamic-img-bg, .custom-row .card-wrapper .card .card-img, .cart-wrapper .in-cart .img-wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  height: 180px;
+  position: relative; }
+
+.cta {
+  padding: 0 10px; }
+
 .custom-card-wrapper .card {
   min-height: 10rem; }
 
@@ -19227,13 +19238,6 @@ i {
       overflow: hidden;
       margin-bottom: 2rem;
       border-color: #ff94b9; }
-      .custom-row .card-wrapper .card .card-img {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0;
-        height: 180px;
-        position: relative; }
       .custom-row .card-wrapper .card .card-body {
         background-color: #222;
         color: #ff94b9;
@@ -19360,6 +19364,9 @@ i {
   display: flex;
   align-items: center; }
 
+.tituloJuego {
+  display: flex; }
+
 .screenshots {
   margin-top: 1rem;
   width: 100%; }
@@ -19411,3 +19418,17 @@ i {
     border-bottom: 1px dashed rgba(89, 54, 206, 0.8); }
 
 /* Fin modificacion Ari*/
+.cart-wrapper {
+  padding: 1rem;
+  background-color: #2f2f2f;
+  margin: 1rem 10px; }
+  .cart-wrapper .in-cart {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed rgba(255, 148, 185, 0.5); }
+    .cart-wrapper .in-cart .img-wrapper {
+      height: 130px; }
+    .cart-wrapper .in-cart .in-cart-title {
+      font-family: "OpenSans-Bold"; }
+  .cart-wrapper p {
+    margin-bottom: 0; }
