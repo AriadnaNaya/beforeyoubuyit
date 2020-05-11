@@ -10,14 +10,18 @@
   <%- include('../partials/header') %>
   <!-- /.navbar header -->
 
+  <div class="w-100">
+    <%- include('../partials/slider') %>
+  </div>
   <!-- home content -->
   <div class="container">
-    <h6 class="text-pink p-2">There are: <%= gameList.count %> results in this API</h6>
     <div class="custom-row">
       <%- include('../partials/game-card') %>
     </div>
   </div>
   <!-- /.home content -->
+
+  <%- include('../partials/footer') %>
 
   <%- include('../partials/scripts') %>
 </body>

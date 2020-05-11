@@ -1,6 +1,5 @@
 $(document).ready(function () {
   
-
   // Login form validation to check if fields are empty
   const loginForm = $('#loginForm');
   const loginSubmit = $('#loginSubmit');
@@ -10,15 +9,57 @@ $(document).ready(function () {
   const user = $('input[name=user]');
   const password = $('input[name=password]');
 
+  const trailer = $('button[id=trailer]');
+  const gameplay = $('button[id=gameplay]');
+  const honest = $('button[id=honest]');
+
+  const trailerTitle = $('.trailer');
+  const gameplayTitle = $('.gameplay');
+  const honestTitle = $('.honest');
+
   const dniMessage = $('.message.dni');
   const emailMessage = $('.message.email');
   const userMessage = $('.message.user');
   const passwordMessage = $('.message.password');
 
+  const getCard = document.getElementsByClassName('card-wrapper');
+
+  for (let i = 0; i < getCard.length; i++) {
+    const element = getCard[i];
+    element.addEventListener('mouseenter', () => {
+      element.classList.add('hover')
+    });
+
+    element.addEventListener('mouseleave', () => {
+      element.classList.remove('hover')
+    });
+
+  }
+
   dniMessage.css('display', 'none');
   emailMessage.css('display', 'none');
   userMessage.css('display', 'none');
   passwordMessage.css('display', 'none');
+
+  trailerTitle.css('display', 'block');
+  gameplayTitle.css('display', 'none');
+  honestTitle.css('display', 'none');
+
+  trailer.bind('click', () => {
+    trailerTitle.css('display', 'block');
+    gameplayTitle.css('display', 'none');
+    honestTitle.css('display', 'none');
+  })
+  gameplay.bind('click', () => {
+    trailerTitle.css('display', 'none');
+    gameplayTitle.css('display', 'block');
+    honestTitle.css('display', 'none');
+  })
+  honest.bind('click', () => {
+    trailerTitle.css('display', 'none');
+    gameplayTitle.css('display', 'none');
+    honestTitle.css('display', 'block');
+  })
 
   loginSubmit.bind('click', function () {
     event.preventDefault();

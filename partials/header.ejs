@@ -1,7 +1,7 @@
 <!-- navbar header -->
 <header class="navbar">
   <nav class="container">
-    <a class="navbar-brand" href="home"><i class="icon-bub text-sunflower"></i>BUB</a>
+    <a class="navbar-brand" href="juegos"><i class="icon-bub text-sunflower"></i>BUB</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,11 +9,14 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto ml-2">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="home">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="juegos">Juegos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="users">Juegos</a>
+          <a class="nav-link" href="key">Carga</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)">Ayuda</a>
@@ -24,10 +27,16 @@
           <a href="/" class="nav-link">Login</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
-            <div class="user-info-left">
-              <strong><%= nombre %> <%= apellido %> <i class="fa fa-user"></i> </strong>
-            </div>
+          <a href="javascript:void(0)" class="nav-link">
+            <strong><%= nombre %> <%= apellido %></strong>
+          </a>
+        </li>
+        <li class="nav-item">
+          <img src="assets/misc/morgado.jpg" alt="">
+        </li>
+        <li class="nav-item">
+          <a href="carrito" class="nav-link cart">
+            <i class="material-icons">shopping_cart</i>
           </a>
         </li>
       </ul>

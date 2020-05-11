@@ -16,6 +16,7 @@ $success: #48ce65;
 $danger: #e72323;
 $info: #237fe7;
 $primary: #5936ce;
+$secondary: #9683d3;
 $default: $primary;
 $input-group-addon-bg: $default;
 $input-border-color: $default;
@@ -93,4 +94,7 @@ $theme-colors: map-merge(("primary": $primary,
 
 //Custom sizes
 $menu-mobile: 250px;
+$game-card-height: 242px;
+$card-start-height: 242px;
+$card-end-height: 325px;
 

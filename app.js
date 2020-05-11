@@ -1,28 +1,39 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
 
 // LiveReload dependencies
-var connectLivereload = require("connect-livereload");
+const connectLivereload = require("connect-livereload");
 const livereload = require('livereload');
 
 // Controllers
-var indexRouter = require('./routes/index');
-var registroRouter = require('./routes/registro');
-var usersRouter = require('./routes/users');
-var homeRouter = require('./routes/home');
+const indexRouter = require('./routes/index');
+const registroRouter = require('./routes/registro');
+const juegosRouter = require('./routes/juegos');
+const homeRouter = require('./routes/home');
+const detalleRouter = require('./routes/detalle');
+const keyRouter = require('./routes/key');
+const cargaRouter = require('./routes/carga');
+var carritoRouter = require('./routes/carrito');
+var confirmacionRouter = require('./routes/confirmacion');
 
-var app = express();
+const app = express();
 app.use(connectLivereload());
+
+app.use(methodOverride('_method'));
 
 // Trhird party and custom js
 app.use('/assets', [
   express.static(__dirname + '/build/js'),
   express.static(__dirname + '/node_modules/jquery/dist/'),
-  express.static(__dirname + '/node_modules/bootstrap/dist/js/')
+  express.static(__dirname + '/node_modules/bootstrap/dist/js/'),
+  express.static(__dirname + '/node_modules/material-design-icons/iconfont/'),
+  express.static(__dirname + '/public/images/')
 ]);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +45,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'build')));
-var liveReloadServer = livereload.createServer();
+const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, 'build'));
 
 liveReloadServer.server.once("connection", () => {
@@ -46,8 +57,13 @@ liveReloadServer.server.once("connection", () => {
 // Navigation
 app.use('/', indexRouter);
 app.use('/registro', registroRouter);
-app.use('/users', usersRouter);
+app.use('/juegos', juegosRouter);
 app.use('/home', homeRouter);
+app.use ('/detalle', detalleRouter);
+app.use ('/key', keyRouter);
+app.use ('/carga', cargaRouter);
+app.use('/carrito', carritoRouter);
+app.use('/confirmacion', confirmacionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,13 +72,19 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  if (res.status(404)) {
+    res.status(400).render('notfound');
+  } else {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+  }
+  
+  
 });
 
 module.exports = app;

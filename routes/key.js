@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET key page. */
 router.get('/', function(req, res, next) {
-  
-  res.render('home', {
-    title: 'Home',
-    nombre: 'Homero',
-    apellido: 'Thompson'
+  res.render('key', 
+  { title: 'Carga Key',
+    nombre: 'Admin',
+    apellido: '-'
   });
 });
 

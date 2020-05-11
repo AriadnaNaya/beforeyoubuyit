@@ -1,0 +1,28 @@
+
+{
+  "user": "ezequiel.turchetti@gmail.com",
+
+	"results": [
+
+		{
+			"id": 3498,
+			"name": "Grand Theft Auto V",
+			"released": "2013-09-17",
+			"background_image": "https://media.rawg.io/media/games/b11/b115b2bc6a5957a917bc7601f4abdda2.jpg",
+			"price": 2200,
+			"platform":  "steam",
+			"key": "34as-x2-ytc2-63cn"
+		},
+
+		{
+			"id": 4200,
+			"name": "Portal 2",
+			"released": "2011-04-19",
+			"price": 1800,
+			"background_image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+			"platform": "xbox-store",
+			"key": "115s-7av-f5e5-4t7y"
+
+		}
+	]
+}
