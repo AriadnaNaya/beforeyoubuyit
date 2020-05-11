@@ -400,6 +400,10 @@ i {
     align-items: center;
   }
 }
+.tituloJuego{
+  display: flex;
+  
+}
 
 .screenshots {
   margin-top: 1rem;
@@ -467,3 +471,46 @@ i {
 }
 
 /* Fin modificacion Ari*/
+
+.prodCarrito{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.r-prodCarrito{
+  margin-top: 50px;
+  align-items: center;
+} 
+.r-prodCarrito img {
+  width: 80%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: block;
+  }
+ 
+.r-prodCarrito .btn{
+  margin-bottom: 10px;
+} 
+   
+.compra-Carrito {
+  margin-top: 10px;
+  .totalPrice {
+    margin-top: 15px;
+  .btn{
+    margin-top: 12px;
+  }   
+  }
+} 
+@media (max-width : 576px){
+  .r-prodCarrito img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+ 
+  }
+  .consumo{
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+  }
+}
+

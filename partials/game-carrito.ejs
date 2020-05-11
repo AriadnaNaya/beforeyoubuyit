@@ -1,0 +1,29 @@
+<% for(var i = 0; i < carritoList.results.length; i++) { %>
+
+    <div class="card-img">
+        <div class="col-6">
+        <img src="<%=  carritoList.results[i].background_image %>" alt="Imagen Producto">
+    </div>
+    </div>
+
+
+    <div class="card-body">
+        <% for (var j=0; j< carritoList.results[i].platform.length; j++) { %>
+
+        <% if ( carritoList.results[i].platform[j] === 'steam') { %>
+        <i class="icon-steam"></i>
+        <% } %>
+        <% if ( carritoList.results[i].platform[j] === 'epic-games') { %>
+        <i class="icon-epic"></i>
+        <% } %>
+        <% if ( carritoList.results[i].platform[j] === 'gog') { %>
+        <i class="icon-gog"></i>
+        <% } %>
+        <% if ( carritoList.results[i].platform[j] === 'xbox-store') { %>
+        <i class="icon-xbox"></i>
+        <% } %>
+        <% } %>
+    </div>
+
+
+<% } %>

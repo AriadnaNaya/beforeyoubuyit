@@ -10,6 +10,7 @@ const connectLivereload = require("connect-livereload");
 const livereload = require('livereload');
 
 // Controllers
+var carritoRouter = require('./routes/carrito');
 const indexRouter = require('./routes/index');
 const registroRouter = require('./routes/registro');
 const juegosRouter = require('./routes/juegos');
@@ -58,6 +59,7 @@ app.use('/home', homeRouter);
 app.use ('/detalle', detalleRouter);
 app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
+app.use('/carrito', carritoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
