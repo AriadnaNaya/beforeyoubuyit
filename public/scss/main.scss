@@ -93,6 +93,16 @@ i {
       text-transform: uppercase;
       padding-left: 20px;
       padding-right: 20px;
+      &.cart {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-sm;
+        i {
+          position: relative;
+          top: 3px;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
   .navbar-brand {
@@ -228,7 +238,7 @@ i {
             font-size: 1.25rem;
             padding: 7px;
             background-color: lighten($black, 5);
-            border-radius: 50%;
+            @include border-radius(50%);
             position: relative;
           }
         }

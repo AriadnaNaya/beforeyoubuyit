@@ -1745,7 +1745,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .navbar .navbar-nav .nav-link.cart {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1761,45 +1761,49 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, .navbar .navbar-nav .nav-link.cart {
       transition: none; } }
-  .btn:hover {
+  .btn:hover, .navbar .navbar-nav .nav-link.cart:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .navbar .navbar-nav .nav-link.cart:focus, .btn.focus, .navbar .navbar-nav .focus.nav-link.cart {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(89, 54, 206, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .navbar .navbar-nav .disabled.nav-link.cart, .btn:disabled, .navbar .navbar-nav .nav-link.cart:disabled {
     opacity: 0.65; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .navbar .navbar-nav a.disabled.nav-link.cart,
+fieldset:disabled a.btn,
+fieldset:disabled .navbar .navbar-nav a.nav-link.cart,
+.navbar .navbar-nav fieldset:disabled a.nav-link.cart {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, .navbar .navbar-nav .nav-link.cart {
   color: #fff;
   background-color: #5936ce;
   border-color: #5936ce; }
-  .btn-primary:hover {
+  .btn-primary:hover, .navbar .navbar-nav .nav-link.cart:hover {
     color: #fff;
     background-color: #4b2bb2;
     border-color: #4629a8; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, .navbar .navbar-nav .nav-link.cart:focus, .btn-primary.focus, .navbar .navbar-nav .focus.nav-link.cart {
     color: #fff;
     background-color: #4b2bb2;
     border-color: #4629a8;
     box-shadow: 0 0 0 0.2rem rgba(114, 84, 213, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, .navbar .navbar-nav .disabled.nav-link.cart, .btn-primary:disabled, .navbar .navbar-nav .nav-link.cart:disabled {
     color: #fff;
     background-color: #5936ce;
     border-color: #5936ce; }
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:not(:disabled):not(.disabled):active, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle,
+  .navbar .navbar-nav .show > .dropdown-toggle.nav-link.cart {
     color: #fff;
     background-color: #4629a8;
     border-color: #42269e; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    .navbar .navbar-nav .show > .dropdown-toggle.nav-link.cart:focus {
       box-shadow: 0 0 0 0.2rem rgba(114, 84, 213, 0.5); }
 
 .btn-secondary {
@@ -2166,13 +2170,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .navbar .navbar-nav .btn-group-lg > .nav-link.cart {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .navbar .navbar-nav .nav-link.cart {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2416,17 +2420,22 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .navbar .navbar-nav .btn-group > .nav-link.cart,
+  .btn-group-vertical > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .nav-link.cart {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .navbar .navbar-nav .btn-group > .nav-link.cart:hover,
+    .btn-group-vertical > .btn:hover,
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, .navbar .navbar-nav .btn-group > .nav-link.cart:focus, .btn-group > .btn:active, .navbar .navbar-nav .btn-group > .nav-link.cart:active, .btn-group > .btn.active, .navbar .navbar-nav .btn-group > .active.nav-link.cart,
     .btn-group-vertical > .btn:focus,
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:active,
+    .btn-group-vertical > .btn.active,
+    .navbar .navbar-nav .btn-group-vertical > .active.nav-link.cart {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2436,17 +2445,19 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.navbar .navbar-nav .btn-group > .btn-group:not(:last-child) > .nav-link.cart {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.navbar .navbar-nav .btn-group > .btn-group:not(:first-child) > .nav-link.cart {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2460,11 +2471,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .navbar .navbar-nav .btn-group-sm > .nav-link.cart + .dropdown-toggle-split, .navbar .navbar-nav .nav-link.cart + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .navbar .navbar-nav .btn-group-lg > .nav-link.cart + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2472,28 +2483,36 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
+  
   .btn-group-vertical > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .nav-link.cart,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .btn-group:not(:last-child) > .nav-link.cart {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .btn-group:not(:first-child) > .nav-link.cart {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .navbar .navbar-nav .btn-group-toggle > .nav-link.cart,
+.btn-group-toggle > .btn-group > .btn,
+.navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .navbar .navbar-nav .btn-group-toggle > .nav-link.cart input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .navbar .navbar-nav .btn-group-toggle > .nav-link.cart input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2553,21 +2572,39 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .navbar .navbar-nav .nav-link.cart, .navbar .navbar-nav .input-group-prepend .nav-link.cart,
+  .input-group-append .btn,
+  .input-group-append .navbar .navbar-nav .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .nav-link.cart {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
+    .input-group-prepend .btn:focus, .input-group-prepend .navbar .navbar-nav .nav-link.cart:focus, .navbar .navbar-nav .input-group-prepend .nav-link.cart:focus,
+    .input-group-append .btn:focus,
+    .input-group-append .navbar .navbar-nav .nav-link.cart:focus,
+    .navbar .navbar-nav .input-group-append .nav-link.cart:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .navbar .navbar-nav .nav-link.cart + .btn, .navbar .navbar-nav .input-group-prepend .nav-link.cart + .btn, .input-group-prepend .navbar .navbar-nav .btn + .nav-link.cart, .navbar .navbar-nav .input-group-prepend .btn + .nav-link.cart, .input-group-prepend .navbar .navbar-nav .nav-link.cart + .nav-link.cart, .navbar .navbar-nav .input-group-prepend .nav-link.cart + .nav-link.cart,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .navbar .navbar-nav .nav-link.cart + .input-group-text,
+  .navbar .navbar-nav .input-group-prepend .nav-link.cart + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .navbar .navbar-nav .input-group-text + .nav-link.cart,
+  .navbar .navbar-nav .input-group-prepend .input-group-text + .nav-link.cart,
   .input-group-append .btn + .btn,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .btn,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .btn,
+  .input-group-append .navbar .navbar-nav .btn + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .btn + .nav-link.cart,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .nav-link.cart,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .input-group-text,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .navbar .navbar-nav .input-group-text + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .input-group-text + .nav-link.cart {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2603,7 +2640,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.navbar .navbar-nav .input-group-lg > .input-group-prepend > .nav-link.cart,
+.input-group-lg > .input-group-append > .btn,
+.navbar .navbar-nav .input-group-lg > .input-group-append > .nav-link.cart {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2618,7 +2657,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.navbar .navbar-nav .input-group-sm > .input-group-prepend > .nav-link.cart,
+.input-group-sm > .input-group-append > .btn,
+.navbar .navbar-nav .input-group-sm > .input-group-append > .nav-link.cart {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2628,20 +2669,24 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .navbar .navbar-nav .input-group > .input-group-prepend > .nav-link.cart,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.navbar .navbar-nav .input-group > .input-group-append:not(:last-child) > .nav-link.cart,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.navbar .navbar-nav .input-group > .input-group-append:last-child > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .navbar .navbar-nav .input-group > .input-group-append > .nav-link.cart,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.navbar .navbar-nav .input-group > .input-group-prepend:not(:first-child) > .nav-link.cart,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.navbar .navbar-nav .input-group > .input-group-prepend:first-child > .nav-link.cart:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3586,7 +3631,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .navbar .navbar-nav .nav-link.cart .badge {
   position: relative;
   top: -1px; }
 
@@ -9260,7 +9305,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .navbar .navbar-nav .nav-link.cart {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -9276,45 +9321,49 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, .navbar .navbar-nav .nav-link.cart {
       transition: none; } }
-  .btn:hover {
+  .btn:hover, .navbar .navbar-nav .nav-link.cart:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .navbar .navbar-nav .nav-link.cart:focus, .btn.focus, .navbar .navbar-nav .focus.nav-link.cart {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(89, 54, 206, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .navbar .navbar-nav .disabled.nav-link.cart, .btn:disabled, .navbar .navbar-nav .nav-link.cart:disabled {
     opacity: 0.65; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .navbar .navbar-nav a.disabled.nav-link.cart,
+fieldset:disabled a.btn,
+fieldset:disabled .navbar .navbar-nav a.nav-link.cart,
+.navbar .navbar-nav fieldset:disabled a.nav-link.cart {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, .navbar .navbar-nav .nav-link.cart {
   color: #fff;
   background-color: #5936ce;
   border-color: #5936ce; }
-  .btn-primary:hover {
+  .btn-primary:hover, .navbar .navbar-nav .nav-link.cart:hover {
     color: #fff;
     background-color: #4b2bb2;
     border-color: #4629a8; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, .navbar .navbar-nav .nav-link.cart:focus, .btn-primary.focus, .navbar .navbar-nav .focus.nav-link.cart {
     color: #fff;
     background-color: #4b2bb2;
     border-color: #4629a8;
     box-shadow: 0 0 0 0.2rem rgba(114, 84, 213, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, .navbar .navbar-nav .disabled.nav-link.cart, .btn-primary:disabled, .navbar .navbar-nav .nav-link.cart:disabled {
     color: #fff;
     background-color: #5936ce;
     border-color: #5936ce; }
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:not(:disabled):not(.disabled):active, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle,
+  .navbar .navbar-nav .show > .dropdown-toggle.nav-link.cart {
     color: #fff;
     background-color: #4629a8;
     border-color: #42269e; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .navbar .navbar-nav .nav-link.cart:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    .navbar .navbar-nav .show > .dropdown-toggle.nav-link.cart:focus {
       box-shadow: 0 0 0 0.2rem rgba(114, 84, 213, 0.5); }
 
 .btn-secondary {
@@ -10621,13 +10670,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .navbar .navbar-nav .btn-group-lg > .nav-link.cart {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .navbar .navbar-nav .nav-link.cart {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -10871,17 +10920,22 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .navbar .navbar-nav .btn-group > .nav-link.cart,
+  .btn-group-vertical > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .nav-link.cart {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .navbar .navbar-nav .btn-group > .nav-link.cart:hover,
+    .btn-group-vertical > .btn:hover,
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, .navbar .navbar-nav .btn-group > .nav-link.cart:focus, .btn-group > .btn:active, .navbar .navbar-nav .btn-group > .nav-link.cart:active, .btn-group > .btn.active, .navbar .navbar-nav .btn-group > .active.nav-link.cart,
     .btn-group-vertical > .btn:focus,
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:active,
+    .btn-group-vertical > .btn.active,
+    .navbar .navbar-nav .btn-group-vertical > .active.nav-link.cart {
       z-index: 1; }
 
 .btn-toolbar {
@@ -10891,17 +10945,19 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.navbar .navbar-nav .btn-group > .btn-group:not(:last-child) > .nav-link.cart {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .navbar .navbar-nav .btn-group > .nav-link.cart:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.navbar .navbar-nav .btn-group > .btn-group:not(:first-child) > .nav-link.cart {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -10915,11 +10971,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .navbar .navbar-nav .btn-group-sm > .nav-link.cart + .dropdown-toggle-split, .navbar .navbar-nav .nav-link.cart + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .navbar .navbar-nav .btn-group-lg > .nav-link.cart + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -10927,28 +10983,36 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
+  
   .btn-group-vertical > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .nav-link.cart,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .btn-group:not(:last-child) > .nav-link.cart {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .navbar .navbar-nav .btn-group-vertical > .nav-link.cart:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .navbar .navbar-nav .btn-group-vertical > .btn-group:not(:first-child) > .nav-link.cart {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .navbar .navbar-nav .btn-group-toggle > .nav-link.cart,
+.btn-group-toggle > .btn-group > .btn,
+.navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .navbar .navbar-nav .btn-group-toggle > .nav-link.cart input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .navbar .navbar-nav .btn-group-toggle > .nav-link.cart input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .navbar .navbar-nav .btn-group-toggle > .btn-group > .nav-link.cart input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -11008,21 +11072,39 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .navbar .navbar-nav .nav-link.cart, .navbar .navbar-nav .input-group-prepend .nav-link.cart,
+  .input-group-append .btn,
+  .input-group-append .navbar .navbar-nav .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .nav-link.cart {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
+    .input-group-prepend .btn:focus, .input-group-prepend .navbar .navbar-nav .nav-link.cart:focus, .navbar .navbar-nav .input-group-prepend .nav-link.cart:focus,
+    .input-group-append .btn:focus,
+    .input-group-append .navbar .navbar-nav .nav-link.cart:focus,
+    .navbar .navbar-nav .input-group-append .nav-link.cart:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .navbar .navbar-nav .nav-link.cart + .btn, .navbar .navbar-nav .input-group-prepend .nav-link.cart + .btn, .input-group-prepend .navbar .navbar-nav .btn + .nav-link.cart, .navbar .navbar-nav .input-group-prepend .btn + .nav-link.cart, .input-group-prepend .navbar .navbar-nav .nav-link.cart + .nav-link.cart, .navbar .navbar-nav .input-group-prepend .nav-link.cart + .nav-link.cart,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .navbar .navbar-nav .nav-link.cart + .input-group-text,
+  .navbar .navbar-nav .input-group-prepend .nav-link.cart + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .navbar .navbar-nav .input-group-text + .nav-link.cart,
+  .navbar .navbar-nav .input-group-prepend .input-group-text + .nav-link.cart,
   .input-group-append .btn + .btn,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .btn,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .btn,
+  .input-group-append .navbar .navbar-nav .btn + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .btn + .nav-link.cart,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .nav-link.cart,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .navbar .navbar-nav .nav-link.cart + .input-group-text,
+  .navbar .navbar-nav .input-group-append .nav-link.cart + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .navbar .navbar-nav .input-group-text + .nav-link.cart,
+  .navbar .navbar-nav .input-group-append .input-group-text + .nav-link.cart {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -11058,7 +11140,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.navbar .navbar-nav .input-group-lg > .input-group-prepend > .nav-link.cart,
+.input-group-lg > .input-group-append > .btn,
+.navbar .navbar-nav .input-group-lg > .input-group-append > .nav-link.cart {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -11073,7 +11157,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.navbar .navbar-nav .input-group-sm > .input-group-prepend > .nav-link.cart,
+.input-group-sm > .input-group-append > .btn,
+.navbar .navbar-nav .input-group-sm > .input-group-append > .nav-link.cart {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -11083,20 +11169,24 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .navbar .navbar-nav .input-group > .input-group-prepend > .nav-link.cart,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.navbar .navbar-nav .input-group > .input-group-append:not(:last-child) > .nav-link.cart,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.navbar .navbar-nav .input-group > .input-group-append:last-child > .nav-link.cart:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .navbar .navbar-nav .input-group > .input-group-append > .nav-link.cart,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.navbar .navbar-nav .input-group > .input-group-prepend:not(:first-child) > .nav-link.cart,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.navbar .navbar-nav .input-group > .input-group-prepend:first-child > .nav-link.cart:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -12041,7 +12131,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .navbar .navbar-nav .nav-link.cart .badge {
   position: relative;
   top: -1px; }
 
@@ -19085,6 +19175,10 @@ i {
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px; }
+  .navbar .navbar-nav .nav-link.cart i {
+    position: relative;
+    top: 3px;
+    font-size: 1.2rem; }
 
 .navbar .navbar-brand {
   font-family: "LeagueGothic-CondensedRegular";
