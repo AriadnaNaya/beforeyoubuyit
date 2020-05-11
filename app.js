@@ -31,7 +31,9 @@ app.use('/assets', [
   express.static(__dirname + '/node_modules/jquery/dist/'),
   express.static(__dirname + '/node_modules/bootstrap/dist/js/'),
   express.static(__dirname + '/node_modules/material-design-icons/iconfont/'),
+  express.static(__dirname + '/public/images/')
 ]);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

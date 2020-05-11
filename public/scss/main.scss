@@ -105,6 +105,18 @@ button.btn {
         }
       }
     }
+    .nav-item {
+      img {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+        bottom: 1px;
+        @include border-radius(50%);
+        background-color: $primary;
+      }
+    }
     .nav-link {
       color: $white;
       text-transform: uppercase;
