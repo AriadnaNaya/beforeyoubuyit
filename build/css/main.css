@@ -4725,7 +4725,7 @@ a.close.disabled {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.bg-primary, .custom-card-wrapper .full .card {
+.bg-primary, .custom-card-wrapper .full .card, footer {
   background-color: #5936ce !important; }
 
 a.bg-primary:hover, .custom-card-wrapper .full a.card:hover, a.bg-primary:focus, .custom-card-wrapper .full a.card:focus,
@@ -5558,7 +5558,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100 {
+.w-100, footer {
   width: 100% !important; }
 
 .w-auto {
@@ -13825,7 +13825,7 @@ a.close.disabled {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.bg-primary, .custom-card-wrapper .full .card {
+.bg-primary, .custom-card-wrapper .full .card, footer {
   background-color: #5936ce !important; }
 
 a.bg-primary:hover, .custom-card-wrapper .full a.card:hover, a.bg-primary:focus, .custom-card-wrapper .full a.card:focus,
@@ -14896,7 +14896,7 @@ button.bg-blue:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100 {
+.w-100, footer {
   width: 100% !important; }
 
 .w-auto {
@@ -16534,10 +16534,10 @@ a.text-purple:hover, a.text-purple:focus {
 a.text-indigo:hover, a.text-indigo:focus {
   color: #0884f1 !important; }
 
-.text-pink {
+.text-pink, footer a {
   color: #ff94b9 !important; }
 
-a.text-pink:hover, a.text-pink:focus {
+a.text-pink:hover, footer a:hover, a.text-pink:focus, footer a:focus {
   color: #ff4887 !important; }
 
 .text-berry {
@@ -19124,14 +19124,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover,
 a,
-button,
-i {
+button {
   transition: all 0.5s ease; }
   @media (prefers-reduced-motion: reduce) {
     .hover,
     a,
-    button,
-    i {
+    button {
       transition: none; } }
   .hover:focus, .hover:hover, .hover:visited,
   a:focus,
@@ -19139,10 +19137,7 @@ i {
   a:visited,
   button:focus,
   button:hover,
-  button:visited,
-  i:focus,
-  i:hover,
-  i:visited {
+  button:visited {
     text-decoration: none; }
 
 .input-group-append .fa,
@@ -19440,3 +19435,15 @@ a i.material-icons, .btn i.material-icons, .navbar .navbar-nav .nav-link.cart i.
       height: 175px; }
   .cart-wrapper p {
     margin-bottom: 0; }
+
+footer {
+  padding: 2rem 0; }
+  footer h6 {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed rgba(255, 148, 185, 0.5); }
+  footer .social a > i {
+    font-size: 1.25rem;
+    padding-right: 1rem; }
+  footer .copy {
+    margin-top: 2rem; }

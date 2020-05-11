@@ -32,8 +32,7 @@ h6 {
 
 .hover,
 a,
-button,
-i {
+button {
   @include transition(all .5s ease);
 
   &:focus,
@@ -539,3 +538,25 @@ a, .btn, .btn-group {
   }
 }
 
+footer {
+  @extend .w-100;
+  @extend .bg-primary;
+  padding: 2rem 0;
+  h6 {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed transparentize($pink, .5);
+  }
+  a {
+    @extend .text-pink;
+  }
+  .social {
+    a > i {
+      font-size: 1.25rem;
+      padding-right: 1rem;
+    }
+  }
+  .copy {
+    margin-top: 2rem;
+  }
+}
