@@ -28,7 +28,7 @@
     "express": "~4.16.1",
     "font-awesome": "^4.7.0",
     "http-errors": "~1.6.3",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "jsdom": "^16.2.2",
     "material-design-icons": "^3.0.1",
     "method-override": "^3.0.0",
