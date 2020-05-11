@@ -272,35 +272,38 @@ i {
 }
 
 /* Carga page */
-.segunda {
-  margin-top: 25px;
-
-  .infoBase {
-    margin-top: 20px;
-  }
-
-  .IzqColumna {
-    .hero-item {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .DerColumna {
-    .imagen {
-      img {
-        width: 100%;
-
+#accordion {
+  margin-top: 3rem;
+  .card {
+    background-color: $clear;
+    border: none;
+    .card-header {
+      background-color: lighten($black, 5);
+      button {
+        color: $pink;
       }
     }
-
-    .cambiarImg {
-      margin-top: 20px;
-      margin-left: 10px;
+    .card-body {
+      i {
+        font-size: inherit;
+      }
+      a:not(.badge) {
+        i {
+          @extend .text-secondary;
+        }
+      }
+    }
+    .hero-wrapper {
+      margin-left: 15px;
+      margin-right: 15px;
     }
   }
 }
 
+.img-wrapper,
+.img-wrapper img {
+  width: 100%;
+}
 /* Detalle page */
 
 .tituloRequisitos,
