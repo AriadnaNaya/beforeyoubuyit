@@ -163,6 +163,10 @@ button.btn {
   font-family: $font-bold;
 }
 
+.margin-bottom-xl {
+  margin-bottom: 10rem;
+}
+
 .custom-card-wrapper {
   > * {
     @extend .my-1;
@@ -554,6 +558,7 @@ footer {
   @extend .w-100;
   @extend .bg-primary;
   padding: 2rem 0;
+  margin-top: 5rem;
   h6 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;

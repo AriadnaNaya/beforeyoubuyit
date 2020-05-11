@@ -19214,6 +19214,9 @@ button {
 .bold-case, .cart-wrapper .in-cart .in-cart-title, .cart-wrapper .in-cart .price strong {
   font-family: "OpenSans-Bold"; }
 
+.margin-bottom-xl {
+  margin-bottom: 10rem; }
+
 .custom-card-wrapper .card {
   min-height: 10rem; }
 
@@ -19447,7 +19450,8 @@ a i.material-icons, .btn i.material-icons, .navbar .navbar-nav .nav-link.cart i.
     margin-bottom: 0; }
 
 footer {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  margin-top: 5rem; }
   footer h6 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
