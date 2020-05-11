@@ -43,11 +43,29 @@ i {
   }
 }
 
+button.btn {
+  @extend .text-uppercase;
+}
+
 .input-group-append,
 .input-group-preppend {
   .fa {
     padding-top: 10px;
   }
+}
+
+.title {
+  @extend .h4;
+  @extend .text-uppercase;
+}
+
+.text-small,
+.text-small p {
+  font-size: 85%;
+}
+
+.lighten {
+  opacity: .7;
 }
 
 .absolute-center {
@@ -127,6 +145,11 @@ i {
 
 .cta {
   padding: 0 10px;
+}
+
+.bold-case {
+  @extend .text-uppercase;
+  font-family: $font-bold;
 }
 
 .custom-card-wrapper {
@@ -398,7 +421,7 @@ i {
   }
 
   .price {
-    p {
+    > * {
       margin: 0px;
     }
   }
@@ -491,16 +514,20 @@ i {
 
     .img-wrapper {
       @extend .dinamic-img-bg;
-      height: 130px;
+      height: 175px;
     }
 
     .in-cart-title {
-      font-family: $font-bold;
+      @extend .bold-case;
+      @extend .mb-3;
     }
 
     .price {
       @extend .align-self-end;
       @extend .text-right;
+      strong {
+        @extend .bold-case;
+      }
     }
   }
   .purchase {

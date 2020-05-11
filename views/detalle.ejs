@@ -101,7 +101,7 @@
 								Plataforma
 							</button>
 							<div class="price">
-								<p>ARS$ <strong>1.200,00</strong></p>
+								<h6>ARS$ <strong>1.200,00</strong></h6>
 							</div>
 							<div class="dropdown-menu">
 								<% for (var j=0; j< juego.stores.length; j++) { %>
@@ -120,9 +120,10 @@
 								<% } %>
 							</div>
 						</div>
-						<div class="btn-group">
-							<button type="button" class="btn btn-success"><i class="material-icons">vertical_align_bottom</i>Demo</button>
-						</div>
+						<form method="GET" action="carrito" class="btn-group">
+							<button type="button" class="btn btn-success"><i class="material-icons">vertical_align_bottom</i> Demo</button>
+							<button type="submit" class="btn btn-primary"><i class="material-icons">shopping_cart</i> Comprar</button>
+						</form>
 
 
 					</div>

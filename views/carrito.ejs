@@ -14,9 +14,9 @@
 
   <section class="container">
     <div class="col-12">
-      <h4>Mi carrito</h4>
+      <h4 class="title">Mi carrito</h4>
     </div>
-    <div class="cart-wrapper">
+    <form method="GET" action="confirmacion" class="cart-wrapper">
       <% for(var i = 0; i < carritoList.results.length; i++) { %>
         <div class="in-cart w-100">
           <div class="col-12 col-md-2 img-wrapper"
@@ -24,8 +24,33 @@
           </div>
           <div class="col-12 col-md-8">
             <p class="in-cart-title"><%=  carritoList.results[i].name%></p>
-            <p>Una vez comprado el juego tendras que activarlo en STEAM con la llave y las instrucciones que
+            <p class="bold-case">
+              <% if ( carritoList.results[i].platform === 'steam') { %>
+                <i class="icon-steam"></i> Steam Key
+              <% } %>
+            </p>
+            <p class="bold-case">
+              <% if ( carritoList.results[i].platform === 'epic-games') { %>
+                <i class="icon-epic"></i> Epic Games Key
+              <% } %>
+            </p>
+            <p class="bold-case">
+              <% if ( carritoList.results[i].platform === 'gog') { %>
+                <i class="icon-gog"></i> GOG Key
+              <% } %>
+            </p>
+            <p class="bold-case">
+              <% if ( carritoList.results[i].platform === 'xbox-store') { %>
+                <i class="icon-xbox"></i> Xbox Store Key
+              <% } %>
+            </p>
+            
+            <p class="bold-case">Activación global</p>
+              
+            <p class="mt-3">Una vez comprado el juego tendras que activarlo en STEAM con la llave y las instrucciones que
               verás a continuación </p>
+            <p class="mt-3">Podrás ver el código de la llave en tu perfil > mis compras o en tu dirección de correo
+              electrónico.</p>
           </div>
           <div class="col-12 col-md-2 price">
             <strong>ARS <%= carritoList.results[i].price %></strong>
@@ -37,17 +62,17 @@
       <% } %>
       <div class="row">
         <div class="col-10 purchase">
-          <button class="btn btn-primary">Comprar</button>
+          <button type="submit" class="btn btn-primary">Comprar</button>
           <p>Sub total:</p>
         </div>
         <div class="col-2 text-right">
           <p>ARS $4000</p>
         </div>
       </div>
-    </div>
+    </form>
     <div class="cta row">
       <div class="col-12 col-md-6">
-        <a href="javascript:void(0)" class="text-secondary">Seguir comprando</a>
+        <a href="juegos" class="text-secondary">Seguir comprando</a>
       </div>
       <div class="col-12 col-md-6 text-right">
         <a href="javascript:void(0)" class="text-secondary">Eliminar todos los articulos</a>

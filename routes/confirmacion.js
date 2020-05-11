@@ -7,7 +7,7 @@ const carritoModel = require("../models/carritoModel");
 
 
 router.get('/', function (req, res, next) {
-	res.render('carrito', {
+	res.render('confirmacion', {
 		nombre: 'Homero',
 		apellido: 'Thompson',
 		title: 'GAME List',

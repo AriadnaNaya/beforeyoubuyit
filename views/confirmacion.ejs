@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <!-- navbar header -->
+  <%- include('../partials/header') %>
+
+  <!-- Productos en Carrito de Compras -->
+
+
+  <section class="container">
+    <div class="col-12">
+      <h4 class="title">Compra exitosa</h4>
+    </div>
+    <div method="GET" action="confirmacion" class="cart-wrapper">
+      <% for(var i = 0; i < carritoList.results.length; i++) { %>
+      <div class="in-cart w-100">
+        <div class="col-12 col-md-2 img-wrapper"
+          style="background-image: url('<%= carritoList.results[i].background_image %>');">
+        </div>
+        <div class="col-12 col-md-3">
+          <p class="in-cart-title"><%=  carritoList.results[i].name%></p>
+          <p class="bold-case">
+            <% if ( carritoList.results[i].platform === 'steam') { %>
+            <i class="icon-steam"></i> Steam Key
+            <% } %>
+          </p>
+          <p class="bold-case">
+            <% if ( carritoList.results[i].platform === 'epic-games') { %>
+            <i class="icon-epic"></i> Epic Games Key
+            <% } %>
+          </p>
+          <p class="bold-case">
+            <% if ( carritoList.results[i].platform === 'gog') { %>
+            <i class="icon-gog"></i> GOG Key
+            <% } %>
+          </p>
+          <p class="bold-case">
+            <% if ( carritoList.results[i].platform === 'xbox-store') { %>
+            <i class="icon-xbox"></i> Xbox Store Key
+            <% } %>
+          </p>
+
+          <p class="bold-case mb-3">Activación global</p>
+          <a href="juegos" class="text-secondary">Seguir comprando</a>
+        </div>
+        <div class="col-12 col-md-7 text-small">
+          <h4 class="bold-case mb-0"><%= carritoList.results[i].key %></h4>
+          <small class="lighten">Código de activación</small>
+          <p class="mt-3">Sigue estas instrucciones para activar una copia física o digital de un juego en <%= carritoList.results[i].platform %>:</p>
+          <ol>
+            <li>
+              Abre el cliente de <%= carritoList.results[i].platform %> e inicia sesión en tu cuenta.
+            </li>
+            <li>
+              Haz clic en el menú Juegos.
+            </li>
+            <li>
+              Selecciona Activar un producto en <%= carritoList.results[i].platform %>.
+            </li>
+            <li>
+              Sigue las instrucciones en pantalla para completar el proceso.
+            </li>
+          </ol>
+          <p class="mt-3">Consulta el artículo Claves de producto de copias físicas o digitales para obtener más
+            información sobre el
+          registro de claves.</p>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <div class="cta row">
+      <div class="col-12">
+        <p><strong>Importante:</strong></p>
+        <p>Asegúrate de que activas el juego a través de la aplicación de tu respectivo Store. El sitio web de Steam no puede utilizarse para activar un juego. Si aún no lo has hecho, puedes descargarte e instalar la aplicación de Steam haciendo clic en el botón verde "Instalar Steam ahora" que encontrarás aquí: <a class="text-secondary" href="javascript:void(0)">http://store.steampowered.com/about/</a></p>
+      </div>
+    </div>
+  </section>
+
+  <%- include('../partials/scripts') %>
+</body>
+
+</html>
