@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('../partials/head') %>
+  <%- include('../partials/head') %> 
   </head>
   <body class="login">
     <!-- navbar header -->
-    <%- include('../partials/header') %>
+    <!--  <%- include('../partials/header') %> -->
     <!-- /.navbar header -->
 
     <!-- home content -->
     <div class="container">
       <div class="row ">
         <div class="col-12 col-md-4 login-screen">
-          <div id="logo-container"></div>
-          <form action="#home" id="loginForm" method="POST">
+          <div id="logo-container">
+
+          <form action="/users/create"  method="POST" id="loginForm" enctype="multipart/form-data">
+                     
             <div class="form-group">
-              <label for="user">Usuario</label>
+              <label for="name">Nombre</label>
               <div class="input-group">
-                <input class="form-control" type="text" name='user' id='user' tabindex="2" />
+                <input class="form-control" type="text" name='name' id='name' tabindex="2" />
+                <span class="input-group-append"><i class="input-group-text fa fa-user"></i></span>
+              </div>
+              <div class="message invalid-feedback user">
+                <small class="">Usuario inexistente</small>
+              </div>                       
+            </div>
+            
+            <div class="form-group">                     
+              <label for="lastname">Apellido</label>
+              <div class="input-group">
+                <input class="form-control" type="text" name='lastname' id='lastname' tabindex="2" />
                 <span class="input-group-append"><i class="input-group-text fa fa-user"></i></span>
               </div>
               <div class="message invalid-feedback user">
                 <small class="">Usuario inexistente</small>
               </div>
-            </div>
+            </div>                    
             <div class="form-group">
               <label for="email">Email</label>
               <div class="input-group">
@@ -44,14 +57,19 @@
                 <small class="">Clave incorrecta</small>
               </div>
             </div>
+            <div class="input-group">
+              <label for="imagenPerfil" class="form-label">Imagen de perfil:</label>
+              <input type="file" name="perfil" id="imagenPerfil">
+            </div>
             <p>
               <small class="mb-3 text-pink">Al Registrarte, aceptas nuestras condiciones de uso y políticas de privacidad</small>
             </p>
             <div class="form-group">
-              <button type="button" id="loginSubmit" class="btn btn-default btn-block" tabindex="4">Registrate</button>
+              <button type="submit" id="loginSubmit" class="btn btn-default btn-block" tabindex="4">Registrate</button>
             </div>
           </form>
         </div>
+      </div>  
       </div>
     </div>
     <!-- /.home content -->

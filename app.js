@@ -11,7 +11,7 @@ const livereload = require('livereload');
 
 // Controllers
 const indexRouter = require('./routes/index');
-const registroRouter = require('./routes/registro');
+const usersRouter = require('./routes/users');
 const juegosRouter = require('./routes/juegos');
 const homeRouter = require('./routes/home');
 const detalleRouter = require('./routes/detalle');
@@ -36,13 +36,14 @@ app.use('/assets', [
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'build')));
 const liveReloadServer = livereload.createServer();
@@ -56,7 +57,7 @@ liveReloadServer.server.once("connection", () => {
 
 // Navigation
 app.use('/', indexRouter);
-app.use('/registro', registroRouter);
+app.use('/users', usersRouter);
 app.use('/juegos', juegosRouter);
 app.use('/home', homeRouter);
 app.use ('/detalle', detalleRouter);
