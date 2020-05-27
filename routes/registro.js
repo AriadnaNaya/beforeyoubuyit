@@ -1,13 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const controller = require ("../controllers/usersController");
 
 /* GET login page. */
-router.get('/', function(req, res, next) {
-  res.render('registro', 
-  { title: 'Registro',
-    nombre: 'Homero',
-    apellido: 'Thompson'
-  });
-});
+router.get('/',controller.registroUsuario);
 
 module.exports = router;
