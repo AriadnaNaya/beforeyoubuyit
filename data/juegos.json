@@ -528,7 +528,28 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2011-04-19",
-     "requirements_en": null,
+     "requirements_en":{
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
+     },
      "requirements_ru": {
       "minimum": "Core 2 Duo/Athlon X2 2 ГГц,1 Гб памяти,GeForce 7600/Radeon X800,10 Гб на винчестере,интернет-соединение",
       "recommended": "Core 2 Duo/Athlon X2 2.5 ГГц,2 Гб памяти,GeForce GTX 280/Radeon HD 2600,10 Гб на винчестере,интернет-соединение"
@@ -983,7 +1004,28 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2015-05-18",
-     "requirements_en": null,
+     "requirements_en":{
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
+     },
      "requirements_ru": null
     },
     {
@@ -1424,7 +1466,26 @@
      },
      "released_at": "2013-03-05",
      "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows XP / Windows Vista / Windows 7<br>\t</li><li><strong>Processor:</strong>1.8 GHz Processor<br>\t</li><li><strong>Memory:</strong>512 MB RAM<br>\t</li><li><strong>Graphics:</strong>3D graphics card compatible with DirectX 9<br>\t</li><li><strong>DirectX®:</strong>9.0<br>\t</li><li><strong>Hard Drive:</strong>2 GB HD space</li></ul>"
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "i486-100, 8 Мб",
@@ -1859,8 +1920,26 @@
      },
      "released_at": "2011-11-11",
      "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br>\t\t\t\t\t\t\t\t<ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/Vista/XP PC (32 or 64 bit)<br>\t\t\t\t\t\t\t\t</li><li><strong>Processor:</strong> Dual Core 2.0GHz or equivalent processor<br>\t\t\t\t\t\t\t\t</li><li><strong>Memory:</strong> 2GB System RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 6GB free HDD Space<br>\t\t\t\t\t\t\t\t</li><li><strong>Video Card:</strong> Direct X 9.0c compliant video card with 512 MB of RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Sound:</strong> DirectX compatible sound card<br>\t\t\t\t\t\t\t\t</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br>\t\t\t\t\t\t\t\t<ul class=\"bb_ul\"><li><strong>Processor:</strong> Quad-core Intel or AMD CPU<br>\t\t\t\t\t\t\t\t</li><li><strong>Memory:</strong> 4GB System RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Video Card:</strong> DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)<br>\t\t\t\t\t\t\t\t</li></ul>"
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Core 2 Duo/Athlon X2 2 ГГц,2 Гб памяти,GeForce 8800/Radeon X1900,6 Гб на винчестере",
@@ -2315,8 +2394,26 @@
      },
      "released_at": "2009-11-17",
      "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 32/64-bit / Vista 32/64 / XP<br></li><li><strong>Processor:</strong> Pentium 4 3.0GHz<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 13 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c compatible sound card</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 32/64-bit / Vista 32/64 / XP<br></li><li><strong>Processor:</strong> Intel core 2 duo 2.4GHz<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 13 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c compatible sound card</li></ul>"
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Pentium 4/Athlon 64 3 ГГц,1 Гб памяти,GeForce 6600/Radeon X800,7.5 Гб на винчестере",
@@ -2732,9 +2829,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2012-09-18",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP SP3<br>\t</li><li><strong>Processor:</strong> 2.4 GHz Dual Core Processor<br>\t</li><li><strong>Memory:</strong> 2 GB(XP)/ 2 GB(Vista)<br>\t</li><li><strong>Hard Disk Space:</strong> 13 GB free<br>\t</li><li><strong>Video Memory:</strong> 256 MB<br>\t</li><li><strong>Video Card:</strong> NVIDIA GeForce 8500 /ATI Radeon HD 2600<br>\t</li><li><strong>Sound:</strong> DirectX 9.0c Compatible<br>\t</li><li><strong>Other Requirements:</strong>Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP SP3/Vista/Win 7<br>\t</li><li><strong>Processor:</strong> 2.3 GHz Quad Core processor<br>\t</li><li><strong>Memory:</strong> 2 GB<br>\t</li><li><strong>Hard Disk Space:</strong> 20 GB free<br>\t</li><li><strong>Video Memory:</strong> 512MB<br>\t</li><li><strong>Video Card:</strong> NVIDIA GeForce GTX 560 / ATI Radeon HD 5850<br>\t</li><li><strong>Sound:</strong> DirectX 9.0c Compatible<br>\t</li><li><strong>Other Requirements:</strong>Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)</li></ul>"
+     "requirements_en":{
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Core 2 Duo/Athlon 64 X2 2.4 ГГц,2 Гб памяти,GeForce 8500/Radeon HD 2600,13 Гб на винчестере,интернет-соединение",
@@ -3251,8 +3366,26 @@
      },
      "released_at": "2013-03-26",
      "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows Vista Service Pack 2 32-bit<br>\t</li><li><strong>Processor:</strong> Intel Core 2 DUO 2.4 GHz / AMD Athlon X2 2.7 GHz<br>\t</li><li><strong>Memory:</strong> 2GB<br>\t</li><li><strong>Hard Disk Space:</strong> 20 GB free<br>\t</li><li><strong>Video Card:</strong> DirectX10 Compatible ATI Radeon HD 3870 / NVIDIA 8800 GT / Intel HD 3000 Integrated Graphics<br>\t</li><li><strong>Video Card Memory:</strong> 512 MB\t<br>\t</li><li><strong>Sound:</strong> DirectX Compatible</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7 Service Pack 1 64-bit<br>\t</li><li><strong>Processor:</strong> Quad Core Processor<br>\t</li><li><strong>Memory:</strong> 4GB<br>\t</li><li><strong>Hard Disk Space:</strong> 30 GB free<br>\t</li><li><strong>Video Card:</strong> DirectX11 Compatible, AMD Radeon HD 6950 / NVIDIA GeForce GTX 560<br>\t</li><li><strong>Video Card Memory:</strong> 1024 MB\t<br>\t</li><li><strong>Sound:</strong> DirectX Compatible</li></ul>"
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Win Vista 32\nCore 2 Duo E4600/Athlon 64 X2 5200+\nGeForce GT 340/Radeon HD 3800\n2 GB RAM\n20 GB HDD",
@@ -3731,8 +3864,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2007-10-09",
-     "requirements_en": {
-      "minimum": "<p><strong>Minimum: </strong>1.7 GHz Processor, 512MB RAM, DirectX&reg; 8.1 level Graphics Card (Requires support for SSE), Windows&reg; 7 (32/64-bit)/Vista/XP, Mouse, Keyboard, Internet Connection</p>\r\n\t\t\t<p><strong>Recommended: </strong>Pentium 4 processor (3.0GHz, or better), 1GB RAM, DirectX&reg; 9 level Graphics Card, Windows&reg; 7 (32/64-bit)/Vista/XP, Mouse, Keyboard, Internet Connection</p>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Pentium 4/Athlon XP 1.7 ГГц,512 Мб памяти,3D-ускоритель со 128 Мб памяти,7.5 Гб на винчестере,Интернет-соединение 128 Кб/c",
@@ -4266,7 +4418,28 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2015-01-30",
-     "requirements_en": null,
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
+     },
      "requirements_ru": null
     },
     {
@@ -4678,8 +4851,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2012-08-21",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7/Vista/XP<br></li><li><strong>Processor:</strong> Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video card must be 256 MB or more and should be a DirectX 9-compatible with support for Pixel Shader 3.0<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 15 GB available space</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Сore 2 Duo/Athlon x2 64 1.8 ГГц,2 Гб памяти,GeForce 8800/Radeon X9800,7.6 Гб на винчестере,интернет-соединение",
@@ -5098,8 +5290,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2010-07-21",
-     "requirements_en": {
-      "minimum": "<ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP, Vista, 7<br>\t\t\t\t\t\t</li><li><strong>Processor:</strong> 2 GHz<br>\t\t\t\t\t\t</li><li><strong>Memory:</strong> 512MB<br>\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 150MB\t<br>\t\t\t\t\t\t</li><li><strong>Video Card:</strong> 5 years or younger. Integrated graphics and very low budget cards may not work. Shader Model 3.0 required<br>\t\t\t\t\t\t</li><li><strong>DirectX®:</strong> 9.0c\t<br>\t\t\t\t\t\t</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Pentium 4/Athlon XP 2 ГГц,512 Мб памяти,3D-ускоритель с 256 Мб памяти,150 Мб на винчестере",
@@ -5740,9 +5951,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2007-08-21",
-     "requirements_en": {
-      "minimum": "<h2 class=\"bb_tag\"><strong>Minimum: </strong></h2><ul class=\"bb_ul\"><li><strong>Operating System</strong>: Windows XP (with Service Pack 2) or Windows Vista<br></li><li><strong>CPU</strong>: Intel single-core Pentium 4 processor at 2.4GHz<br></li><li><strong>RAM</strong>: 1 GB<br></li><li><strong>Video Card</strong>: Direct X 9.0c compliant video card with 128MB RAM and Pixel Shader 3.0 (NVIDIA 6600 or better/ATI X1300 or better, excluding ATI X1550)<br></li><li><strong>Sound Card</strong>: 100% direct X 9.0c compatible sound card<br></li><li><strong>Hard Drive Space</strong>: 8GB<br></li><li>Game requires Internet connection for activation</li></ul>",
-      "recommended": "<h2 class=\"bb_tag\"><strong>Recommended: </strong></h2><ul class=\"bb_ul\"><li><strong>CPU</strong>: Intel Core 2 Duo processor<br></li><li><strong>RAM</strong>: 2GB<br></li><li><strong>Video Card</strong>: DX 9 - Direct X 9.0c compliant video card with 512 MB RAM and Pixel Shader 3.0 (NVIDIA GeForce 7900 GT or better), DX 10 - NVIDIA GeForce 8600 or better<br></li><li><strong>Sound Card</strong>: SoundBlaster(r) X-Fi(tm) series (optimized foruse with Creative Labs EAX ADVANCED HD 4.0 or EAX ADVANCED HD 5.0 compatible sound cards)</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Pentium 4/Athlon 64 2.5 ГГц,1 Гб памяти,3D-ускоритель со 128 Мб памяти и SM 3.0, 7.5 Гб на винчестере, Windows XP SP2 или Vista,Интернет-соединение",
@@ -6247,7 +6476,28 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2004-11-16",
-     "requirements_en": null,
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
+     },
      "requirements_ru": {
       "minimum": "Pentium III/Athlon 1.2 ГГц,256 Мб памяти,3D-ускоритель с 64 Мб памяти,5 Гб на винчестере,доступ в Интернет",
       "recommended": "Pentium 4/Athlon XP 2.5 ГГц,512 Мб памяти,3D-ускоритель со 128 Мб памяти,5 Гб на винчестере,доступ в Интернет"
@@ -6635,9 +6885,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2007-10-10",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 (32/64-bit)/Vista/XP<br></li><li><strong>Processor:</strong> 1.7 GHz Processor or better<br></li><li><strong>Memory:</strong> 512 MB RAM<br></li><li><strong>DirectX:</strong> Version 8.1<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 15 GB available space</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 (32/64-bit)<br></li><li><strong>Processor:</strong> Pentium 4 processor (3.0GHz, or better)<br></li><li><strong>Memory:</strong> 1 GB RAM<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 15 GB available space</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Pentium 4/Athlon XP 1.7 ГГц,512 Мб памяти,3D-ускоритель со 128 Мб памяти,7.5 Гб на винчестере,Интернет-соединение 128 Кб/c",
@@ -7083,8 +7351,26 @@
      },
      "released_at": "2018-10-26",
      "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 7 - Service Pack 1 (6.1.7601)<br></li><li><strong>Processor:</strong> Intel® Core™ i5-2500K / AMD FX-6300<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 150 GB available space<br></li><li><strong>Sound Card:</strong> Direct X Compatible</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10 - April 2018 Update (v1803)<br></li><li><strong>Processor:</strong> Intel® Core™ i7-4770K / AMD Ryzen 5 1500X<br></li><li><strong>Memory:</strong> 12 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 150 GB available space<br></li><li><strong>Sound Card:</strong> Direct X Compatible</li></ul>"
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": null
     },
@@ -7584,9 +7870,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2013-08-13",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows 7<br>\t</li><li><strong>Processor:</strong>2 GHz Intel Dual Core Processor<br>\t</li><li><strong>Memory:</strong>4 GB RAM<br>\t</li><li><strong>Graphics:</strong>Nvidia &amp; AMD (512MB VRAM)<br>\t</li><li><strong>DirectX®:</strong>9.0c<br>\t</li><li><strong>Hard Drive:</strong>31 GB HD space <br>\t</li><li><strong>Sound:</strong>DirectX 9.0c compatible</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows 10<br>\t</li><li><strong>Processor:</strong>2.3 GHz Intel Quad Core Processor<br>\t</li><li><strong>Memory:</strong>8 GB RAM<br>\t</li><li><strong>Graphics:</strong>Nvidia &amp; AMD (1GB VRAM)<br>\t</li><li><strong>DirectX®:</strong>9.0c<br>\t</li><li><strong>Hard Drive:</strong>45 GB HD space<br>\t</li><li><strong>Sound:</strong>DirectX 9.0c compatible</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": null
     },
@@ -7983,9 +8287,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2016-05-13",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows7,Windows8,Windows10<br></li><li><strong>Processor:</strong> Intel cpu i3<br></li><li><strong>Memory:</strong> 4 GB RAM<br></li><li><strong>Graphics:</strong> GTX 650<br></li><li><strong>Storage:</strong> 2 GB available space<br></li><li><strong>Sound Card:</strong> Realtek</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows7,Windows8,Windows10<br></li><li><strong>Processor:</strong> Intel cpu i5<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> GTX 770<br></li><li><strong>Storage:</strong> 4 GB available space<br></li><li><strong>Sound Card:</strong> Realtek</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "i386-33, 4 Мб",
@@ -8431,9 +8753,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2015-11-09",
-     "requirements_en": {
-      "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/8/10 (64-bit OS required)<br></li><li><strong>Processor:</strong> Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 550 Ti 2GB/AMD Radeon HD 7870 2GB or equivalent<br></li><li><strong>Storage:</strong> 30 GB available space</li></ul>",
-      "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/8/10 (64-bit OS required)<br></li><li><strong>Processor:</strong> Intel Core i7 4790 3.6 GHz/AMD FX-9590 4.7 GHz or equivalent<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 780 3GB/AMD Radeon R9 290X 4GB or equivalent<br></li><li><strong>Storage:</strong> 30 GB available space</li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": null
     },
@@ -8809,8 +9149,27 @@
       "image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg"
      },
      "released_at": "2008-04-29",
-     "requirements_en": {
-      "minimum": "<ul class=\"bb_ul\"><li><strong>OS:</strong> Windows Vista - Service Pack 1 / Windows XP - Service Pack 3                    <br>\t\t\t\t\t</li><li><strong>Processor:</strong> Intel Core 2 Duo 1.8GHz, AMD Athlon X2 64 2.4GHz                    <br>\t\t\t\t\t</li><li><strong>Memory:</strong> 1.5GB XP / 1.5GB Vista                    <br>\t\t\t\t\t</li><li><strong>Graphics:</strong> 256MB Nvidia 7900 / 256MB ATI X1900                    <br>\t\t\t\t\t</li><li><strong>DirectX Version:</strong> DirectX 9.0c Compliant Card                     <br>\t\t\t\t\t</li><li><strong>Hard Drive:</strong> 16GB of Hard Disc Space                     <br>\t\t\t\t\t</li><li><strong>Sound Card:</strong> 5.1 Channel Audio Card                     <br>\t\t\t\t\t</li><li><strong>Other Requirements:</strong> Initial activation requires internet connection; Online play requires log-in to Games For Windows - Live and Rockstar Games Social Club (13+ to register); software installations required including Adobe Flash, DirectX, Microsoft’s .NET Framework 3.0, Games For Windows - LIVE, and Internet Explorer.                    </li></ul>"
+     "requirements_en":  {
+      "minimum":{
+          "required":"Requiere un procesador y un sistema operativo de 64 bits",
+          "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+          "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+          "memoria": "4 GB de RAM",
+          "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+          "direct": "Versión 11",
+          "almacenamiento":" 12 GB de espacio disponible",
+          "sonido":"DirectX Compatible Sound Device"
+      },
+      "recommended":{
+        "required":"Requiere un procesador y un sistema operativo de 64 bits",
+        "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
+        "procesador": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
+        "memoria": "4 GB de RAM",
+        "graphics":"1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
+        "direct": "Versión 11",
+        "almacenamiento":" 12 GB de espacio disponible",
+        "sonido":"DirectX Compatible Sound Device"
+      }
      },
      "requirements_ru": {
       "minimum": "Core 2 Duo/Athlon X2 64 2 ГГц, 1 Гб памяти, GeForce 7900/Radeon X1900,17 Гб на винчестере,XP SP3/Vista SP1,интернет-соединение",
