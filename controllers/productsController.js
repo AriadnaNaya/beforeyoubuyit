@@ -77,20 +77,28 @@ const controller = {
           
           let idJuego = req.params.id;
           let gameList = products;
-          let getRatings = gameList.results[idJuego].ratings;
+          let gameRatings = () => {
+            if (gameList.results[idJuego].ratings) {
+              let getRatings = gameList.results[idJuego].ratings;
+              // First, get the max vote from the array of objects
+              var maxVotes = Math.max(...getRatings.map(e => e.percent));
 
-          // First, get the max vote from the array of objects
-          var maxVotes = Math.max(...getRatings.map(e => e.percent));
-      
-          // Get the object having votes as max votes
-          var maxRated = getRatings.find(game => game.percent === maxVotes);
+              // Get the object having votes as max votes
+              var maxRated = getRatings.find(game => game.percent === maxVotes);
+              return maxRated.title;
+            } else {
+              return null;
+            }
+          }
+          
+          
       
             res.render('detalle', {
               nombre: 'Homero',
               apellido: 'Thompson',
               title: 'detalle',
               juego: gameList.results[idJuego],
-              rating: maxRated.title
+              rating: gameRatings()
             });
      },
 
