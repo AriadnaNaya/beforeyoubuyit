@@ -25,6 +25,12 @@ const controller = {
         });
     },
 
+    edit: (req, res, next) => {
+      res.render('edit-form', {
+        products: products
+      });
+    },
+
     cargaJuegos:(req, res, next) => {
   
           //let data = JSON.parse(juegosLista);
