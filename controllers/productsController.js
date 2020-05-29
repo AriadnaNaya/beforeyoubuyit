@@ -17,7 +17,7 @@ const controller = {
           //if (error) throw new Error(error);
           let idJuego = req.params.id;
           let gameList = juegosModel;
-          let getRatings = gameList.results[0].ratings;
+          let getRatings = gameList [0].ratings;
       
           // First, get the max vote from the array of objects
           var maxVotes = Math.max(...getRatings.map(e => e.percent));
@@ -28,8 +28,8 @@ const controller = {
               nombre: 'Admin',
               apellido: '-',
               title: 'carga',
-              juego: gameList.results[0],
-              gameList: data,
+              juego: gameList [0],
+              gameList: juegosModel,
               rating: maxRated.title
             });
 
@@ -61,7 +61,7 @@ const controller = {
           //if (error) throw new Error(error);
           let idJuego = req.params.id;
           let gameList = juegosModel;
-          let getRatings = gameList.results[idJuego].ratings;
+          let getRatings = gameList [idJuego].ratings;
 
           // First, get the max vote from the array of objects
           var maxVotes = Math.max(...getRatings.map(e => e.percent));
@@ -73,7 +73,7 @@ const controller = {
               nombre: 'Homero',
               apellido: 'Thompson',
               title: 'detalle',
-              juego: gameList.results[idJuego],
+              juego: gameList [idJuego],
               rating: maxRated.title
             });
      },

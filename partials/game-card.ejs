@@ -1,8 +1,8 @@
-<% for(var i = 0; i < gameList.results.length; i++) { %>
+<% for(var i = 0; i < gameList .length; i++) { %>
   <a href="/detalle/<%= i %>" class="card-wrapper">
     <div class="card">
-      <div class="card-img" style="background-image: url('<%=  gameList.results[i].background_image %>');">
-        <p class="card-title"><%=  gameList.results[i].name %></p>
+      <div class="card-img" style="background-image: url('<%=  gameList [i].background_image %>');">
+        <p class="card-title"><%=  gameList [i].name %></p>
       </div>
       <div class="card-body">
         <div class="price">
@@ -17,17 +17,17 @@
         <p class="legend">
           <small>Disponible para:</small>
         </p>
-        <% for (var j=0; j< gameList.results[i].stores.length; j++) { %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'steam') { %>
+        <% for (var j=0; j< gameList [i].stores.length; j++) { %>
+          <% if ( gameList [i].stores[j].store.slug === 'steam') { %>
             <i class="icon-steam"></i>
           <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'epic-games') { %>
+          <% if ( gameList [i].stores[j].store.slug === 'epic-games') { %>
             <i class="icon-epic"></i>
           <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'gog') { %>
+          <% if ( gameList [i].stores[j].store.slug === 'gog') { %>
             <i class="icon-gog"></i>
           <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'xbox-store') { %>
+          <% if ( gameList [i].stores[j].store.slug === 'xbox-store') { %>
             <i class="icon-xbox"></i>
           <% } %>
         <% } %>
