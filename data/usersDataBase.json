@@ -1,10 +1,32 @@
 [
-    {
-     "id": 4,
-     "name": "Felipe",
-     "lastname": "Galope",
-     "password": "$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe",
-     "email": "felipe@gmail.com",
-     "avatar": "1589589791344.jpeg"
-    }
+ {
+  "id": 0,
+  "name": "Felipe",
+  "lastname": "Galope",
+  "password": "$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe",
+  "email": "felipe@gmail.com",
+  "avatar": "1589589791344.jpeg"
+ },
+ {
+  "id": 1,
+  "name": "Esteban Ezequiel",
+  "lastname": "Turchetti",
+  "password": "$2b$10$OZPRB6rfyC.Jr4UaJJbUGu0mA73F0njD.d5orYT9zP8UgCCcu8u3K",
+  "email": "ezequiel.turchetti@gmail.com"
+ },
+ {
+  "id": 3,
+  "name": "Esteban Ezequiel",
+  "lastname": "Turchetti",
+  "password": "$2b$10$PKAc8GnHAF4KafNPPNAd8.yvBVcMTVR4VjvucAJehXDlnFPai9X5.",
+  "email": "sda@cdt.com.ar"
+ },
+ {
+  "id": 4,
+  "name": "Esteban Ezequiel",
+  "lastname": "Turchetti",
+  "password": "$2b$10$/SZbvhBdD3ELJ9h9y/QL8Ocd7m9a1mMkYEFxUDVvBMHm4p872HeLO",
+  "email": "eze170484@hotmail.com",
+  "avatar": "1590772407901.png"
+ }
 ]

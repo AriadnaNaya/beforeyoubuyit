@@ -14,7 +14,7 @@
         <div class="col-12 col-md-4 login-screen">
           <div id="logo-container">
 
-          <form action="/users/create" method="POST" id="loginForm" enctype="multipart/form-data">
+          <form action="/users/edit/<%= userToEdit.id %>?_method=PUT" method="POST" id="loginForm" enctype="multipart/form-data">
                      
             <div class="form-group">
               <label for="name">Nombre</label>
@@ -63,12 +63,9 @@
               <input  type="file" id="avatar" name="avatar">
             </div>
             
-            <p>
-              <small class="mb-3 text-pink">Al Registrarte, aceptas nuestras condiciones de uso y políticas de privacidad</small>
-            </p>
             
             <div class="form-group">
-              <button type="submit"  class="btn btn-default btn-block" tabindex="4">Registrate</button>
+              <button type="submit"  class="btn btn-default btn-block" tabindex="4">Guardar Cambios</button>
             </div>
           </form>
         </div>

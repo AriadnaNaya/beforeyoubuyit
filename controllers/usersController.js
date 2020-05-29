@@ -3,23 +3,18 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 
 
+
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-
-
 const controller = {
     root: (req, res) => {
-        
-        res.render('register',{
-            title: 'Login',
-            nombre: 'Homero',
-            apellido: 'Thompson'
-            });
+        res.render('register');
     },
     store: (req, res, next) => {
+        const newID = users.length + 1;
         const newUser = {
-            id: users[users.length - 1].id + 1,
+            id: newID,
             name: req.body.name,
             lastname: req.body.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
@@ -27,16 +22,45 @@ const controller = {
             avatar: req.files[0].filename
         };
         
-        const userToSave = [...users, newUser];
-        fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
-        res.redirect('juegos',{
-            title: 'Login',
-            nombre: 'Homero',
-            apellido: 'Thompson'
-            });
+        const finalUser = [...users, newUser];
+        fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
+        res.redirect('/');
     },
+    edit: (req, res) => {
+        
+        id = req.params.userId;
+        const userToEdit = users.find(p => p.id == id);
+     
+        res.render('user-edit-form', {
+          userToEdit: userToEdit
+        });
+    
+      },
+      
+    update: (req, res, next) => {
+        
+        id = req.params.userId;
+        const currentUser = users.find(p => p.id == id);
+        currentUser.name = req.body.name;
+        currentUser.lastname = req.body.lastname;
+        currentUser.email = req.body.email;
+        currentUser.password = bcrypt.hashSync(req.body.password, 10);
+        currentUser.image = req.files[0].filename;
+       
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+           
+        res.redirect('/');
+      },
+    
+     destroy: (req, res) => {
+        id = req.params.userId;
+        let newUser = users.filter(p => p.id != id);
+        fs.writeFileSync(usersFilePath, JSON.stringify(newUser, null, ' '));
+        res.redirect('/');
+      },
+
     login: (req, res) => {
-        res.render('juegos');
+        res.render('/');
     },
     validate: (req, res) => {
       

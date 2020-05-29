@@ -20,15 +20,19 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage })
 
-
-
-
 /*** CREATE ONE user ***/
 
 router.get('/create/', usersController.root); /* GET - Form to create */
 router.post('/create/', upload.any(), usersController.store); /* POST - Store in DB */
 
-// router.get('/login/', usersController.login); /* GET - Form to create */
-// router.post('/login/', usersController.validate); /* Post - Validation login */
+router.get('/', usersController.login); /* GET - Form to create */
+router.post('/', usersController.validate); /* Post - Validation login */
+
+/*** EDIT ONE USER ***/
+router.get('/edit/:userId', usersController.edit); /* GET - Form to create */
+router.put('/edit/:userId', upload.any(), usersController.update); /* PUT - Update in DB */
+
+router.delete('/delete/:userId', usersController.destroy); /* DELETE - Delete from DB */
+
 
 module.exports = router;

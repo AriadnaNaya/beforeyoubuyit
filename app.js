@@ -66,13 +66,14 @@ app.use ('/carga', cargaRouter);
 app.use('/carrito', carritoRouter);
 app.use('/confirmacion', confirmacionRouter);
 
-// catch 404 and forward to error handler
+/*// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.error(err);
   if (res.status(404)) {
     res.status(400).render('notfound');
   } else {
@@ -86,6 +87,6 @@ app.use(function(err, req, res, next) {
   }
   
   
-});
+});*/
 
 module.exports = app;
