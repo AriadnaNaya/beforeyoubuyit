@@ -1,33 +1,12 @@
 const fs = require('fs');
 const express = require('express');
 const router = express.Router();
-const request = require("request");
-const JuegosModel = require('../models/juegosModel');
+//const request = require("request");
+//const JuegosModel = require('../models/juegosModel');
+
+const controller = require ("../controllers/productsController")
 
 /* GET detalle page. */
-router.get('/:id', function (req, res, next) {
-  
-  request(JuegosModel, function (error, response, body) {
-    let data = JSON.parse(body);
-    if (error) throw new Error(error);
-    let idJuego = req.params.id;
-    let gameList = data;
-    let getRatings = gameList.results[idJuego].ratings;
-
-    // First, get the max vote from the array of objects
-    var maxVotes = Math.max(...getRatings.map(e => e.percent));
-
-    // Get the object having votes as max votes
-    var maxRated = getRatings.find(game => game.percent === maxVotes);
-
-      res.render('detalle', {
-        nombre: 'Homero',
-        apellido: 'Thompson',
-        title: 'detalle',
-        juego: gameList.results[idJuego],
-        rating: maxRated.title
-      });
-  });
-});
+router.get('/:id', controller.detalleProducto);
 
 module.exports = router;

@@ -1,13 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const controller = require ("../controllers/mainController")
 
 /* GET login page. */
-router.get('/', function(req, res, next) {
-  res.render('index', 
-  { title: 'Login',
-    nombre: 'Homero',
-    apellido: 'Thompson'
-  });
-});
+router.get('/', controller.homeLogueo);
 
 module.exports = router;
