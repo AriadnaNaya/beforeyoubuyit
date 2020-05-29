@@ -10,6 +10,8 @@ const productsController = require("../controllers/productsController")
 
 router.get('/', productsController.root); /* GET - All products */
 router.get('/edit', productsController.edit); /* GET - All products */
+/* GET detalle page. */
+router.get('/:id', productsController.detail);
 
 
 

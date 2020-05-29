@@ -73,14 +73,10 @@ const controller = {
         });
     },
 
-    detalleProducto: (req, res, next) => {
-
-          //let data = JSON.parse(juegosLista); 
-          //const juegosJSONPath = path.join(__dirname, '../data/juegos.json');
-          //fs.writeFileSync (juegosJSONPath, JSON.stringify (data, null, " "))
-          //if (error) throw new Error(error);
+    detail: (req, res, next) => {
+          
           let idJuego = req.params.id;
-          let gameList = juegosModel;
+          let gameList = products;
           let getRatings = gameList.results[idJuego].ratings;
 
           // First, get the max vote from the array of objects
