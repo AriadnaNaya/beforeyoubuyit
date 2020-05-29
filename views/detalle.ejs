@@ -101,11 +101,13 @@
 				</div>
 				<div class="overview-data">
 					<h4 class="product-title"><%= juego.name %></h4>
-					<% if (juego.developers != null) { %>
-						<% for (var i=0; i< juego.developers.length; i++) { %>
-						<p><%= juego.developers[i] %></p>
+					<p><span>Desarrollado por: </span>
+						<% if (juego.developers != null) { %>
+							<% for (var i=0; i< juego.developers.length; i++) { %>
+							<span><%= juego.developers[i] %></span>
+							<% } %>
 						<% } %>
-					<% } %>
+					</p>
 					<% if (juego.released) { %>
 						<p>Fecha de Lanzamiento: <%= juego.released %></p>
 					<% } %>

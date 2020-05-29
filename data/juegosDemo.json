@@ -1,0 +1,52 @@
+[
+ {
+  "id": 1,
+  "name": "Mi abuela",
+  "price": 2000,
+  "discount": 0,
+  "categories": [
+   "shooter",
+   "FP"
+  ],
+  "about": "Cualquier cosa",
+  "background_image": "default-image.png"
+ },
+ {
+  "id": 2,
+  "name": "Mi abuela tiene covid",
+  "price": "1000",
+  "discount": "10",
+  "categories": [
+   "covid",
+   " viejos"
+  ],
+  "about": "Una vieja ",
+  "background_image": "default-image.png"
+ },
+ {
+  "id": 3,
+  "name": "Kiko zona sur",
+  "price": "450",
+  "discount": "10",
+  "categories": [
+   "Fisuras",
+   " drogas",
+   " indigentes"
+  ],
+  "about": "Es un fisura de zona sur",
+  "background_image": "default-image.png"
+ },
+ {
+  "id": 4,
+  "name": "Chinguenguencha",
+  "price": "450",
+  "discount": "10",
+  "categories": [
+   "Fisuras",
+   " drogas",
+   " indigentes"
+  ],
+  "about": "Un fisura que vive en la calle",
+  "background_image": "default-image.png"
+ }
+]
