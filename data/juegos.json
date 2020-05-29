@@ -946,14 +946,14 @@
      "image": "https://media.rawg.io/media/screenshots/415/41543dcc12dffc8e97d85a56ad42cda8.jpg"
     }
    ],
-   "price": 1200,
+   "price": 1500,
    "discount": 50,
    "game_trailer": "https://media.rawg.io/media/stories-640/fde/fde8aaeeab956f6b705bbb4161b09004.mp4",
-   "game_review": null,
+   "game_review": "https://www.youtube.com/embed/w9aG2qU9okk",
    "game_gameplay": "https://www.youtube.com/embed/A0K5EXfgJnk",
    "about": null,
    "categories": null,
-   "developers": null,
+   "developers": ["Valve"],
    "available_in": ["Steam"]
   },
   {
