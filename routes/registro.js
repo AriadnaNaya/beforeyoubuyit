@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const controller = require ("../controllers/mainController")
+const controller = require ("../controllers/usersController");
 
 /* GET login page. */
-router.get('/', controller.homeLogueo);
+router.get('/',controller.registroUsuario);
 
 module.exports = router;

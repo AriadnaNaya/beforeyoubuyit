@@ -1,13 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const controller = require ("../controllers/productsController")
 
 /* GET key page. */
-router.get('/', function(req, res, next) {
-  res.render('key', 
-  { title: 'Carga Key',
-    nombre: 'Admin',
-    apellido: '-'
-  });
-});
+router.get('/',controller.validaKey);
 
 module.exports = router;

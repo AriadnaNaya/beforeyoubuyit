@@ -21,19 +21,24 @@
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="embed-responsive embed-responsive-16by9">
-									<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls muted autoplay></video>
+									<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
+										muted autoplay></video>
 								</div>
 							</div>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
-										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="560" height="315"
+										src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
 								</div>
 							</div>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/ntc_ptQ5U-Q?mute=1" frameborder="2"
-										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="560" height="315"
+										src="https://www.youtube.com/embed/ntc_ptQ5U-Q?mute=1" frameborder="2"
+										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
 								</div>
 							</div>
 						</div>
@@ -54,8 +59,8 @@
 							<button id="gameplay" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="1"><i class="material-icons">videogame_asset</i></button>
 
-							<button id="honest" data-target="#carousel-example" type="button" class="btn btn-primary" data-slide-to="2"><i
-									class="material-icons">gavel</i></button>
+							<button id="honest" data-target="#carousel-example" type="button" class="btn btn-primary"
+								data-slide-to="2"><i class="material-icons">gavel</i></button>
 							<div class="d-flex flex-column justify-content-center">
 								<p class="m-0 p-0">
 									<small>Actualmente reproduciendo:</small>
@@ -90,7 +95,7 @@
 					<p>Fecha de Lanzamiento: <%= juego.released %></p>
 					<div class="my-2">
 						<% for (var i=0; i< juego.tags.length; i++) { %>
-							<span class="badge badge-secondary"><%= juego.tags[i].name %></span>
+						<span class="badge badge-secondary"><%= juego.tags[i].name %></span>
 						<% } %>
 					</div>
 
@@ -105,24 +110,28 @@
 							</div>
 							<div class="dropdown-menu">
 								<% for (var j=0; j< juego.stores.length; j++) { %>
-									<% if ( juego.stores[j].store.slug === 'steam') { %>
-										<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam"></i> Steam</a>
-									<% } %>
-									<% if ( juego.stores[j].store.slug === 'epic-games') { %>
-										<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic"></i> Epic Games</a>
-									<% } %>
-									<% if ( juego.stores[j].store.slug === 'gog') { %>
-										<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog"></i> GOG</a>
-									<% } %>
-									<% if ( juego.stores[j].store.slug === 'xbox-store') { %>
-										<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox"></i> X-Box Store</a>
-									<% } %>
+								<% if ( juego.stores[j].store.slug === 'steam') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam"></i> Steam</a>
+								<% } %>
+								<% if ( juego.stores[j].store.slug === 'epic-games') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic"></i> Epic
+									Games</a>
+								<% } %>
+								<% if ( juego.stores[j].store.slug === 'gog') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog"></i> GOG</a>
+								<% } %>
+								<% if ( juego.stores[j].store.slug === 'xbox-store') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox"></i> X-Box
+									Store</a>
+								<% } %>
 								<% } %>
 							</div>
 						</div>
 						<form method="GET" action="carrito" class="btn-group">
-							<button type="button" class="btn btn-success"><i class="material-icons">vertical_align_bottom</i> Demo</button>
-							<button type="submit" class="btn btn-primary"><i class="material-icons">shopping_cart</i> Comprar</button>
+							<button type="button" class="btn btn-success"><i
+									class="material-icons">vertical_align_bottom</i> Demo</button>
+							<button type="submit" class="btn btn-primary"><i class="material-icons">shopping_cart</i>
+								Comprar</button>
 						</form>
 
 
@@ -146,7 +155,7 @@
 						</div>
 					</div>
 				</div>
-	
+
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
@@ -158,21 +167,21 @@
 						</div>
 					</div>
 				</div>
-	
+
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert emoji" role="alert">
 							<% if ( rating === 'exceptional') { %>
-								<h2>😲</h2>
+							<h2>😲</h2>
 							<% } %>
 							<% if ( rating === 'recommended') { %>
-								<h2>😀</h2>
+							<h2>😀</h2>
 							<% } %>
 							<% if ( rating === 'meh') { %>
-								<h2>😐</h2>
+							<h2>😐</h2>
 							<% } %>
 							<% if ( rating === 'skip') { %>
-								<h2>🤮</h2>
+							<h2>🤮</h2>
 							<% } %>
 						</div>
 						<div class="hero-data">
@@ -193,7 +202,7 @@
 					<h4>ACERCA DE ESTE JUEGO</h4>
 				</div>
 				<div class="col-12 col-md-8">
-	
+
 					<p>Civilization, creado originalmente por Sid Meier, el legendario diseñador de videojuegos, es
 						un
 						juego
@@ -208,7 +217,7 @@
 						civilización
 						más
 						grande jamás conocida.
-	
+
 						Civilization VI ofrece nuevas maneras de interactuar con tu mundo: ahora las ciudades se
 						expanden
 						físicamente en el mapa, la investigación activa de tecnología y cultura desbloquea nuevos
@@ -218,12 +227,12 @@
 						de una de
 						las cinco maneras posibles.
 					</p>
-	
-	
+
+
 				</div>
-	
+
 				<div class="col-12 col-md-4">
-	
+
 					<ul class="list-unstyled">
 						<li>Apto para edades entre...</li>
 						<li>¿Cuantos Jugadores?</li>
@@ -244,7 +253,7 @@
 		</div>
 	</div>
 	<!-- //about -->
-	
+
 	<div class="hero-wrapper bg">
 		<div class="container">
 			<div class="tituloRequisitos">
@@ -255,31 +264,55 @@
 				<div class="col-12 col-md-6">
 					<strong>MINIMO</strong>
 
+					<% for (var j=0; j< juego.platforms.length; j++) { %>
+					<% if ( juego.platforms[j].platform.slug == 'pc') { %>
+					<% if (juego.platforms[j].requirements_en) { %>
 					<ul class="list-unstyled">
-						<li>Requiere un procesador y un sistema operativo de 64 bits</li>
-						<li>SO: Windows 7x64 / Windows 8.1x64 / Windows 10x64</li>
-						<li>Procesador: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater</li>
-						<li>Memoria: 4 GB de RAM</li>
-						<li>Gráficos: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530</li>
-						<li>DirectX: Versión 11</li>
-						<li>Almacenamiento: 12 GB de espacio disponible</li>
-						<li>Tarjeta de sonido: DirectX Compatible Sound Device</li>
+						<li><%=juego.platforms[j].requirements_en.minimum.required %></li>
+						<li>SO: <%=juego.platforms[j].requirements_en.minimum.so %></li>
+						<li>Procesador: <%=juego.platforms[j].requirements_en.minimum.procesador %></li>
+						<li>Memoria: <%=juego.platforms[j].requirements_en.minimum.memoria %></li>
+						<li>Graficos: <%=juego.platforms[j].requirements_en.minimum.graphics %></li>
+						<li>DirectX: <%=juego.platforms[j].requirements_en.minimum.direct %></li>
+						<li>Almacenamiento: <%=juego.platforms[j].requirements_en.minimum.almacenamiento %></li>
+						<li>Tarjeta de Sonido: <%=juego.platforms[j].requirements_en.minimum.sonido %></li>
 					</ul>
+					<% } %>
+					<%if (!juego.platforms[j].requirements_en) { %>
+					<br> </br>
+					<h1>Sorry :(</h1>
+					<p>We are working har to bring you new updates with al the information you need!! </p>
+					<%}%>
+					<% } %>
+					<% } %>
+
 				</div>
 
 				<div class="col-12 col-md-6">
 					<strong>RECOMENDADO</strong>
 
-					<ul class="list-unstyled">
-						<li>Requiere un procesador y un sistema operativo de 64 bits</li>
-						<li>SO: Windows 7x64 / Windows 8.1x64 / Windows 10x64</li>
-						<li>Procesador: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater</li>
-						<li>Memoria: 4 GB de RAM</li>
-						<li>Gráficos: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530</li>
-						<li>DirectX: Versión 11</li>
-						<li>Almacenamiento: 12 GB de espacio disponible</li>
-						<li>Tarjeta de sonido: DirectX Compatible Sound Device</li>
-					</ul>
+					<% for (var j=0; j< juego.platforms.length; j++) { %>
+						<% if ( juego.platforms[j].platform.slug == 'pc') { %>
+						<% if (juego.platforms[j].requirements_en) { %>
+						<ul class="list-unstyled">
+							<li><%=juego.platforms[j].requirements_en.recommended.required %></li>
+							<li>SO: <%=juego.platforms[j].requirements_en.recommended.so %></li>
+							<li>Procesador: <%=juego.platforms[j].requirements_en.recommended.procesador %></li>
+							<li>Memoria: <%=juego.platforms[j].requirements_en.recommended.memoria %></li>
+							<li>Graficos: <%=juego.platforms[j].requirements_en.recommended.graphics %></li>
+							<li>DirectX: <%=juego.platforms[j].requirements_en.recommended.direct %></li>
+							<li>Almacenamiento: <%=juego.platforms[j].requirements_en.recommended.almacenamiento %></li>
+							<li>Tarjeta de Sonido: <%=juego.platforms[j].requirements_en.recommended.sonido %></li>
+						</ul>
+						<% } %>
+						<%if (!juego.platforms[j].requirements_en) { %>
+						<br> </br>
+						<h1>Sorry :(</h1>
+						<p>We are working har to bring you new updates with al the information you need!! </p>
+						<%}%>
+						<% } %>
+						<% } %>
+
 				</div>
 			</div>
 		</div>

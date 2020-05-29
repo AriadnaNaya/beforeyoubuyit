@@ -2,21 +2,12 @@ const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 
-const carritoModel = require("../models/carritoModel");
+//const carritoModel = require("../models/carritoModel");
+
+const controller = require ("../controllers/productsController")
 
 
-
-router.get('/', function (req, res, next) {
-	res.render('confirmacion', {
-		nombre: 'Homero',
-		apellido: 'Thompson',
-		title: 'GAME List',
-		carritoList: carritoModel
-	});
-
-
-
-});
+router.get('/', controller.confirmacionCompra);
 
 
 module.exports = router;
