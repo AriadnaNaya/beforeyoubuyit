@@ -19,48 +19,56 @@
 				<div class="top-content">
 					<div id="carousel-example" class="carousel slide">
 						<div class="carousel-inner">
+							
 							<div class="carousel-item active">
 								<div class="embed-responsive embed-responsive-16by9">
-									<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
+									<% if (juego.clip != undefined) { %>
+										<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
 										muted autoplay></video>
+									<% } %>
+									<% if (juego.clip == undefined) { %>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<% } %>
 								</div>
 							</div>
+							<% if (juego.game_gameplay != null) { %>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+										src="<%= juego.game_gameplay %>?mute=1" frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
 							</div>
+							<% } %>
+							<% if (juego.game_review != null) { %>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="https://www.youtube.com/embed/ntc_ptQ5U-Q?mute=1" frameborder="2"
+										src="<%= juego.game_review %>?mute=1" frameborder="2"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
 							</div>
+							<% } %>
+
 						</div>
-						<!-- <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a> -->
 					</div>
 					<div class="filters">
 						<div class="carousel-indicators">
 							<button id="trailer" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="0"><i class="material-icons">videocam</i></button>
 
+							<% if (juego.game_gameplay != null) { %>
 							<button id="gameplay" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="1"><i class="material-icons">videogame_asset</i></button>
+							<% } %>
 
+							<% if (juego.game_review != null) { %>
 							<button id="honest" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="2"><i class="material-icons">gavel</i></button>
+							<% } %>
 							<div class="d-flex flex-column justify-content-center">
 								<p class="m-0 p-0">
 									<small>Actualmente reproduciendo:</small>
