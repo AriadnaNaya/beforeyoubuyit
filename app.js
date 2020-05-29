@@ -17,8 +17,9 @@ const homeRouter = require('./routes/home');
 const detalleRouter = require('./routes/detalle');
 const keyRouter = require('./routes/key');
 const cargaRouter = require('./routes/carga');
-var carritoRouter = require('./routes/carrito');
-var confirmacionRouter = require('./routes/confirmacion');
+const carritoRouter = require('./routes/carrito');
+const confirmacionRouter = require('./routes/confirmacion');
+const productosRouter = require('./routes/products');
 
 const app = express();
 app.use(connectLivereload());
@@ -64,6 +65,7 @@ app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
 app.use('/carrito', carritoRouter);
 app.use('/confirmacion', confirmacionRouter);
+app.use('/productos', productosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -72,17 +74,13 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  if (res.status(404)) {
-    res.status(400).render('notfound');
-  } else {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-  }
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
   
   
 });

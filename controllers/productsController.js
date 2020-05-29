@@ -1,7 +1,21 @@
+const fs = require('fs');
+const path = require('path');
+
 const carritoModel = require("../models/carritoModel");
 const juegosModel = require("../models/juegosModel");
 
+const productsFilePath = path.join(__dirname, '../data/juegos.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const controller = {
+
+    root: (req, res) => {
+      res.render('products', 
+      {
+        products: products
+      });
+    },
 
     validaKey: (req, res, next) => {
         res.render('key', 
@@ -29,7 +43,7 @@ const controller = {
               apellido: '-',
               title: 'carga',
               juego: gameList.results[0],
-              gameList: data,
+              gameList: products,
               rating: maxRated.title
             });
 
