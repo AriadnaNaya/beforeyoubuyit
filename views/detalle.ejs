@@ -19,48 +19,56 @@
 				<div class="top-content">
 					<div id="carousel-example" class="carousel slide">
 						<div class="carousel-inner">
+							
 							<div class="carousel-item active">
 								<div class="embed-responsive embed-responsive-16by9">
-									<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
+									<% if (juego.clip != undefined) { %>
+										<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
 										muted autoplay></video>
+									<% } %>
+									<% if (juego.clip == undefined) { %>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<% } %>
 								</div>
 							</div>
+							<% if (juego.game_gameplay != null) { %>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+										src="<%= juego.game_gameplay %>?mute=1" frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
 							</div>
+							<% } %>
+							<% if (juego.game_review != null) { %>
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="https://www.youtube.com/embed/ntc_ptQ5U-Q?mute=1" frameborder="2"
+										src="<%= juego.game_review %>?mute=1" frameborder="2"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
 							</div>
+							<% } %>
+
 						</div>
-						<!-- <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a> -->
 					</div>
 					<div class="filters">
 						<div class="carousel-indicators">
 							<button id="trailer" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="0"><i class="material-icons">videocam</i></button>
 
+							<% if (juego.game_gameplay != null) { %>
 							<button id="gameplay" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="1"><i class="material-icons">videogame_asset</i></button>
+							<% } %>
 
+							<% if (juego.game_review != null) { %>
 							<button id="honest" data-target="#carousel-example" type="button" class="btn btn-primary"
 								data-slide-to="2"><i class="material-icons">gavel</i></button>
+							<% } %>
 							<div class="d-flex flex-column justify-content-center">
 								<p class="m-0 p-0">
 									<small>Actualmente reproduciendo:</small>
@@ -72,16 +80,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="screenshots row">
-					<div class="col-12">
-						<strong>Screenshots</strong>
+				<% if (juego.short_screenshots) { %>
+					<div class="screenshots row">
+						<div class="col-12">
+							<strong>Screenshots</strong>
+						</div>
+						<% for (var k=1; k< juego.short_screenshots.length; k++) { %>
+						<div class="col">
+							<img src="<%= juego.short_screenshots[k].image %>" alt="">
+						</div>
+						<% } %>
 					</div>
-					<% for (var k=1; k< juego.short_screenshots.length; k++) { %>
-					<div class="col">
-						<img src="<%= juego.short_screenshots[k].image %>" alt="">
-					</div>
-					<% } %>
-				</div>
+				<% } %>
 			</div>
 			<!-- //videos -->
 			<!-- gameInfo -->
@@ -91,13 +101,35 @@
 				</div>
 				<div class="overview-data">
 					<h4 class="product-title"><%= juego.name %></h4>
-					<p>Developers: Firaxis Games, Aspyr, Aspyr (Mac)</p>
-					<p>Fecha de Lanzamiento: <%= juego.released %></p>
+					<p><span>Desarrollado por: </span>
+						<% if (juego.developers != null) { %>
+							<% for (var i=0; i< juego.developers.length; i++) { %>
+							<span><%= juego.developers[i] %></span>
+							<% } %>
+						<% } %>
+					</p>
+					<% if (juego.released) { %>
+						<p>Fecha de Lanzamiento: <%= juego.released %></p>
+					<% } %>
+
+					<!-- tags -->
+					<% if (juego.tags) { %>
 					<div class="my-2">
 						<% for (var i=0; i< juego.tags.length; i++) { %>
 						<span class="badge badge-secondary"><%= juego.tags[i].name %></span>
 						<% } %>
 					</div>
+					<% } %>
+					<!-- //tags -->
+					<!-- tags -->
+					<% if (juego.categories != null) { %>
+					<div class="my-2">
+						<% for (var i=0; i< juego.categories.length; i++) { %>
+						<span class="badge badge-secondary"><%= juego.categories[i] %></span>
+						<% } %>
+					</div>
+					<% } %>
+					<!-- //tags -->
 
 					<div class="row">
 						<div class="btn-group">
@@ -106,21 +138,21 @@
 								Plataforma
 							</button>
 							<div class="price">
-								<h6>ARS$ <strong>1.200,00</strong></h6>
+								<h6>ARS$ <strong><%= juego.price %></strong></h6>
 							</div>
 							<div class="dropdown-menu">
-								<% for (var j=0; j< juego.stores.length; j++) { %>
-								<% if ( juego.stores[j].store.slug === 'steam') { %>
+								<% for (var j=0; j< juego.available_in.length; j++) { %>
+								<% if ( juego.available_in[j] === 'Steam') { %>
 								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam"></i> Steam</a>
 								<% } %>
-								<% if ( juego.stores[j].store.slug === 'epic-games') { %>
+								<% if ( juego.available_in[j] === 'Epic Games') { %>
 								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic"></i> Epic
 									Games</a>
 								<% } %>
-								<% if ( juego.stores[j].store.slug === 'gog') { %>
+								<% if ( juego.available_in[j] === 'GOG') { %>
 								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog"></i> GOG</a>
 								<% } %>
-								<% if ( juego.stores[j].store.slug === 'xbox-store') { %>
+								<% if ( juego.available_in[j] === 'X-Box Store') { %>
 								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox"></i> X-Box
 									Store</a>
 								<% } %>
@@ -142,6 +174,7 @@
 		</div>
 	</div>
 	<!-- ratings	 -->
+	<% if (juego.ratings) { %>
 	<div class="hero-wrapper bg p-0">
 		<div class="container">
 			<div class="row">
@@ -193,6 +226,7 @@
 			</div>
 		</div>
 	</div>
+	<% } %>
 	<!-- //ratings -->
 	<!-- about -->
 	<div class="hero-wrapper">
@@ -201,53 +235,15 @@
 				<div class="col-12">
 					<h4>ACERCA DE ESTE JUEGO</h4>
 				</div>
-				<div class="col-12 col-md-8">
-
-					<p>Civilization, creado originalmente por Sid Meier, el legendario diseñador de videojuegos, es
-						un
-						juego
-						de estrategia por turnos en el que tu objetivo es construir un imperio que resista el paso
-						del
-						tiempo.
-						Conquista el mundo entero estableciendo y liderando tu propia civilización desde la Edad de
-						Piedra hasta
-						la Era de la Información. Libra guerras, utiliza la diplomacia, fomenta el progreso de tu
-						cultura y
-						enfréntate cara a cara a los líderes más importantes de la historia para crear la
-						civilización
-						más
-						grande jamás conocida.
-
-						Civilization VI ofrece nuevas maneras de interactuar con tu mundo: ahora las ciudades se
-						expanden
-						físicamente en el mapa, la investigación activa de tecnología y cultura desbloquea nuevos
-						potenciales y
-						los líderes actúan en función de sus rasgos históricos mientras intentas conseguir la
-						victoria
-						de una de
-						las cinco maneras posibles.
-					</p>
+				<div class="col-12">
+					<% if (juego.about != null) { %>
+						<p><%= juego.about %></p>
+					<% } %>
+					<% if (juego.about == null) { %>
+						<p>No tenemos una descripción disponible para este juego</p>
+					<% } %>
 
 
-				</div>
-
-				<div class="col-12 col-md-4">
-
-					<ul class="list-unstyled">
-						<li>Apto para edades entre...</li>
-						<li>¿Cuantos Jugadores?</li>
-						<li>¿Se puede jugar online?</li>
-						<li>Plataformas donde esta disponible</li>
-						<li>¿Apto para VR?</li>
-						<li>En caso de serlo, ¿Que cascos?</li>
-						<li>Idiomas en los que esta disponible</li>
-						<li>Links relacionados</li>
-						<ul class="list-unstyled">
-							<li>DLC</li>
-							<li>Juegos del mismo genero</li>
-							<li>Por los mismos cradores</li>
-						</ul>
-					</ul>
 				</div>
 			</div>
 		</div>

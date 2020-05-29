@@ -445,7 +445,16 @@
      "id": 1827226,
      "image": "https://media.rawg.io/media/screenshots/a7e/a7e990bc574f4d34e03b5926361d1ee7.jpg"
     }
-   ]
+   ],
+   "price": 2300,
+   "discount": 50,
+   "game_trailer": "https://media.rawg.io/media/stories-640/5b0/5b0cfff8c606c5e4db4f74f108c4413b.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": ["Rockstar Games"],
+   "available_in": ["Steam", "Epic Games", "X-Box Store"]
   },
   {
    "id": 4200,
@@ -936,7 +945,16 @@
      "id": 99023,
      "image": "https://media.rawg.io/media/screenshots/415/41543dcc12dffc8e97d85a56ad42cda8.jpg"
     }
-   ]
+   ],
+   "price": 1500,
+   "discount": 50,
+   "game_trailer": "https://media.rawg.io/media/stories-640/fde/fde8aaeeab956f6b705bbb4161b09004.mp4",
+   "game_review": "https://www.youtube.com/embed/w9aG2qU9okk",
+   "game_gameplay": "https://www.youtube.com/embed/A0K5EXfgJnk",
+   "about": "Portal 2 es el segundo videojuego mezcla de videojuego de lógica y de disparos en primera persona, de la saga Portal.<br> Fue desarrollado por Valve Corporation. Tras los eventos del primer Portal, Chell (nuestra protagonista) despierta 50 días después de haber sido criogenizada en lo que parece ser una habitación de hotel, donde una máquina alternativa le da una serie de indicaciones para moverse y finalmente volver a dormir. Posteriormente Chell es despertada de nuevo, pero esta vez la habitación donde se encuentra está seriamente deteriorada, con el contador de tiempo fallando. De fondo suena una voz al otro lado de la puerta, tras abrirla aparece Wheatley, el módulo de personalidad que despertó a Chell de su letargo.",
+   "categories": null,
+   "developers": ["Valve"],
+   "available_in": ["Steam"]
   },
   {
    "id": 3328,
@@ -1382,7 +1400,16 @@
      "id": 30342,
      "image": "https://media.rawg.io/media/screenshots/f63/f6373ee614046d81503d63f167181803.jpg"
     }
-   ]
+   ],
+   "price": 1500,
+   "discount": 50,
+   "game_trailer": "https://media.rawg.io/media/stories-640/619/6197079f588ae10e3fe87edad3ee2d43.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam", "X-Box Store", "GOG"]
   },
   {
    "id": 5286,
@@ -1851,7 +1878,16 @@
      "id": 99165,
      "image": "https://media.rawg.io/media/screenshots/2a4/2a4250f83ad9e959d8b4ca9376ae34ea.jpg"
     }
-   ]
+   ],
+   "price": 1900,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/02a/02ae488ef3392f85c002070b76fd6e37.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 5679,
@@ -2325,7 +2361,16 @@
      "id": 118312,
      "image": "https://media.rawg.io/media/screenshots/091/091e95b49d5a22de036698fc731395a2.jpg"
     }
-   ]
+   ],
+   "price": 1000,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/706/706aad163bc0ff757ad963890175e000.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 12020,
@@ -2761,7 +2806,16 @@
      "id": 99753,
      "image": "https://media.rawg.io/media/screenshots/5f2/5f2ca569912add2a211b20ba3f576b97.jpg"
     }
-   ]
+   ],
+   "price": 800,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/6bf/6bf9c27538426b187908bafd61160c3e.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 802,
@@ -3282,7 +3336,16 @@
      "id": 7088,
      "image": "https://media.rawg.io/media/screenshots/297/29716964351ecd82545f1de3a50dfc4e.jpg"
     }
-   ]
+   ],
+   "price": 900,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/7fc/7fc5cc0196871480ac2a135642b6b915.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam", "X-Box Store"]
   },
   {
    "id": 4062,
@@ -3762,7 +3825,16 @@
      "id": 98554,
      "image": "https://media.rawg.io/media/screenshots/985/985b56daa78e0a23133518d4226e9f97.jpg"
     }
-   ]
+   ],
+   "price": 800,
+   "discount": 15,
+   "game_trailer": "https://media.rawg.io/media/stories-640/151/151157e3bb2dd3e3f1e5fbee39ccc69d.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 13536,
@@ -4241,7 +4313,16 @@
      "id": 115798,
      "image": "https://media.rawg.io/media/screenshots/e72/e7256b4caedf099bcb8ebd332f892334.jpg"
     }
-   ]
+   ],
+   "price": 800,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/727/72779f22fc89f5b492c1af76be79adfd.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 3439,
@@ -4783,7 +4864,16 @@
      "id": 1826492,
      "image": "https://media.rawg.io/media/screenshots/c1d/c1d6333b2da0f920e8de10c14d3c6093.jpg"
     }
-   ]
+   ],
+   "price": 1000,
+   "discount": 10,
+   "game_trailer": "https://media.rawg.io/media/stories-640/514/51432922c6982fc36865911381f82d89.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam", "X-Box Store"]
   },
   {
    "id": 4291,
@@ -5222,7 +5312,16 @@
      "id": 81649,
      "image": "https://media.rawg.io/media/screenshots/337/337a3e98b5933f456a2b37b59fab5f39.jpg"
     }
-   ]
+   ],
+   "price": 1500,
+   "discount": 10,
+   "game_trailer": "https://media.rawg.io/media/stories-640/0cc/0cca2e6569d5c6631b1c422116d3dd71.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 1030,
@@ -5883,7 +5982,16 @@
      "id": 30990,
      "image": "https://media.rawg.io/media/screenshots/4a8/4a8c625374918e96e74948189e90c20b.jpg"
     }
-   ]
+   ],
+   "price": 800,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/8b0/8b0b7285424bc9ace90187a5dd9b909b.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam", "Epic Games", "X-Box Store", "GOG"]
   },
   {
    "id": 4286,
@@ -6346,7 +6454,16 @@
      "id": 170998,
      "image": "https://media.rawg.io/media/screenshots/146/146e418797aca19296f90d259207414c.jpg"
     }
-   ]
+   ],
+   "price": 600,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/812/81238e77897b40294fce96e82601aba5.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 13537,
@@ -6817,7 +6934,16 @@
      "id": 115809,
      "image": "https://media.rawg.io/media/screenshots/e99/e995e154d4f9e2df0367adea528a72c5.jpg"
     }
-   ]
+   ],
+   "price": 300,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/7d7/7d7b25f5b3fb214df4b36f282ffd71c9.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 11859,
@@ -7282,7 +7408,16 @@
      "id": 97910,
      "image": "https://media.rawg.io/media/screenshots/707/707c7488bd6e35bc74d274a923bc1df2.jpg"
     }
-   ]
+   ],
+   "price": 400,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/a65/a655bf5c37dd13053263c7c97205a357.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 28,
@@ -7802,7 +7937,16 @@
      "id": 778178,
      "image": "https://media.rawg.io/media/screenshots/985/985e3e1f1d1af1ab0797d43a95d472cc.jpg"
     }
-   ]
+   ],
+   "price": 3500,
+   "discount": 20,
+   "game_trailer": "https://media.rawg.io/media/stories-640/b19/b1904018c12b752274008720a9f9cc2f.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": ["Rockstar Games"],
+   "available_in": ["Steam", "Epic Games", "X-Box Store"]
   },
   {
    "id": 3939,
@@ -8219,7 +8363,16 @@
      "id": 74199,
      "image": "https://media.rawg.io/media/screenshots/4ee/4ee5c3c8b850ab4ba8e04b9f5d5ab060.jpg"
     }
-   ]
+   ],
+   "price": 1100,
+   "discount": 12,
+   "game_trailer": "https://media.rawg.io/media/stories-640/754/75466cbed22b9f3f48a944180e5338f6.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam"]
   },
   {
    "id": 2454,
@@ -8685,7 +8838,16 @@
      "id": 22404,
      "image": "https://media.rawg.io/media/screenshots/b77/b77629938389a41160d3b2a56eaed568.jpg"
     }
-   ]
+   ],
+   "price": 1300,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/58e/58e76ab51a852851c17079501b25e1d1.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": ["id Software", "Bethesda"],
+   "available_in": ["Steam", "X-Box Store"]
   },
   {
    "id": 3070,
@@ -9081,7 +9243,16 @@
      "id": 28006,
      "image": "https://media.rawg.io/media/screenshots/99c/99c81029aeace339293753186246099f.jpg"
     }
-   ]
+   ],
+   "price": 2300,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/427/427aa7b8aa4a789d76a7a6f1c6d26abe.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": null,
+   "available_in": ["Steam", "Epic Games", "X-Box Store", "GOG"]
   },
   {
    "id": 4459,
@@ -9472,7 +9643,16 @@
      "id": 139047,
      "image": "https://media.rawg.io/media/screenshots/b25/b254f9729ae3f36a9ccffccaa01d5cf6.jpg"
     }
-   ]
+   ],
+   "price": 2300,
+   "discount": 0,
+   "game_trailer": "https://media.rawg.io/media/stories-640/be3/be37d466f17e6f07137a7abccb1db0b2.mp4",
+   "game_review": null,
+   "game_gameplay": null,
+   "about": null,
+   "categories": null,
+   "developers": ["Rockstar Games"],
+   "available_in": ["Steam", "Epic Games", "X-Box Store", "GOG"]
   }
  ],
  "seo_title": "All Games",
