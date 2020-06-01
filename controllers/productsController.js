@@ -144,8 +144,10 @@ const controller = {
         res.render('carrito', {
             nombre: 'Homero',
             apellido: 'Thompson',
-            title: 'GAME List',
-            carritoList: carritoModel
+            title: 'Carrito',
+            carritoList: productsDB,
+            finalPrice: finalPrice,
+            toThousand: toThousand
         });
     },
 
@@ -154,7 +156,7 @@ const controller = {
             nombre: 'Homero',
             apellido: 'Thompson',
             title: 'GAME List',
-            carritoList: carritoModel
+            carritoList: productsDB
         });
     },
 

@@ -18,7 +18,10 @@ router.put('/edit/:id', productsController.update); /* PUT - Update in DB */
 /* GET detalle page. */
 /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', productsController.destroy); /* DELETE - Delete from DB */
+
 router.get('/:id', productsController.detail);
+
+
 
 
 

@@ -17,33 +17,35 @@
       <h4 class="title">Mi carrito</h4>
     </div>
     <form method="GET" action="confirmacion" class="cart-wrapper">
-      <% for(var i = 0; i < carritoList.results.length; i++) { %>
+      <% for(var i = 0; i < 4; i++) { %>
         <div class="in-cart w-100">
           <div class="col-12 col-md-2 img-wrapper"
-            style="background-image: url('<%= carritoList.results[i].background_image %>');">
+            style="background-image: url('<%= carritoList[i].background_image %>');">
           </div>
           <div class="col-12 col-md-8">
-            <p class="in-cart-title"><%=  carritoList.results[i].name%></p>
-            <p class="bold-case">
-              <% if ( carritoList.results[i].platform === 'steam') { %>
-                <i class="icon-steam"></i> Steam Key
-              <% } %>
-            </p>
-            <p class="bold-case">
-              <% if ( carritoList.results[i].platform === 'epic-games') { %>
-                <i class="icon-epic"></i> Epic Games Key
-              <% } %>
-            </p>
-            <p class="bold-case">
-              <% if ( carritoList.results[i].platform === 'gog') { %>
-                <i class="icon-gog"></i> GOG Key
-              <% } %>
-            </p>
-            <p class="bold-case">
-              <% if ( carritoList.results[i].platform === 'xbox-store') { %>
-                <i class="icon-xbox"></i> Xbox Store Key
-              <% } %>
-            </p>
+            <p class="in-cart-title"><%=  carritoList[i].name%></p>
+            <% for (var j=0; j< carritoList[i].store.length; j++) { %>
+              <span class="bold-case">
+                <% if ( carritoList[i].store[j] === 'Steam') { %>
+                <i class="icon-steam" title="<%= carritoList[i].store[j] %>"></i> <%= carritoList[i].store[j] %> Key
+                <% } %>
+              </span>
+              <span class="bold-case">
+                <% if ( carritoList[i].store[j] === 'Epic Games') { %>
+                <i class="icon-epic" title="<%= carritoList[i].store[j] %>"></i> Epic <%= carritoList[i].store[j] %> Key
+                <% } %>
+              </span>
+              <span class="bold-case">
+                <% if ( carritoList[i].store[j] === 'GOG') { %>
+                <i class="icon-gog" title="<%= carritoList[i].store[j] %>"></i> <%= carritoList[i].store[j] %> Key
+                <% } %>
+              </span>
+              <span class="bold-case">
+                <% if ( carritoList[i].store[j] === 'X-Box Store') { %>
+                <i class="icon-xbox" title="<%= carritoList[i].store[j] %>"></i> X-box <%= carritoList[i].store[j] %> Key
+                <% } %>
+              </span>
+            <% } %>
             
             <p class="bold-case">Activación global</p>
               
@@ -53,7 +55,7 @@
               electrónico.</p>
           </div>
           <div class="col-12 col-md-2 price">
-            <strong>ARS <%= carritoList.results[i].price %></strong>
+            <strong>$ <%= finalPrice(carritoList[i].price, carritoList[i].discount) %></strong>
             <div>
               <a class="text-secondary" href="javascript:void(0)"><small>Eliminar</small></a>
             </div>
