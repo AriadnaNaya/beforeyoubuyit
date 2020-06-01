@@ -8,7 +8,7 @@
   "background_image": "https://media.rawg.io/media/games/b11/b115b2bc6a5957a917bc7601f4abdda2.jpg",
   "about": "Se trata de una aventura de acción de mundo abierto con multitud de misiones en la que encarnamos a tres personajes distintos: Trevor, Michael y Franklin. Además, cuenta con GTA Online, el modo multijugador en lína de GTA 5. ... GTA V se ambienta en Los Santos, ciudad ficticia basada en Los Angeles",
   "developers": ["Rockstar Games"],
-  "available_in": ["Steam", "X-Box Store", "GOG", "Epic Games"],
+  "store": ["Steam", "X-Box Store", "GOG", "Epic Games"],
   "metacritic": 97,
   "ratings": [
     {
@@ -78,7 +78,7 @@
   "background_image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
   "about": "Portal 2 es el segundo videojuego mezcla de videojuego de lógica y de disparos en primera persona, de la saga Portal.<br> Fue desarrollado por Valve Corporation. Tras los eventos del primer Portal, Chell (nuestra protagonista) despierta 50 días después de haber sido criogenizada en lo que parece ser una habitación de hotel, donde una máquina alternativa le da una serie de indicaciones para moverse y finalmente volver a dormir. Posteriormente Chell es despertada de nuevo, pero esta vez la habitación donde se encuentra está seriamente deteriorada, con el contador de tiempo fallando. De fondo suena una voz al otro lado de la puerta, tras abrirla aparece Wheatley, el módulo de personalidad que despertó a Chell de su letargo.",
   "developers": ["Valve"],
-  "available_in": ["Steam"],
+  "store": ["Steam"],
   "metacritic": 95,
   "ratings": [
     {
@@ -148,7 +148,7 @@
   "background_image": "https://media.rawg.io/media/games/088/088b41ca3f9d22163e43be07acf42304.jpg",
   "about": "Es un juego de perspectiva en tercera persona, el jugador controla al protagonista Geralt de Rivia, un cazador de monstruos conocido como Lobo Blanco, es un brujo, el cual emprende un largo viaje a través de Los reinos del norte.",
   "developers": ["CD Projekt Red"],
-  "available_in": ["Steam", "X-Box Store", "GOG"],
+  "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 93,
   "ratings": [
     {
@@ -218,7 +218,7 @@
   "background_image": "https://media.rawg.io/media/games/81b/81b138691f027ed1f8720758daa0d895.jpg",
   "about": null,
   "developers": null,
-  "available_in": ["Steam", "X-Box Store", "GOG"],
+  "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 86,
   "ratings": [
     {
@@ -288,7 +288,7 @@
   "background_image": "https://media.rawg.io/media/games/e9c/e9cbc91e2090638ddab6ae0b3d334f90.jpg",
   "about": "La historia de Skyrim se centra en los esfuerzos del personaje, dovahkiin (sangre de dragón), para derrotar a Alduin, un dragón/dovah que, según la profecía, destruirá el mundo. La trama está fechada doscientos años después de los sucesos de Oblivion y tiene lugar en la provincia ficticia de Skyrim",
   "developers": ["Bethesda Game Studios"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 94,
   "ratings": [
     {
@@ -358,7 +358,7 @@
   "background_image": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
   "about": "Left 4 Dead 2 es un videojuego de disparos en primera persona cooperativo de tipo Horror de supervivencia creado por la compañía Valve. Es la secuela de Left 4 Dead y se lanzó al mercado el 17 de noviembre de 2009 en Estados Unidos y Latinoamérica. En Europa llegó tres días después, el 20 de noviembre.",
   "developers": ["Bethesda Game Studios"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 89,
   "ratings": [
     {
@@ -428,7 +428,7 @@
   "background_image": "https://media.rawg.io/media/games/588/588c6bdff3d4baf66ec36b1c05b793bf.jpg",
   "about": "El juego se sitúa 5 años después de su anterior título Borderlands. Jack el guapo, antagonista principal, ha tomado la corporación Hyperion, y se ha autoproclamado dictador de Pandora tras haber encontrado La Cámara. El nuevo grupo viaja en tren en busca de La Cámara.",
   "developers": ["Gearbox Software"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 89,
   "ratings": [
     {
@@ -498,7 +498,7 @@
   "background_image": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
   "about": "BioShock Infinite es un FPS con elementos propios de los juegos de rol similares a los anteriores 2 juegos. Como DeWitt, el jugador se moverá a las diversas estructuras de Columbia usando un gancho a través de unas vías férreas que conectan los edificios llamada Skyline, y otros medios para buscar a Elizabeth.",
   "developers": ["‎Irrational Games"],
-  "available_in": ["Steam"],
+  "store": ["Steam"],
   "metacritic": 94,
   "ratings": [
     {
@@ -568,7 +568,7 @@
   "background_image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
   "about": "El juego consiste en una serie de puzzles que deben ser resueltos teletransportando al personaje del juego y otros objetos simples utilizando el Dispositivo portátil de portales de Aperture Science . El objetivo de cada cámara es llegar a un punto de salida, representada por un ascensor circular. La pistola de portales y la física inusual que crea son el énfasis de este juego.",
   "developers": ["‎Valve"],
-  "available_in": ["Steam", "X-Box Store", "GOG"],
+  "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 90,
   "ratings": [
     {
@@ -638,7 +638,7 @@
   "background_image": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg",
   "about": "Life is Strange destaca por el modo en el que trata diversas situaciones que sufren los adolescentes, como el acoso escolar, la depresión, el suicidio, las violaciones o las drogas. Del mismo modo trata temas como las diversas orientaciones sexuales que existen, al mostrar con naturalidad relaciones homosexuales.",
   "developers": ["Dontnod Entertainment"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 83,
   "ratings": [
     {
@@ -708,7 +708,7 @@
   "background_image": "https://media.rawg.io/media/games/64b/64bb90ca6b1df8a36d710f6542111142.jpg",
   "about": "Counter-Strike: Global Offensive (CS:GO) es un videojuego de disparos en primera persona desarrollado por Valve Corporation en cooperación con Hidden Path Entertainment, y es el cuarto juego de la saga Counter-Strike, sin contar Counter-Strike: Online.",
   "developers": ["Valve‎", "‎Hidden Path Entertainment"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 83,
   "ratings": [
     {
@@ -777,7 +777,7 @@
   "background_image": "https://media.rawg.io/media/games/929/9295e55ce69cf5337c567983cf8b4137.jpeg",
   "about": "Es un videojuego de lógica y plataformas desarrollado por la compañía independiente danesa Playdead y estrenado en 2010 para Xbox Live Arcade. La trama describe las vivencias de un niño mientras busca a su hermana en un entorno siniestro.",
   "developers": ["Valve‎", "‎Hidden Path Entertainment"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 88,
   "ratings": [
     {
@@ -846,7 +846,7 @@
   "background_image": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
   "about": "Está ambientado durante una ucronía del año 1960, en Rapture, una ciudad distópica ficticia bajo el agua. El jugador se entera de la historia de Rapture a través de grabaciones de audio mientras explora la ciudad.",
   "developers": ["2K Boston‎", "2K Australia"],
-  "available_in": ["Steam", "X-Box Store", "GOG"],
+  "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 96,
   "ratings": [
     {
@@ -916,7 +916,7 @@
   "background_image": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
   "about": "Es un videojuego de disparos en primera persona, es la secuela de Half-Life y Half-Life: Alyx. ... Se introdujo el motor de juego Source y, a causa de Steam, fue el primer videojuego de un solo jugador en requerir la activación del producto en línea.",
   "developers": ["Valve"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 96,
   "ratings": [
     {
@@ -986,7 +986,7 @@
   "background_image": "https://media.rawg.io/media/games/8e0/8e032ac4faf1136e7d708bb3ac61af23.jpg",
   "about": "Es el primero de los juegos multijugadores de Valve en proveer estadísticas detalladas del jugador. Estos incluyen: tiempo pasado jugando como cada clase, más puntos obtenidos, y las mayores capturas u objetivos alcanzados en una sola vida.",
   "developers": ["Valve"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 92,
   "ratings": [
     {
@@ -1056,7 +1056,7 @@
   "background_image": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
   "about": "Es un videojuego de acción-aventura western, en un mundo abierto y en perspectiva de primera y tercera persona,1​ con componentes para un jugador y multijugador.2​ Fue desarrollado por Rockstar Studios. Es la precuela de Red Dead Redemption y el tercer juego de la saga Red Dead.",
   "developers": ["Rockstar Games"],
-  "available_in": ["Steam", "X-Box Store", "Epic Games"],
+  "store": ["Steam", "X-Box Store", "Epic Games"],
   "metacritic": 96,
   "ratings": [
     {
@@ -1129,7 +1129,7 @@
   "background_image": "https://media.rawg.io/media/games/73e/73eecb8909e0c39fb246f457b5d6cbbe.jpg",
   "about": "Es un videojuego de disparos en primera persona multijugador cooperativo, desarrollado por Overkill Software. El objetivo del juego es ganar el máximo dinero posible realizando atracos a bancos, joyerías,y museos se evita a las fuerzas de seguridad. El juego está ambientado en la ciudad de Washington.",
   "developers": ["Overkill Software"],
-  "available_in": ["Steam", "X-Box Store", "Epic Games"],
+  "store": ["Steam", "X-Box Store", "Epic Games"],
   "metacritic": 79,
   "ratings": [
     {
@@ -1201,7 +1201,7 @@
   "background_image": "https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg",
   "about": "Los jugadores toman el papel de un marine espacial sin nombre mientras lucha contra las fuerzas demoníacas del infierno que han sido desatadas por la Unión Aerospace Corporation en un planeta colonizado en el futuro, Marte.",
   "developers": ["id Software", "Bethesda"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 85,
   "ratings": [
     {
@@ -1273,7 +1273,7 @@
   "background_image": "https://media.rawg.io/media/games/c88/c885ae6a24bbce21df93b6c4e1c78899.jpg",
   "about": "stá ambientado en la post-apocalíptica zona estadounidense de la Commonwealth, Massachusetts en el año 2287, 210 años después de una devastadora guerra nuclear (se rumora que era entre Estados Unidos, Rusia y China) , en la que el o la protagonista sobrevive en un búnker subterráneo de la compañía Vault-Tec",
   "developers": ["Bethesda"],
-  "available_in": ["Steam", "X-Box Store"],
+  "store": ["Steam", "X-Box Store"],
   "metacritic": 84,
   "ratings": [
     {
@@ -1345,7 +1345,7 @@
   "background_image": "https://media.rawg.io/media/games/4a0/4a0a1316102366260e6f38fd2a9cfdce.jpg",
   "about": "Es un videojuego de acción-aventura de mundo abierto desarrollado por Rockstar North.5​ El videojuego, precedido por Grand Theft Auto: Vice City Stories, es el noveno título de la serie Grand Theft Auto y el primero de la misma en aparecer en las videoconsolas de séptima generación. La historia del juego discurre en Liberty City, una ciudad ficticia basada fuertemente en la ciudad moderna de Nueva York.​ El protagonista de la trama es Niko Bellic, un veterano de guerra de Europa del Este, que emigró a Estados Unidos en busca del sueño americano prometido por su primo, pero que rápidamente es arrastrado a un submundo criminal. Como en otras ediciones de la serie, el videojuego está compuesto de elementos de conducción y disparos en tercera persona, y posee un juego de mundo abierto que le da a los jugadores más control sobre su experiencia de juego. GTA IV es el primer juego de consola en la franquicia que tiene un modo multijugador en línea de manera nativa sin mods, y contiene quince tipos de juego.",
   "developers": ["Rockstar Games"],
-  "available_in": ["Steam", "Epic Games", "X-Box Store", "GOG"],
+  "store": ["Steam", "Epic Games", "X-Box Store", "GOG"],
   "metacritic": 90,
   "ratings": [
     {

@@ -6,9 +6,22 @@ const juegosModel = require("../models/juegosModel");
 
 const productsFilePath = path.join(__dirname, '../data/juegos.json');
 const productsFilePathDemo = path.join(__dirname, '../data/juegosDemo.json');
+const productsFilePathDB = path.join(__dirname, '../data/juegosDB.json');
 
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsDemo = JSON.parse(fs.readFileSync(productsFilePathDemo, 'utf-8'));
+const productsDB = JSON.parse(fs.readFileSync(productsFilePathDB, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const finalPrice = (price, discount) => {
+  if (discount > 0) {
+    price = price - (price * discount / 100);
+  } else {
+    price = price;
+  }
+  return toThousand(price);
+}
 
 
 const controller = {
@@ -16,7 +29,9 @@ const controller = {
     root: (req, res) => {
       res.render('products', 
       {
-        products: products
+        products: productsDB,
+        finalPrice: finalPrice,
+        toThousand: toThousand
       });
     },
 
