@@ -568,7 +568,7 @@
   "background_image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
   "about": "El juego consiste en una serie de puzzles que deben ser resueltos teletransportando al personaje del juego y otros objetos simples utilizando el Dispositivo portátil de portales de Aperture Science . El objetivo de cada cámara es llegar a un punto de salida, representada por un ascensor circular. La pistola de portales y la física inusual que crea son el énfasis de este juego.",
   "developers": ["‎Valve"],
-  "available_in": ["Steam"],
+  "available_in": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 90,
   "ratings": [
     {
@@ -846,7 +846,7 @@
   "background_image": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
   "about": "Está ambientado durante una ucronía del año 1960, en Rapture, una ciudad distópica ficticia bajo el agua. El jugador se entera de la historia de Rapture a través de grabaciones de audio mientras explora la ciudad.",
   "developers": ["2K Boston‎", "2K Australia"],
-  "available_in": ["Steam", "X-Box Store"],
+  "available_in": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 96,
   "ratings": [
     {
