@@ -13,51 +13,7 @@
   <!-- home content -->
   <div class="container">
     <div class="custom-row">
-      <% for(var i = 0; i < products.length; i++) { %>
-      <a href="javascript:void(0)" class="card-wrapper">
-        <div class="card">
-          <div class="card-img" style="background-image: url('<%=  products[i].background_image %>');">
-            <p class="card-title"><%=  products[i].name %></p>
-          </div>
-          <div class="card-body">
-            <div class="price">
-              <div class="value">
-                <% if (products[i].discount > 1) { %>
-                  <p>
-                    <span class="badge badge-sunflower">-<%= products[i].discount %>%</span>
-                    $<%= finalPrice(products[i].price, products[i].discount) %>
-                  </p>
-                  <div class="discount">
-                    <small>$<%= toThousand(products[i].price) %></small>
-                  </div>
-                <% } else { %>
-                  <p style="margin-bottom: 21px;">$<%= toThousand(products[i].price) %></p>
-                <% } %>
-                
-              </div>
-              <i class="fa fa-cart-plus"></i>
-            </div>
-            <p class="legend">
-              <small>Disponible para:</small>
-            </p>
-            <% for (var j=0; j< products[i].store.length; j++) { %>
-              <% if ( products[i].store[j] === 'Steam') { %>
-                <i class="icon-steam" title="Steam"></i>
-              <% } %>
-              <% if ( products[i].store[j] === 'Epic games') { %>
-                <i class="icon-epic" title="Epic Games"></i>
-              <% } %>
-              <% if ( products[i].store[j] === 'GOG') { %>
-                <i class="icon-gog" title="GOG Galaxy"></i>
-              <% } %>
-              <% if ( products[i].store[j] === 'X-Box Store') { %>
-                <i class="icon-xbox" title="X-Box Store"></i>
-            <% } %>
-            <% } %>
-          </div>
-        </div>
-      </a>
-      <% } %>
+      <%- include('../partials/game-card') %>
     </div>
   </div>
   <!-- /.home content -->

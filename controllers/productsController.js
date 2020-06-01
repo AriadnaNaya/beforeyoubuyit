@@ -160,11 +160,11 @@ const controller = {
 
     detail: (req, res, next) => {
           
-          let idJuego = req.params.id;
-          let gameList = products;
+          let idJuego = req.params.id-1;
+          let gameList = productsDB;
           let gameRatings = () => {
-            if (gameList.results[idJuego].ratings) {
-              let getRatings = gameList.results[idJuego].ratings;
+            if (gameList[idJuego].ratings) {
+              let getRatings = gameList[idJuego].ratings;
               // First, get the max vote from the array of objects
               var maxVotes = Math.max(...getRatings.map(e => e.percent));
 
@@ -179,7 +179,9 @@ const controller = {
               nombre: 'Homero',
               apellido: 'Thompson',
               title: 'detalle',
-              juego: gameList.results[idJuego],
+              juego: gameList[idJuego],
+              reqMininimum: gameList[idJuego].requirements.minimum,
+              reqRecommended: gameList[idJuego].requirements.recommended,
               rating: gameRatings()
             });
      },
