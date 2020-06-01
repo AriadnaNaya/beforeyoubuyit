@@ -19,7 +19,7 @@ const keyRouter = require('./routes/key');
 const cargaRouter = require('./routes/carga');
 const carritoRouter = require('./routes/carrito');
 const confirmacionRouter = require('./routes/confirmacion');
-const productosRouter = require('./routes/products');
+const productsRouter = require('./routes/products');
 
 const app = express();
 app.use(connectLivereload());
@@ -66,7 +66,7 @@ app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
 app.use('/carrito', carritoRouter);
 app.use('/confirmacion', confirmacionRouter);
-app.use('/productos', productosRouter);
+app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
