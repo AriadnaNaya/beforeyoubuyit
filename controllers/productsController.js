@@ -77,11 +77,12 @@ const controller = {
 
     edit: (req, res) => {
       //obtener id del producto
-      id = req.params.id;
-      const productToEdit = productsDemo.find(p => p.id == id);
+      id = req.params.key;
+      const productToEdit = productsDB.find(p => p.id == id);
       //renderizar el formulario de edición con los datos obtenidos
       res.render('edit-form', {
-        productToEdit: productToEdit
+        productToEdit: productToEdit,
+        id: id
       });
 
     },
