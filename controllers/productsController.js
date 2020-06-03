@@ -35,18 +35,18 @@ const controller = {
       });
     },
 
-    validaKey: (req, res, next) => {
-        res.render('key', 
-        { title: 'Carga Key',
-          nombre: 'Admin',
-          apellido: '-'
+    search: (req, res, next) => {
+        let id = req.query.id;
+        const results = productsDB.find(p => p.id == id);
+        
+        res.render('reseults', {
+          results: results
         });
     },
 
     // Create - Form to create
     create: (req, res) => {
      res.render('create-form');
-     console.log('conectado')
     },
 
     // Create -  Method to store
@@ -77,12 +77,11 @@ const controller = {
 
     edit: (req, res) => {
       //obtener id del producto
-      id = req.params.key;
+      id = req.params.id;
       const productToEdit = productsDB.find(p => p.id == id);
       //renderizar el formulario de edición con los datos obtenidos
       res.render('edit-form', {
-        productToEdit: productToEdit,
-        id: id
+        productToEdit: productToEdit
       });
 
     },
@@ -183,8 +182,8 @@ const controller = {
               apellido: 'Thompson',
               title: 'detalle',
               juego: gameList[idJuego],
-              reqMininimum: gameList[idJuego].requirements.minimum,
-              reqRecommended: gameList[idJuego].requirements.recommended,
+              finalPrice: finalPrice,
+              toThousand: toThousand,
               rating: gameRatings()
             });
      },

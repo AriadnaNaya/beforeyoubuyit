@@ -28,5 +28,13 @@
   "password": "$2b$10$/SZbvhBdD3ELJ9h9y/QL8Ocd7m9a1mMkYEFxUDVvBMHm4p872HeLO",
   "email": "eze170484@hotmail.com",
   "avatar": "1590772407901.png"
+ },
+ {
+  "id": 5,
+  "name": "Robert",
+  "lastname": "Englund",
+  "password": "$2b$10$qZeg6LfegauqUh1UgQlnyuYj9tNQSLNG0lBCclDw5avG1XkbbiBwq",
+  "email": "fred@gmail.com",
+  "avatar": "1591140130721.jpg"
  }
 ]

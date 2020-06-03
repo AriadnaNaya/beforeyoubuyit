@@ -10,6 +10,7 @@
   "developers": ["Rockstar Games"],
   "store": ["Steam", "X-Box Store", "GOG", "Epic Games"],
   "metacritic": 97,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -45,28 +46,8 @@
   "game_gameplay": null,
   "game_review": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": "Procesador intel i5, ATI RADEON tu vieja",
+    "recommended": "Procesador intel i11, ENVIDIA 5000 tu vieja en tanga"
   }
  },
  {
@@ -80,6 +61,7 @@
   "developers": ["Valve"],
   "store": ["Steam"],
   "metacritic": 95,
+  "rating_bub": 90,
   "ratings": [
     {
      "id": 5,
@@ -115,28 +97,8 @@
   "game_review": "https://www.youtube.com/embed/w9aG2qU9okk",
   "game_gameplay": "https://www.youtube.com/embed/A0K5EXfgJnk",
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -150,6 +112,7 @@
   "developers": ["CD Projekt Red"],
   "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 93,
+  "rating_bub": 90,
   "ratings": [
     {
      "id": 5,
@@ -185,28 +148,8 @@
   "game_review": null,
   "game_gameplay":null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -220,6 +163,7 @@
   "developers": null,
   "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 86,
+  "rating_bub": 90,
   "ratings": [
     {
      "id": 4,
@@ -255,28 +199,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -290,6 +214,7 @@
   "developers": ["Bethesda Game Studios"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 94,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -325,28 +250,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -360,6 +265,7 @@
   "developers": ["Bethesda Game Studios"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 89,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -395,28 +301,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -430,6 +316,7 @@
   "developers": ["Gearbox Software"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 89,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -465,28 +352,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -500,6 +367,7 @@
   "developers": ["‎Irrational Games"],
   "store": ["Steam"],
   "metacritic": 94,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -535,28 +403,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -570,6 +418,7 @@
   "developers": ["‎Valve"],
   "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 90,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -605,28 +454,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -640,6 +469,7 @@
   "developers": ["Dontnod Entertainment"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 83,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -675,28 +505,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -710,6 +520,7 @@
   "developers": ["Valve‎", "‎Hidden Path Entertainment"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 83,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -744,28 +555,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -779,6 +570,7 @@
   "developers": ["Valve‎", "‎Hidden Path Entertainment"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 88,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -813,28 +605,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -848,6 +620,7 @@
   "developers": ["2K Boston‎", "2K Australia"],
   "store": ["Steam", "X-Box Store", "GOG"],
   "metacritic": 96,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -883,28 +656,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -918,6 +671,7 @@
   "developers": ["Valve"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 96,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -953,28 +707,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -988,6 +722,7 @@
   "developers": ["Valve"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 92,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -1023,28 +758,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -1058,6 +773,7 @@
   "developers": ["Rockstar Games"],
   "store": ["Steam", "X-Box Store", "Epic Games"],
   "metacritic": 96,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -1096,28 +812,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -1131,6 +827,7 @@
   "developers": ["Overkill Software"],
   "store": ["Steam", "X-Box Store", "Epic Games"],
   "metacritic": 79,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -1168,28 +865,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -1203,6 +880,7 @@
   "developers": ["id Software", "Bethesda"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 85,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 5,
@@ -1240,28 +918,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -1275,6 +933,7 @@
   "developers": ["Bethesda"],
   "store": ["Steam", "X-Box Store"],
   "metacritic": 84,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -1312,28 +971,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  },
  {
@@ -1347,6 +986,7 @@
   "developers": ["Rockstar Games"],
   "store": ["Steam", "Epic Games", "X-Box Store", "GOG"],
   "metacritic": 90,
+  "rating_bub": 90,
   "ratings": [
     {
       "id": 4,
@@ -1384,28 +1024,8 @@
   "game_review": null,
   "game_gameplay": null,
   "requirements": {
-    "minimum": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    },
-    "recommended": {
-      "required": "Requiere un procesador y un sistema operativo de 64 bits",
-      "so": "Windows 7x64 / Windows 8.1x64 / Windows 10x64",
-      "processor": "Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater",
-      "memory": "4 GB de RAM",
-      "graphics": "1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530",
-      "direct": "Versión 11",
-      "storage": " 12 GB de espacio disponible",
-      "sound": "DirectX Compatible Sound Device",
-      "network": "Broadband Internet connection"
-    }
+    "minimum": null,
+    "recommended": null
   }
  }
 ]

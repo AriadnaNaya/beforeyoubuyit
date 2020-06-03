@@ -117,7 +117,7 @@
 								Plataforma
 							</button>
 							<div class="price">
-								<h6>ARS$ <strong><%= juego.price %></strong></h6>
+								<h3><strong>$<%= finalPrice(juego.price, juego.discount) %></strong></h3>
 							</div>
 							<div class="dropdown-menu">
 								<% for (var j=0; j< juego.store.length; j++) { %>
@@ -153,10 +153,10 @@
 		</div>
 	</div>
 	<!-- ratings	 -->
-	<% if (juego.ratings) { %>
 	<div class="hero-wrapper bg p-0">
 		<div class="container">
 			<div class="row">
+				<% if (juego.metacritic) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
@@ -167,19 +167,21 @@
 						</div>
 					</div>
 				</div>
-
+				<% } %>
+				<% if (juego.rating_bub) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
-							<h4><%= juego.rating %></h4>
+							<h4><%= juego.rating_bub %></h4>
 						</div>
 						<div class="hero-data">
 							<h4>BuB</h4>
-							<p>Sobre <%= juego.rating_top %></p>
 						</div>
 					</div>
 				</div>
+				<% } %>
 
+				<% if (juego.ratings) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert emoji" role="alert">
@@ -202,10 +204,10 @@
 						</div>
 					</div>
 				</div>
+				<% } %>
 			</div>
 		</div>
 	</div>
-	<% } %>
 	<!-- //ratings -->
 	<!-- about -->
 	<div class="hero-wrapper">
@@ -239,14 +241,9 @@
 				<div class="col-12 col-md-6">
 					<strong>MINIMO</strong>
 					<% if (juego.requirements) { %>
-					<ul class="list-unstyled">
-						<% for (requirement in reqMininimum) { %>
-							<li><strong><%= requirement %></strong>: <%= `${reqMininimum[requirement]}` %></li>
-						<% } %>
-					</ul>
+						<p><%= juego.requirements.minimum %></p>
 					<% } %>
 					<%if (!juego.requirements) { %>
-					<br> </br>
 					<h1>Sorry :(</h1>
 					<p>Este juego no tiene requisitos para mostrar </p>
 					<% } %>
@@ -255,11 +252,7 @@
 				<div class="col-12 col-md-6">
 					<strong>RECOMENDADO</strong>
 					<% if (juego.requirements) { %>
-					<ul class="list-unstyled">
-						<% for (requirement in reqRecommended) { %>
-						<li><strong><%= requirement %></strong>: <%= `${reqRecommended[requirement]}` %></li>
-						<% } %>
-					</ul>
+						<p><%= juego.requirements.recommended %></p>
 					<% } %>
 					<%if (!juego.requirements) { %>
 					<br> </br>
