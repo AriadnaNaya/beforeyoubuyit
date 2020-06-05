@@ -74,6 +74,20 @@ const controller = {
       
       categories = categories.split(",");
       developers = developers.split(",");
+
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("Could not extract video ID.");
+        }
+      }
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
       
       const newProduct = {
         id: newId,
@@ -89,9 +103,9 @@ const controller = {
         rating_bub: req.body.rating_bub,
         ratings: null,
         categories: categories,
-        game_trailer: req.body.game_trailer,
-        game_gameplay: req.body.game_gameplay,
-        game_review: req.body.game_review,
+        game_trailer: game_trailer,
+        game_gameplay: game_gameplay,
+        game_review: game_review,
         requirements: requirements
       };
       // Lo agregamos al objeto original

@@ -1169,5 +1169,68 @@
    "minimum": "Una compu",
    "recommended": "Una compu"
   }
+ },
+ {
+  "id": 22,
+  "name": "Parlante",
+  "price": "456",
+  "discount": "0",
+  "released": "2020-05-05",
+  "background_image": "1591394898929.jpg",
+  "about": "22",
+  "developers": [
+   "Janio Software",
+   " BuB"
+  ],
+  "store": [
+   "Steam",
+   "Epic Games"
+  ],
+  "metacritic": "22",
+  "rating_bub": "11",
+  "ratings": null,
+  "categories": [
+   "Fisuras",
+   " drogas",
+   " indigentes"
+  ],
+  "game_trailer": "nXSfVCQx6eg",
+  "game_gameplay": "AH9YrtkhclA",
+  "game_review": "YesozO3RtH0",
+  "requirements": {
+   "minimum": "33",
+   "recommended": "44"
+  }
+ },
+ {
+  "id": 23,
+  "name": "Age of empires: Definitive edition",
+  "price": "500",
+  "discount": "25",
+  "released": "2018-02-19",
+  "background_image": "1591395322780.jpg",
+  "about": "Age of Empires, el juego que marcó las bases del género de la estrategia en tiempo real y dejó un legado de dos décadas, regresa en su forma definitiva para PC con Windows 10. Con todo el contenido lanzado oficialmente y una jugabilidad modernizada, nuevos gráficos y gran cantidad de novedades, Age of Empires: Definitive Edition es el título de estrategia en tiempo real definitivo. Disfruta de más de 40 horas de campañas actualizadas, con un ritmo y una narración adaptados a los tiempos modernos; libra batallas en línea para hasta 8 jugadores, con nuevos modos y características competitivos; sorpréndete con unos gráficos en HD 4K con animaciones renovadas; deja fluir toda tu creatividad con el creador de escenarios; y comparte tus creaciones. Es el mejor momento para entrar en Age of Empires. Te damos la bienvenida de nuevo a la historia.",
+  "developers": [
+   "Forgotten Empires",
+   " Tantalus Media",
+   " Tantalus"
+  ],
+  "store": [
+   "Steam",
+   "X-Box Store"
+  ],
+  "metacritic": "69",
+  "rating_bub": "85",
+  "ratings": null,
+  "categories": [
+   "Estrategia"
+  ],
+  "game_trailer": "Q3rDhoWcVgQ",
+  "game_gameplay": "lnpsuYxQrN0",
+  "game_review": "b9SHy3YrPI0",
+  "requirements": {
+   "minimum": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 1.8 Ghz+ Dual Core or greater i5 or AMD equivalent\r\nMemoria: 4 GB de RAM\r\nGráficos: DirectX 11.0 compatible card with Direct3D Feature Level 11_0 or higher support and 1GB of free memory - Intel: HD 4000 (Ivy Bridge CPU)or better GPU - nVidia: GT 430 or better desktop GPU, or GT 425M or better mobile GPU - AMD: Radeon HD 5500 or better Desktop GPU, or Mobility Radeon 5650 or better mobile GPU\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible",
+   "recommended": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 2.4 Ghz i5 or greater (4 HW threads)\r\nMemoria: 16 GB de RAM\r\nGráficos: Nvidia GTX 650; AMD HD 5850\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible"
+  }
  }
 ]
