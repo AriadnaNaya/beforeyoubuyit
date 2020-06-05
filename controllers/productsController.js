@@ -60,13 +60,12 @@ const controller = {
         minimum: req.body.requirements_min,
         recommended: req.body.requirements_rec
       }
-      // get selected checkboxes
+      // Obtiene checkboxes seleccionados
       let getSelectedChbox = (store) => {
-        // gets all the input tags in store, and their number
+        //Obtiene los tags con el "name" correspondiente
         var inpfields = store.getElementsByName('store');
         
-        // traverse the inpfields elements, and adds the value of selected (checked) checkbox in store
-        
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
         for (var i = 0; i < inpfields.length; i++) {
           if (inpfields[i].checked == true) store.push(inpfields[i].value);
         }

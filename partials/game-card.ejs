@@ -1,9 +1,16 @@
 <% for(var i = 0; i < products.length; i++) { %>
 <a href="products/<%= products[i].id %>" class="card-wrapper">
   <div class="card">
-    <div class="card-img" style="background-image: url('<%=  products[i].background_image %>');">
-      <p class="card-title"><%=  products[i].name %></p>
-    </div>
+    <% if ( products[i].background_image.includes('http') ) { %>
+      <div class="card-img" style="background-image: url('<%=  products[i].background_image %>');">
+        <p class="card-title"><%=  products[i].name %></p>
+      </div>
+    <% } else { %>
+      <div class="card-img" style="background-image: url('assets/products/<%=  products[i].background_image %>');">
+        <p class="card-title"><%=  products[i].name %></p>
+      </div>
+    <% }  %>
+    
     <div class="card-body">
       <div class="price">
         <div class="value">

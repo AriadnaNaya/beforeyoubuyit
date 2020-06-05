@@ -22,12 +22,9 @@
 							
 							<div class="carousel-item active">
 								<div class="embed-responsive embed-responsive-16by9">
-									<% if (juego.game_trailer != undefined) { %>
-										<video width="560" height="315" src="<%= juego.game_trailer %>" id="trailer" controls
-										muted autoplay></video>
-									<% } %>
-									<% if (juego.game_trailer == undefined) { %>
-									<iframe width="560" height="315" src="<%= juego.game_trailer %>?mute=1" frameborder="1"
+									<% if (juego.game_trailer != null) { %>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= juego.game_trailer %>?mute=1"
+										frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<% } %>
 								</div>
@@ -36,7 +33,7 @@
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="<%= juego.game_gameplay %>?mute=1" frameborder="1"
+										src="https://www.youtube.com/embed/<%= juego.game_gameplay %>?mute=1" frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
@@ -46,7 +43,7 @@
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="<%= juego.game_review %>?mute=1" frameborder="2"
+										src="https://www.youtube.com/embed/<%= juego.game_review %>?mute=1" frameborder="2"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
@@ -85,7 +82,12 @@
 			<!-- gameInfo -->
 			<div class="product-overview col-12 col-md-5">
 				<div class="imagen">
-					<img src="<%=juego.background_image %>" alt="Imagen civ">
+					<% if ( juego.background_image.includes('http') ) { %>
+						<img src="<%=juego.background_image %>" alt="Imagen civ">
+					<% } else { %>
+						<img src="assets/products/<%=juego.background_image %>" alt="Imagen civ">
+					<% }  %>
+					
 				</div>
 				<div class="overview-data">
 					<h4 class="product-title"><%= juego.name %></h4>
