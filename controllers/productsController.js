@@ -52,27 +52,57 @@ const controller = {
     // Create -  Method to store
     store: (req, res) => {
       //Crear objeto con todas las propiedades del form
-      const newId = productsDemo.length + 1;
+      const newId = productsDB.length + 1;
       let categories = req.body.categories;
-      categories = categories.split(",")
+      let developers = req.body.developers;
+      let store = req.body.store;
+      let requirements = {
+        minimum: req.body.requirements_min,
+        recommended: req.body.requirements_rec
+      }
+      // get selected checkboxes
+      let getSelectedChbox = (store) => {
+        // gets all the input tags in store, and their number
+        var inpfields = store.getElementsByName('store');
+        
+        // traverse the inpfields elements, and adds the value of selected (checked) checkbox in store
+        
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) store.push(inpfields[i].value);
+        }
+        return store;
+      }
+      
+      categories = categories.split(",");
+      developers = developers.split(",");
       
       const newProduct = {
         id: newId,
         name: req.body.name,
         price: req.body.price,
         discount: req.body.discount,
-        categories: categories,
+        released: req.body.released,
+        background_image: req.files[0].filename,
         about: req.body.about,
-        background_image: 'default-image.png'
+        developers: developers,
+        store: store,
+        metacritic: req.body.metacritic,
+        rating_bub: req.body.rating_bub,
+        ratings: null,
+        categories: categories,
+        game_trailer: req.body.game_trailer,
+        game_gameplay: req.body.game_gameplay,
+        game_review: req.body.game_review,
+        requirements: requirements
       };
       // Lo agregamos al objeto original
-      const finalProduct = [...productsDemo, newProduct];
-      console.log(finalProduct);
+      const finalProduct = [...productsDB, newProduct];
+      console.log(newProduct);
       //Esto crea un nuevo array con todos los onjetos del array y agrega una nueva posicion con el objeto que creamos
       // Sobrescrivimos el JSON
-      fs.writeFileSync(productsFilePathDemo, JSON.stringify(finalProduct, null, ' '));
-      // redirigimos a la home
-      res.redirect('/juegos');
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(finalProduct, null, ' '));
+      // redirigimos a la productos
+      res.redirect('/');
     },
 
     edit: (req, res) => {
