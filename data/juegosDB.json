@@ -1140,34 +1140,32 @@
  },
  {
   "id": 21,
-  "name": "MK11",
-  "price": "1500",
-  "discount": "5",
-  "released": "2020-05-05",
-  "background_image": "1591391761345.jpg",
-  "about": "Peleas",
+  "name": "Mortal Kombat 11",
+  "price": "2500",
+  "discount": "10",
+  "released": "2020-05-26",
+  "background_image": "1591471247795.jpg",
+  "about": "El aclamado juego de peleas Mortal Kombat ",
   "developers": [
-   "Janio Software",
-   " BuB"
+   "Netherealm Studios"
   ],
   "store": [
    "Steam",
    "X-Box Store"
   ],
-  "metacritic": "99",
-  "rating_bub": "99",
+  "metacritic": "86",
+  "rating_bub": "95",
   "ratings": null,
   "categories": [
-   "Fisuras",
-   " drogas",
-   " indigentes"
+   "Peleas",
+   " multiplayer"
   ],
-  "game_trailer": "lQFZC6dzauM",
-  "game_gameplay": "AH9YrtkhclA",
-  "game_review": "YesozO3RtH0",
+  "game_trailer": "L0sebiE6Em8",
+  "game_gameplay": "mc_K58fHgXY",
+  "game_review": "wYUDT2LH794",
   "requirements": {
-   "minimum": "Una compu",
-   "recommended": "Una compu"
+   "minimum": "SO: 64-bit Windows 7 / Windows 10\r\nProcesador: Intel Core i5-750, 2.66 GHz / AMD Phenom II X4 965, 3.4 GHz or AMD Ryzen™ 3 1200, 3.1 GHz\r\nMemoria: 8 GB de RAM\r\nGráficos: NVIDIA® GeForce™ GTX 670 or NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950 or AMD® Radeon™ R9 270\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet",
+   "recommended": "SO: 64-bit Windows 7 / Windows 10\r\nProcesador: Intel Core i5-2300, 2.8 GHz / AMD FX-6300, 3.5GHz or AMD Ryzen™ 5 1400, 3.2 GHz\r\nMemoria: 8 GB de RAM\r\nGráficos: NVIDIA® GeForce™ GTX 780 or NVIDIA® GeForce™ GTX 1060-6GB / AMD® Radeon™ R9 290 or RX 570\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet"
   }
  },
  {

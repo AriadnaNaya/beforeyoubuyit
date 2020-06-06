@@ -141,11 +141,17 @@
 							</div>
 						</div>
 						<form method="GET" action="carrito" class="btn-group">
-							<button type="button" class="btn btn-success"><i
-									class="material-icons">vertical_align_bottom</i> Demo</button>
+							<button type="button" class="btn btn-success"><i class="material-icons">vertical_align_bottom</i> Demo</button>
 							<button type="submit" class="btn btn-primary"><i class="material-icons">shopping_cart</i>
 								Comprar</button>
 						</form>
+						<div class="btn-group">
+							<a href="/products/edit/<%= juego.id %>" type="button" class="btn btn-pink"><i class="material-icons">create</i> Editar</a>
+							<form action="/products/delete/<%= juego.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="btn btn-danger"><i class="material-icons">delete_forever</i>
+									Borrar</button>
+							</form>
+						</div>
 
 
 					</div>
