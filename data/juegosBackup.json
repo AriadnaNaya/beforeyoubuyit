@@ -21,25 +21,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 2131,
     "percent": 58.74
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 1220,
     "percent": 33.63
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 213,
     "percent": 5.87
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 64,
     "percent": 1.76
    }
@@ -54,7 +54,7 @@
   "game_review": null,
   "requirements": {
    "minimum": "Procesador intel i5, ATI RADEON tu vieja",
-   "recommended": "Procesador intel i11, ENVIDIA 5000 tu vieja en tanga"
+   "recomendado": "Procesador intel i11, ENVIDIA 5000 tu vieja en tanga"
   }
  },
  {
@@ -76,25 +76,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 2157,
     "percent": 69.65
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 799,
     "percent": 25.8
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 81,
     "percent": 2.62
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 60,
     "percent": 1.94
    }
@@ -109,7 +109,7 @@
   "game_gameplay": "A0K5EXfgJnk",
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -133,25 +133,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 2631,
     "percent": 78.12
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 529,
     "percent": 15.71
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 135,
     "percent": 4.01
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 73,
     "percent": 2.17
    }
@@ -166,7 +166,7 @@
   "game_gameplay": "YdHc3JZixRY",
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -188,25 +188,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 1296,
     "percent": 60.34
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 554,
     "percent": 25.79
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 242,
     "percent": 11.27
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 56,
     "percent": 2.61
    }
@@ -221,7 +221,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -244,25 +244,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1468,
     "percent": 56.03
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 866,
     "percent": 33.05
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 232,
     "percent": 8.85
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 54,
     "percent": 2.06
    }
@@ -277,7 +277,7 @@
   "game_gameplay": "oSL-r9AIEEU",
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -300,25 +300,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 966,
     "percent": 53.73
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 568,
     "percent": 31.59
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 206,
     "percent": 11.46
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 58,
     "percent": 3.23
    }
@@ -333,7 +333,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -356,25 +356,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 927,
     "percent": 48.06
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 620,
     "percent": 32.14
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 308,
     "percent": 15.97
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 74,
     "percent": 3.84
    }
@@ -389,7 +389,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -411,25 +411,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1295,
     "percent": 54.62
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 797,
     "percent": 33.61
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 216,
     "percent": 9.11
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 63,
     "percent": 2.66
    }
@@ -444,7 +444,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -468,25 +468,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1580,
     "percent": 60.82
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 873,
     "percent": 33.6
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 97,
     "percent": 3.73
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 48,
     "percent": 1.85
    }
@@ -501,7 +501,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -524,25 +524,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 916,
     "percent": 42.88
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 800,
     "percent": 37.45
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 292,
     "percent": 13.67
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 128,
     "percent": 5.99
    }
@@ -557,7 +557,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -581,25 +581,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 837,
     "percent": 47.61
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 476,
     "percent": 27.08
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 273,
     "percent": 15.53
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 172,
     "percent": 9.78
    }
@@ -613,7 +613,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -637,25 +637,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 1012,
     "percent": 52.11
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 679,
     "percent": 34.96
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 184,
     "percent": 9.47
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 67,
     "percent": 3.45
    }
@@ -669,7 +669,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -694,25 +694,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1076,
     "percent": 53.4
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 749,
     "percent": 37.17
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 133,
     "percent": 6.6
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 57,
     "percent": 2.83
    }
@@ -727,7 +727,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -750,25 +750,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1333,
     "percent": 62.91
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 611,
     "percent": 28.83
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 119,
     "percent": 5.62
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 56,
     "percent": 2.64
    }
@@ -783,7 +783,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -806,25 +806,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 762,
     "percent": 45.77
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 422,
     "percent": 25.35
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 333,
     "percent": 20
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 148,
     "percent": 8.89
    }
@@ -839,7 +839,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -863,25 +863,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1736,
     "percent": 71.15
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 474,
     "percent": 19.43
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 152,
     "percent": 6.23
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 78,
     "percent": 3.2
    }
@@ -899,7 +899,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -923,25 +923,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 602,
     "percent": 51.54
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 321,
     "percent": 27.48
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 127,
     "percent": 10.87
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 118,
     "percent": 10.1
    }
@@ -958,7 +958,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -982,25 +982,25 @@
   "ratings": [
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 1132,
     "percent": 53.7
    },
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 777,
     "percent": 36.86
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 148,
     "percent": 7.02
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 51,
     "percent": 2.42
    }
@@ -1017,7 +1017,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -1040,25 +1040,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 918,
     "percent": 47.76
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 527,
     "percent": 27.42
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 366,
     "percent": 19.04
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 111,
     "percent": 5.78
    }
@@ -1075,7 +1075,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -1100,25 +1100,25 @@
   "ratings": [
    {
     "id": 4,
-    "title": "recommended",
+    "title": "recomendado",
     "count": 707,
     "percent": 45.26
    },
    {
     "id": 5,
-    "title": "exceptional",
+    "title": "excepcional",
     "count": 648,
     "percent": 41.49
    },
    {
     "id": 3,
-    "title": "meh",
+    "title": "cualquiera",
     "count": 165,
     "percent": 10.56
    },
    {
     "id": 1,
-    "title": "skip",
+    "title": "bosta",
     "count": 42,
     "percent": 2.69
    }
@@ -1135,7 +1135,7 @@
   "game_gameplay": null,
   "requirements": {
    "minimum": null,
-   "recommended": null
+   "recomendado": null
   }
  },
  {
@@ -1167,7 +1167,7 @@
   "game_review": "YesozO3RtH0",
   "requirements": {
    "minimum": "Una compu",
-   "recommended": "Una compu"
+   "recomendado": "Una compu"
   }
  },
  {
@@ -1199,7 +1199,7 @@
   "game_review": "YesozO3RtH0",
   "requirements": {
    "minimum": "33",
-   "recommended": "44"
+   "recomendado": "44"
   }
  },
  {
@@ -1230,7 +1230,7 @@
   "game_review": "b9SHy3YrPI0",
   "requirements": {
    "minimum": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 1.8 Ghz+ Dual Core or greater i5 or AMD equivalent\r\nMemoria: 4 GB de RAM\r\nGráficos: DirectX 11.0 compatible card with Direct3D Feature Level 11_0 or higher support and 1GB of free memory - Intel: HD 4000 (Ivy Bridge CPU)or better GPU - nVidia: GT 430 or better desktop GPU, or GT 425M or better mobile GPU - AMD: Radeon HD 5500 or better Desktop GPU, or Mobility Radeon 5650 or better mobile GPU\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible",
-   "recommended": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 2.4 Ghz i5 or greater (4 HW threads)\r\nMemoria: 16 GB de RAM\r\nGráficos: Nvidia GTX 650; AMD HD 5850\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible"
+   "recomendado": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 2.4 Ghz i5 or greater (4 HW threads)\r\nMemoria: 16 GB de RAM\r\nGráficos: Nvidia GTX 650; AMD HD 5850\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible"
   }
  }
 ]
