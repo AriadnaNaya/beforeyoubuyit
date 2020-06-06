@@ -12,14 +12,14 @@ const livereload = require('livereload');
 // Controllers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const juegosRouter = require('./routes/juegos');
+//const juegosRouter = require('./routes/juegos');
 const homeRouter = require('./routes/home');
 //const detalleRouter = require('./routes/detalle');
-const keyRouter = require('./routes/key');
+//const keyRouter = require('./routes/key');
 const cargaRouter = require('./routes/carga');
 const carritoRouter = require('./routes/carrito');
 const confirmacionRouter = require('./routes/confirmacion');
-const productosRouter = require('./routes/products');
+const productsRouter = require('./routes/products');
 
 const app = express();
 app.use(connectLivereload());
@@ -59,14 +59,14 @@ liveReloadServer.server.once("connection", () => {
 // Navigation
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/juegos', juegosRouter);
+//app.use('/juegos', juegosRouter);
 app.use('/home', homeRouter);
 //app.use ('/detalle', detalleRouter);
-app.use ('/key', keyRouter);
+//app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
 app.use('/carrito', carritoRouter);
 app.use('/confirmacion', confirmacionRouter);
-app.use('/productos', productosRouter);
+app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

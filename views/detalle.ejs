@@ -7,7 +7,7 @@
 
 <body>
 	<!-- navbar header -->
-	<%- include('../partials/header') %>
+	<%- include('../partials/navbar') %>
 	<!-- /.navbar header -->
 
 	<!-- home content porque no trae imagen lala -->
@@ -22,12 +22,9 @@
 							
 							<div class="carousel-item active">
 								<div class="embed-responsive embed-responsive-16by9">
-									<% if (juego.clip != undefined) { %>
-										<video width="560" height="315" src="<%= juego.clip.clip %>" id="trailer" controls
-										muted autoplay></video>
-									<% } %>
-									<% if (juego.clip == undefined) { %>
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/99WZ-1fWrJE?mute=1" frameborder="1"
+									<% if (juego.game_trailer != null) { %>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= juego.game_trailer %>?mute=1"
+										frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<% } %>
 								</div>
@@ -36,7 +33,7 @@
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="<%= juego.game_gameplay %>?mute=1" frameborder="1"
+										src="https://www.youtube.com/embed/<%= juego.game_gameplay %>?mute=1" frameborder="1"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
@@ -46,7 +43,7 @@
 							<div class="carousel-item">
 								<div class="embed-responsive embed-responsive-16by9">
 									<iframe width="560" height="315"
-										src="<%= juego.game_review %>?mute=1" frameborder="2"
+										src="https://www.youtube.com/embed/<%= juego.game_review %>?mute=1" frameborder="2"
 										allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</div>
@@ -80,24 +77,17 @@
 						</div>
 					</div>
 				</div>
-				<% if (juego.short_screenshots) { %>
-					<div class="screenshots row">
-						<div class="col-12">
-							<strong>Screenshots</strong>
-						</div>
-						<% for (var k=1; k< juego.short_screenshots.length; k++) { %>
-						<div class="col">
-							<img src="<%= juego.short_screenshots[k].image %>" alt="">
-						</div>
-						<% } %>
-					</div>
-				<% } %>
 			</div>
 			<!-- //videos -->
 			<!-- gameInfo -->
 			<div class="product-overview col-12 col-md-5">
 				<div class="imagen">
-					<img src="<%=juego.background_image %>" alt="Imagen civ">
+					<% if ( juego.background_image.includes('http') ) { %>
+						<img src="<%=juego.background_image %>" alt="Imagen civ">
+					<% } else { %>
+						<img src="assets/products/<%=juego.background_image %>" alt="Imagen civ">
+					<% }  %>
+					
 				</div>
 				<div class="overview-data">
 					<h4 class="product-title"><%= juego.name %></h4>
@@ -113,19 +103,10 @@
 					<% } %>
 
 					<!-- tags -->
-					<% if (juego.tags) { %>
-					<div class="my-2">
-						<% for (var i=0; i< juego.tags.length; i++) { %>
-						<span class="badge badge-secondary"><%= juego.tags[i].name %></span>
-						<% } %>
-					</div>
-					<% } %>
-					<!-- //tags -->
-					<!-- tags -->
-					<% if (juego.categories != null) { %>
+					<% if (juego.categories) { %>
 					<div class="my-2">
 						<% for (var i=0; i< juego.categories.length; i++) { %>
-						<span class="badge badge-secondary"><%= juego.categories[i] %></span>
+						<span class="badge badge-secondary"><%= juego.categories[i].name %></span>
 						<% } %>
 					</div>
 					<% } %>
@@ -138,33 +119,39 @@
 								Plataforma
 							</button>
 							<div class="price">
-								<h6>ARS$ <strong><%= juego.price %></strong></h6>
+								<h3><strong>$<%= finalPrice(juego.price, juego.discount) %></strong></h3>
 							</div>
 							<div class="dropdown-menu">
-								<% for (var j=0; j< juego.available_in.length; j++) { %>
-								<% if ( juego.available_in[j] === 'Steam') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam"></i> Steam</a>
+								<% for (var j=0; j< juego.store.length; j++) { %>
+								<% if ( juego.store[j] === 'Steam') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam" title="<%= juego.store[j]%>"></i> Steam</a>
 								<% } %>
-								<% if ( juego.available_in[j] === 'Epic Games') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic"></i> Epic
+								<% if ( juego.store[j] === 'Epic Games') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic" title="<%= juego.store[j]%>"></i> Epic
 									Games</a>
 								<% } %>
-								<% if ( juego.available_in[j] === 'GOG') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog"></i> GOG</a>
+								<% if ( juego.store[j] === 'GOG') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog" title="<%= juego.store[j]%>"></i> GOG</a>
 								<% } %>
-								<% if ( juego.available_in[j] === 'X-Box Store') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox"></i> X-Box
+								<% if ( juego.store[j] === 'X-Box Store') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox" title="<%= juego.store[j]%>"></i> X-Box
 									Store</a>
 								<% } %>
 								<% } %>
 							</div>
 						</div>
 						<form method="GET" action="carrito" class="btn-group">
-							<button type="button" class="btn btn-success"><i
-									class="material-icons">vertical_align_bottom</i> Demo</button>
+							<button type="button" class="btn btn-success"><i class="material-icons">vertical_align_bottom</i> Demo</button>
 							<button type="submit" class="btn btn-primary"><i class="material-icons">shopping_cart</i>
 								Comprar</button>
 						</form>
+						<div class="btn-group">
+							<a href="/products/edit/<%= juego.id %>" type="button" class="btn btn-pink"><i class="material-icons">create</i> Editar</a>
+							<form action="/products/delete/<%= juego.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="btn btn-danger"><i class="material-icons">delete_forever</i>
+									Borrar</button>
+							</form>
+						</div>
 
 
 					</div>
@@ -174,10 +161,10 @@
 		</div>
 	</div>
 	<!-- ratings	 -->
-	<% if (juego.ratings) { %>
 	<div class="hero-wrapper bg p-0">
 		<div class="container">
 			<div class="row">
+				<% if (juego.metacritic) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
@@ -188,45 +175,46 @@
 						</div>
 					</div>
 				</div>
-
+				<% } %>
+				<% if (juego.rating_bub) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
-							<h4><%= juego.rating %></h4>
+							<h4><%= juego.rating_bub %></h4>
 						</div>
 						<div class="hero-data">
 							<h4>BuB</h4>
-							<p>Sobre <%= juego.rating_top %></p>
 						</div>
 					</div>
 				</div>
+				<% } %>
 
+				<% if (juego.ratings) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert emoji" role="alert">
-							<% if ( rating === 'exceptional') { %>
+							<% if ( rating === 'excepcional') { %>
 							<h2>😲</h2>
 							<% } %>
-							<% if ( rating === 'recommended') { %>
+							<% if ( rating === 'recomendado') { %>
 							<h2>😀</h2>
 							<% } %>
-							<% if ( rating === 'meh') { %>
+							<% if ( rating === 'cualquiera') { %>
 							<h2>😐</h2>
 							<% } %>
-							<% if ( rating === 'skip') { %>
+							<% if ( rating === 'bosta') { %>
 							<h2>🤮</h2>
 							<% } %>
 						</div>
 						<div class="hero-data">
 							<h4 class="rating"><%= rating %></h4>
-							<p>de acuerdo a <%= juego.reviews_count %> usuarios</p>
 						</div>
 					</div>
 				</div>
+				<% } %>
 			</div>
 		</div>
 	</div>
-	<% } %>
 	<!-- //ratings -->
 	<!-- about -->
 	<div class="hero-wrapper">
@@ -259,57 +247,28 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<strong>MINIMO</strong>
-
-					<% for (var j=0; j< juego.platforms.length; j++) { %>
-					<% if ( juego.platforms[j].platform.slug == 'pc') { %>
-					<% if (juego.platforms[j].requirements_en) { %>
-					<ul class="list-unstyled">
-						<li><%=juego.platforms[j].requirements_en.minimum.required %></li>
-						<li>SO: <%=juego.platforms[j].requirements_en.minimum.so %></li>
-						<li>Procesador: <%=juego.platforms[j].requirements_en.minimum.procesador %></li>
-						<li>Memoria: <%=juego.platforms[j].requirements_en.minimum.memoria %></li>
-						<li>Graficos: <%=juego.platforms[j].requirements_en.minimum.graphics %></li>
-						<li>DirectX: <%=juego.platforms[j].requirements_en.minimum.direct %></li>
-						<li>Almacenamiento: <%=juego.platforms[j].requirements_en.minimum.almacenamiento %></li>
-						<li>Tarjeta de Sonido: <%=juego.platforms[j].requirements_en.minimum.sonido %></li>
-					</ul>
+					<% if (juego.requirements) { %>
+						<p><%= juego.requirements.minimum %></p>
 					<% } %>
-					<%if (!juego.platforms[j].requirements_en) { %>
-					<br> </br>
+					<%if (!juego.requirements) { %>
 					<h1>Sorry :(</h1>
-					<p>We are working har to bring you new updates with al the information you need!! </p>
-					<%}%>
-					<% } %>
+					<p>Este juego no tiene requisitos para mostrar </p>
 					<% } %>
 
 				</div>
-
 				<div class="col-12 col-md-6">
 					<strong>RECOMENDADO</strong>
-
-					<% for (var j=0; j< juego.platforms.length; j++) { %>
-						<% if ( juego.platforms[j].platform.slug == 'pc') { %>
-						<% if (juego.platforms[j].requirements_en) { %>
-						<ul class="list-unstyled">
-							<li><%=juego.platforms[j].requirements_en.recommended.required %></li>
-							<li>SO: <%=juego.platforms[j].requirements_en.recommended.so %></li>
-							<li>Procesador: <%=juego.platforms[j].requirements_en.recommended.procesador %></li>
-							<li>Memoria: <%=juego.platforms[j].requirements_en.recommended.memoria %></li>
-							<li>Graficos: <%=juego.platforms[j].requirements_en.recommended.graphics %></li>
-							<li>DirectX: <%=juego.platforms[j].requirements_en.recommended.direct %></li>
-							<li>Almacenamiento: <%=juego.platforms[j].requirements_en.recommended.almacenamiento %></li>
-							<li>Tarjeta de Sonido: <%=juego.platforms[j].requirements_en.recommended.sonido %></li>
-						</ul>
-						<% } %>
-						<%if (!juego.platforms[j].requirements_en) { %>
-						<br> </br>
-						<h1>Sorry :(</h1>
-						<p>We are working har to bring you new updates with al the information you need!! </p>
-						<%}%>
-						<% } %>
-						<% } %>
+					<% if (juego.requirements) { %>
+						<p><%= juego.requirements.recommended %></p>
+					<% } %>
+					<%if (!juego.requirements) { %>
+					<br> </br>
+					<h1>Sorry :(</h1>
+					<p>Este juego no tiene requisitos para mostrar </p>
+					<% } %>
 
 				</div>
+				
 			</div>
 		</div>
 	</div>

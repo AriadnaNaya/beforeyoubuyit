@@ -1140,66 +1140,66 @@
  },
  {
   "id": 21,
-  "name": "MK11",
-  "price": "1500",
-  "discount": "5",
-  "released": "2020-05-05",
-  "background_image": "1591391761345.jpg",
-  "about": "Peleas",
+  "name": "Mortal Kombat 11",
+  "price": "2500",
+  "discount": "10",
+  "released": "2020-05-26",
+  "background_image": "1591471247795.jpg",
+  "about": "El aclamado juego de peleas Mortal Kombat ",
   "developers": [
-   "Janio Software",
-   " BuB"
+   "Netherealm Studios"
   ],
   "store": [
    "Steam",
    "X-Box Store"
   ],
-  "metacritic": "99",
-  "rating_bub": "99",
+  "metacritic": "86",
+  "rating_bub": "95",
   "ratings": null,
   "categories": [
-   "Fisuras",
-   " drogas",
-   " indigentes"
+   "Peleas",
+   " multiplayer"
   ],
-  "game_trailer": "lQFZC6dzauM",
-  "game_gameplay": "AH9YrtkhclA",
-  "game_review": "YesozO3RtH0",
+  "game_trailer": "L0sebiE6Em8",
+  "game_gameplay": "mc_K58fHgXY",
+  "game_review": "wYUDT2LH794",
   "requirements": {
-   "minimum": "Una compu",
-   "recomendado": "Una compu"
+   "minimum": "SO: 64-bit Windows 7 / Windows 10\r\nProcesador: Intel Core i5-750, 2.66 GHz / AMD Phenom II X4 965, 3.4 GHz or AMD Ryzen™ 3 1200, 3.1 GHz\r\nMemoria: 8 GB de RAM\r\nGráficos: NVIDIA® GeForce™ GTX 670 or NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950 or AMD® Radeon™ R9 270\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet",
+   "recomendado": "SO: 64-bit Windows 7 / Windows 10\r\nProcesador: Intel Core i5-2300, 2.8 GHz / AMD FX-6300, 3.5GHz or AMD Ryzen™ 5 1400, 3.2 GHz\r\nMemoria: 8 GB de RAM\r\nGráficos: NVIDIA® GeForce™ GTX 780 or NVIDIA® GeForce™ GTX 1060-6GB / AMD® Radeon™ R9 290 or RX 570\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet"
   }
  },
  {
   "id": 22,
-  "name": "Parlante",
-  "price": "456",
-  "discount": "0",
-  "released": "2020-05-05",
-  "background_image": "1591394898929.jpg",
-  "about": "22",
+  "name": "SOA",
+  "price": "750",
+  "discount": "25",
+  "released": "2020-05-06",
+  "background_image": "1591467532337.jpg",
+  "about": "Motoqueros drogadictos",
   "developers": [
    "Janio Software",
-   " BuB"
+   " SOA Development"
   ],
   "store": [
    "Steam",
-   "Epic Games"
+   "X-Box Store",
+   "GOG"
   ],
-  "metacritic": "22",
-  "rating_bub": "11",
+  "metacritic": "82",
+  "rating_bub": "80",
   "ratings": null,
   "categories": [
-   "Fisuras",
-   " drogas",
-   " indigentes"
+   "Drogas",
+   " motos",
+   " motoqueros",
+   " Open world"
   ],
   "game_trailer": "nXSfVCQx6eg",
   "game_gameplay": "AH9YrtkhclA",
   "game_review": "YesozO3RtH0",
   "requirements": {
-   "minimum": "33",
-   "recomendado": "44"
+   "minimum": "Una compu",
+   "recomendado": "Una compu mejor"
   }
  },
  {
@@ -1232,5 +1232,33 @@
    "minimum": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 1.8 Ghz+ Dual Core or greater i5 or AMD equivalent\r\nMemoria: 4 GB de RAM\r\nGráficos: DirectX 11.0 compatible card with Direct3D Feature Level 11_0 or higher support and 1GB of free memory - Intel: HD 4000 (Ivy Bridge CPU)or better GPU - nVidia: GT 430 or better desktop GPU, or GT 425M or better mobile GPU - AMD: Radeon HD 5500 or better Desktop GPU, or Mobility Radeon 5650 or better mobile GPU\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible",
    "recomendado": "Requiere un procesador y un sistema operativo de 64 bits\r\nSO: Windows 10 64bit\r\nProcesador: 2.4 Ghz i5 or greater (4 HW threads)\r\nMemoria: 16 GB de RAM\r\nGráficos: Nvidia GTX 650; AMD HD 5850\r\nDirectX: Versión 11\r\nRed: Conexión de banda ancha a Internet\r\nAlmacenamiento: 20 GB de espacio disponible"
   }
+ },
+ {
+  "id": 24,
+  "name": "JANIO: Fisuras Online",
+  "price": "200",
+  "discount": "10",
+  "released": "1984-02-19",
+  "background_image": "1591472477695.jpg",
+  "about": "Un gordo virgo peleando con todo el mundo",
+  "developers": [
+   "Janio Software",
+   " BuB"
+  ],
+  "metacritic": "52",
+  "rating_bub": "99",
+  "ratings": null,
+  "categories": [
+   "Estrategia",
+   " pelea"
+  ],
+  "game_trailer": "j1ss3PrOohM",
+  "game_gameplay": "AH9YrtkhclA",
+  "game_review": "b9SHy3YrPI0",
+  "requirements": {
+   "minimum": "Una compu",
+   "recommended": ""
+  },
+  "store": "Steam"
  }
 ]

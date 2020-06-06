@@ -10,7 +10,7 @@
 <body>
 
 	<!-- navbar header -->
-	<%- include('../partials/header') %>
+	<%- include('../partials/navbar') %>
 	<!-- /.navbar header -->
 
 	<!-- home content -->
@@ -24,7 +24,7 @@
 		<div class="row">
 			<div class="col-6 col-md-6">
 
-				<form action="" method="GET">
+				<!-- <form action="" method="GET">
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" placeholder="Llave del producto" aria-label=""
 							aria-describedby="basic-addon1" id="key" name="key">
@@ -32,7 +32,7 @@
 							<button class="btn btn-pink" type="button">Validar</button>
 						</div>
 					</div>
-				</form>
+				</form> -->
 
 				<h5>Plataforma</h5>
 				<p><i class="icon-steam"></i> Steam</p>
@@ -167,16 +167,16 @@
 									<div class="col-12 hero-item">
 										<div class="hero-item">
 											<div class="alert emoji" role="alert">
-												<% if ( rating === 'exceptional') { %>
+												<% if ( rating === 'excepcional') { %>
 												<h2>😲</h2>
 												<% } %>
-												<% if ( rating === 'recommended') { %>
+												<% if ( rating === 'recomendado') { %>
 												<h2>😀</h2>
 												<% } %>
-												<% if ( rating === 'meh') { %>
+												<% if ( rating === 'cualquiera') { %>
 												<h2>😐</h2>
 												<% } %>
-												<% if ( rating === 'skip') { %>
+												<% if ( rating === 'bosta') { %>
 												<h2>🤮</h2>
 												<% } %>
 											</div>

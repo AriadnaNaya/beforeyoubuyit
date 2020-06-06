@@ -6,9 +6,22 @@ const juegosModel = require("../models/juegosModel");
 
 const productsFilePath = path.join(__dirname, '../data/juegos.json');
 const productsFilePathDemo = path.join(__dirname, '../data/juegosDemo.json');
+const productsFilePathDB = path.join(__dirname, '../data/juegosDB.json');
 
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsDemo = JSON.parse(fs.readFileSync(productsFilePathDemo, 'utf-8'));
+const productsDB = JSON.parse(fs.readFileSync(productsFilePathDB, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const finalPrice = (price, discount) => {
+  if (discount > 0) {
+    price = price - (price * discount / 100);
+  } else {
+    price = price;
+  }
+  return toThousand(price);
+}
 
 
 const controller = {
@@ -16,54 +29,99 @@ const controller = {
     root: (req, res) => {
       res.render('products', 
       {
-        products: products
+        products: productsDB,
+        finalPrice: finalPrice,
+        toThousand: toThousand
       });
     },
 
-    validaKey: (req, res, next) => {
-        res.render('key', 
-        { title: 'Carga Key',
-          nombre: 'Admin',
-          apellido: '-'
+    search: (req, res, next) => {
+        let id = req.query.id;
+        const results = productsDB.find(p => p.id == id);
+        
+        res.render('reseults', {
+          results: results
         });
     },
 
     // Create - Form to create
     create: (req, res) => {
      res.render('create-form');
-     console.log('conectado')
     },
 
     // Create -  Method to store
     store: (req, res) => {
       //Crear objeto con todas las propiedades del form
-      const newId = productsDemo.length + 1;
+      const newId = productsDB.length + 1;
       let categories = req.body.categories;
-      categories = categories.split(",")
+      let developers = req.body.developers;
+      let store = req.body.store;
+      let requirements = {
+        minimum: req.body.requirements_min,
+        recommended: req.body.requirements_rec
+      }
+      // Obtiene checkboxes seleccionados
+      let getSelectedChbox = (store) => {
+        //Obtiene los tags con el "name" correspondiente
+        var inpfields = store.getElementsByName('store');
+        
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) store.push(inpfields[i].value);
+        }
+        return store;
+      }
+      
+      categories = categories.split(",");
+      developers = developers.split(",");
+
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
+        }
+      }
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
       
       const newProduct = {
         id: newId,
         name: req.body.name,
         price: req.body.price,
         discount: req.body.discount,
-        categories: categories,
+        released: req.body.released,
+        background_image: req.files[0].filename,
         about: req.body.about,
-        background_image: 'default-image.png'
+        developers: developers,
+        store: store,
+        metacritic: req.body.metacritic,
+        rating_bub: req.body.rating_bub,
+        ratings: null,
+        categories: categories,
+        game_trailer: game_trailer,
+        game_gameplay: game_gameplay,
+        game_review: game_review,
+        requirements: requirements
       };
       // Lo agregamos al objeto original
-      const finalProduct = [...productsDemo, newProduct];
-      console.log(finalProduct);
+      const finalProduct = [...productsDB, newProduct];
+      //console.log(newProduct);
       //Esto crea un nuevo array con todos los onjetos del array y agrega una nueva posicion con el objeto que creamos
       // Sobrescrivimos el JSON
-      fs.writeFileSync(productsFilePathDemo, JSON.stringify(finalProduct, null, ' '));
-      // redirigimos a la home
-      res.redirect('/juegos');
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(finalProduct, null, ' '));
+      // redirigimos a la productos
+      res.redirect('/');
     },
 
     edit: (req, res) => {
       //obtener id del producto
       id = req.params.id;
-      const productToEdit = productsDemo.find(p => p.id == id);
+      const productToEdit = productsDB.find(p => p.id == id);
       //renderizar el formulario de edición con los datos obtenidos
       res.render('edit-form', {
         productToEdit: productToEdit
@@ -77,27 +135,71 @@ const controller = {
        id = req.params.id;
 
        let categories = req.body.categories;
-       categories = categories.split(",")
+       let developers = req.body.developers;
+       let store = req.body.store;
+       let requirements = {
+         minimum: req.body.requirements_min,
+         recommended: req.body.requirements_rec
+       }
+       // Obtiene checkboxes seleccionados
+       let getSelectedChbox = (store) => {
+        //Obtiene los tags con el "name" correspondiente
+        var inpfields = store.getElementsByName('store');
 
-       const currentProduct = productsDemo.find(p => p.id == id);
-       currentProduct.name = req.body.name;
-       currentProduct.price = req.body.price;
-       currentProduct.discount = req.body.discount;
-       currentProduct.categories = categories
-       currentProduct.about = req.body.about;
-       // res.send(products);
-       // reescribir json
-       fs.writeFileSync(productsFilePathDemo, JSON.stringify(productsDemo, null, ' '));
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) store.push(inpfields[i].value);
+        }
+        return store;
+      }
 
-       // volver al detalle
-       res.redirect('/');
+      categories = categories.split(",");
+      developers = developers.split(",");
+
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
+        }
+      }
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
+
+      const currentProduct = productsDB.find(p => p.id == id);
+      currentProduct.name = req.body.name;
+      currentProduct.price = req.body.price;
+      currentProduct.discount = req.body.discount;
+      currentProduct.released = req.body.released;
+      currentProduct.background_image = req.files[0].filename;
+      currentProduct.about = req.body.about;
+      currentProduct.developers = developers;
+      currentProduct.store = store;
+      currentProduct.metacritic = req.body.metacritic;
+      currentProduct.rating_bub = req.body.rating_bub;
+      currentProduct.ratings = null;
+      currentProduct.categories = categories;
+      currentProduct.game_trailer = game_trailer;
+      currentProduct.game_gameplay = game_gameplay;
+      currentProduct.game_review = game_review;
+      currentProduct.requirements = requirements;
+      //console.log(currentProduct);
+      // reescribir json
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(productsDB, null, ' '));
+
+      // volver al detalle
+      res.redirect('/');
      },
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
       id = req.params.id;
-      let newProducts = productsDemo.filter(p => p.id != id);
-      fs.writeFileSync(productsFilePathDemo, JSON.stringify(newProducts, null, ' '));
+      let newProducts = productsDB.filter(p => p.id != id);
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(newProducts, null, ' '));
       res.redirect('/');
     },
 
@@ -129,8 +231,10 @@ const controller = {
         res.render('carrito', {
             nombre: 'Homero',
             apellido: 'Thompson',
-            title: 'GAME List',
-            carritoList: carritoModel
+            title: 'Carrito',
+            carritoList: productsDB,
+            finalPrice: finalPrice,
+            toThousand: toThousand
         });
     },
 
@@ -139,17 +243,17 @@ const controller = {
             nombre: 'Homero',
             apellido: 'Thompson',
             title: 'GAME List',
-            carritoList: carritoModel
+            carritoList: productsDB
         });
     },
 
     detail: (req, res, next) => {
           
-          let idJuego = req.params.id;
-          let gameList = products;
+          let idJuego = req.params.id-1;
+          let gameList = productsDB;
           let gameRatings = () => {
-            if (gameList.results[idJuego].ratings) {
-              let getRatings = gameList.results[idJuego].ratings;
+            if (gameList[idJuego].ratings) {
+              let getRatings = gameList[idJuego].ratings;
               // First, get the max vote from the array of objects
               var maxVotes = Math.max(...getRatings.map(e => e.percent));
 
@@ -164,7 +268,9 @@ const controller = {
               nombre: 'Homero',
               apellido: 'Thompson',
               title: 'detalle',
-              juego: gameList.results[idJuego],
+              juego: gameList[idJuego],
+              finalPrice: finalPrice,
+              toThousand: toThousand,
               rating: gameRatings()
             });
      },

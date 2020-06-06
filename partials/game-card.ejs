@@ -1,37 +1,52 @@
-<% for(var i = 0; i < gameList.results.length; i++) { %>
-  <a href="productos/<%= i %>" class="card-wrapper">
-    <div class="card">
-      <div class="card-img" style="background-image: url('<%=  gameList.results[i].background_image %>');">
-        <p class="card-title"><%=  gameList.results[i].name %></p>
+<% for(var i = 0; i < products.length; i++) { %>
+<a href="products/<%= products[i].id %>" class="card-wrapper">
+  <div class="card">
+    <% if ( products[i].background_image.includes('http') ) { %>
+      <div class="card-img" style="background-image: url('<%=  products[i].background_image %>');">
+        <p class="card-title"><%=  products[i].name %></p>
       </div>
-      <div class="card-body">
-        <div class="price">
-          <div class="value">
-            <p><span class="badge badge-sunflower">25%</span> $1.200,00</p>
-            <div class="discount">
-              <small>$1.500.00</small>
-            </div>
+    <% } else { %>
+      <div class="card-img" style="background-image: url('assets/products/<%=  products[i].background_image %>');">
+        <p class="card-title"><%=  products[i].name %></p>
+      </div>
+    <% }  %>
+    
+    <div class="card-body">
+      <div class="price">
+        <div class="value">
+          <% if (products[i].discount > 1) { %>
+          <p>
+            <span class="badge badge-sunflower">-<%= products[i].discount %>%</span>
+            $<%= finalPrice(products[i].price, products[i].discount) %>
+          </p>
+          <div class="discount">
+            <small>$<%= toThousand(products[i].price) %></small>
           </div>
-          <i class="fa fa-cart-plus"></i>
+          <% } else { %>
+          <p style="margin-bottom: 21px;">$<%= toThousand(products[i].price) %></p>
+          <% } %>
+
         </div>
-        <p class="legend">
-          <small>Disponible para:</small>
-        </p>
-        <% for (var j=0; j< gameList.results[i].stores.length; j++) { %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'steam') { %>
-            <i class="icon-steam"></i>
-          <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'epic-games') { %>
-            <i class="icon-epic"></i>
-          <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'gog') { %>
-            <i class="icon-gog"></i>
-          <% } %>
-          <% if ( gameList.results[i].stores[j].store.slug === 'xbox-store') { %>
-            <i class="icon-xbox"></i>
-          <% } %>
-        <% } %>
+        <i class="fa fa-cart-plus"></i>
       </div>
+      <p class="legend">
+        <small>Disponible para:</small>
+      </p>
+      <% for (var j=0; j< products[i].store.length; j++) { %>
+        <% if ( products[i].store[j] === 'Steam') { %>
+        <i class="icon-steam" title="Steam"></i>
+        <% } %>
+        <% if ( products[i].store[j] === 'Epic games') { %>
+        <i class="icon-epic" title="Epic Games"></i>
+        <% } %>
+        <% if ( products[i].store[j] === 'GOG') { %>
+        <i class="icon-gog" title="GOG Galaxy"></i>
+        <% } %>
+        <% if ( products[i].store[j] === 'X-Box Store') { %>
+        <i class="icon-xbox" title="X-Box Store"></i>
+        <% } %>
+      <% } %>
     </div>
-  </a>
+  </div>
+</a>
 <% } %>
