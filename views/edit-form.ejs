@@ -13,23 +13,41 @@
 	<%- include('../partials/navbar', {nombre: 'Homero', apellido: 'Thompson'}) %>
 	<!-- /.navbar header -->
 
-	<!-- home content -->
-
 	<section class="container">
 		<div class="row">
 			<div class="col-12">
 				<h4>EDICIÓN DE PRODUCTO</h4>
 			</div>
 		</div>
-		<form class="row">
+		<form class="row" action="/products/edit/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
 			<div class="col-6 col-md-6">
 
 				<div class="form-group">
 					<label for="name">Título</label>
 					<input type="text" class="form-control" name="name" value="<%= productToEdit.name %>" required>
 				</div>
+				<div class="form-group">
+					<label for="developers">Developers</label>
+					<input type="text" class="form-control" name="developers" value="<%= productToEdit.developers %>">
+					<small>Puede agregar más de uno y separarlos con una coma ","</small>
+				</div>
+				<div class="form-group">
+					<label for="released">Fecha de lanzamiento</label>
+					<input type="text" class="form-control" name="released" value="<%= productToEdit.released %>">
+					<small>Formato YYYY-MM-DD Ej: 2020-06-30</small>
+				</div>
+				<div class="form-group">
+					<label for="rating_bub">Nuestro rating</label>
+					<input type="number" class="form-control" name="rating_bub" value="<%= productToEdit.rating_bub %>" required>
+					<small>Debe introducir números del 1 al 100</small>
+				</div>
+				<div class="form-group">
+					<label for="metacritic">Rating Metacritic</label>
+					<input type="number" class="form-control" name="metacritic" value="<%= productToEdit.metacritic %>">
+					<small>Debe introducir números del 1 al 100</small>
+				</div>
 				<div class="btn-group mt-3 mb-4">
-					<input type="file" class="btn btn-primary">
+					<input type="file" class="btn btn-primary" name="background_image">
 				</div>
 				<div class="form-group">
 					<label>Plataforma: </label>
@@ -52,48 +70,57 @@
 				</div>
 				<div class="form-group">
 					<label for="about">Acerca del juego</label>
-					<textarea value="<%= productToEdit.about %>" class="form-control" name="about" rows="3" required></textarea>
+					<textarea class="form-control" name="about" rows="3" required><%= productToEdit.about %></textarea>
+				</div>
+				<div class="form-group">
+					<label for="requirements_min">Requisitos del sistema mínimos</label>
+					<textarea class="form-control" name="requirements_min"
+						rows="3"><%= productToEdit.requirements.minimum %></textarea>
+				</div>
+				<div class="form-group">
+					<label for="requirements_rec">Requisitos del sistema recomendados</label>
+					<textarea class="form-control" name="requirements_rec"
+						rows="3"><%= productToEdit.requirements.recommended %></textarea>
 				</div>
 				<div class="form-group">
 					<label for="categories">Categorías</label>
-					<input type="text" class="form-control" name="categories" required>
+					<input type="text" class="form-control" name="categories" value="<%= productToEdit.categories %>" required>
 					<small>Puede agregar más de una y separarlas con una coma ","</small>
 				</div>
 
 				<div class="row">
 					<div class="form-group col my-3">
 						<label for="price">Precio en ARS$</label>
-						<input type="text" value="<%= productToEdit.price %>" class="form-control" placeholder="" name="price" required>
+						<input type="text" class="form-control" name="price" value="<%= productToEdit.price %>" required>
 					</div>
 					<div class="form-group col my-3">
 						<label for="descuento">Descuento (%)</label>
-						<input value="<%= productToEdit.discount %>" type="text" class="form-control" placeholder="" name="discount"
-							required>
+						<input type="text" class="form-control" name="discount" value="<%= productToEdit.discount %>" required>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
 						<label for="urlTrailer">URL Trailer</label>
-						<input value="<%= productToEdit.game_trailer %>" type="text" class="form-control" placeholder=""
-							name="game_trailer" required>
+						<input type="text" class="form-control" value="https://www.youtube.com/watch?v=<%= productToEdit.game_trailer %>" name="game_trailer" required>
+						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
-						<label for="urlGameplay">URL Gameplay</label>
-						<input value="<%= productToEdit.game_gameplay %>" type="text" class="form-control" placeholder=""
-							name="game_gameplay">
+						<label for="game_gameplay">URL Gameplay</label>
+						<input type="text" class="form-control" name="game_gameplay" value="https://www.youtube.com/watch?v=<%= productToEdit.game_gameplay %>">
+						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
-						<label for="game_review">URL Review</label>
-						<input value="<%= productToEdit.game_review %>" type="text" class="form-control" placeholder=""
-							name="game_review">
+						<label for="urlReview">URL Review</label>
+						<input type="text" class="form-control" name="game_review" value="https://www.youtube.com/watch?v=<%= productToEdit.game_review %>">
+						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="btn-group mt-3">
-					<button type="submit" class="btn btn-primary">Editar producto</button>
+					<button type="submit" class="btn btn-primary">Guardar cambios</button>
 				</div>
 
 			</div>

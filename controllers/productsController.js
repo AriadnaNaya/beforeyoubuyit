@@ -81,7 +81,7 @@ const controller = {
         if (match && match[7].length == 11) {
           return match[7];
         } else {
-          alert("Could not extract video ID.");
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
         }
       }
 
@@ -110,7 +110,7 @@ const controller = {
       };
       // Lo agregamos al objeto original
       const finalProduct = [...productsDB, newProduct];
-      console.log(newProduct);
+      //console.log(newProduct);
       //Esto crea un nuevo array con todos los onjetos del array y agrega una nueva posicion con el objeto que creamos
       // Sobrescrivimos el JSON
       fs.writeFileSync(productsFilePathDB, JSON.stringify(finalProduct, null, ' '));
@@ -135,27 +135,71 @@ const controller = {
        id = req.params.id;
 
        let categories = req.body.categories;
-       categories = categories.split(",")
+       let developers = req.body.developers;
+       let store = req.body.store;
+       let requirements = {
+         minimum: req.body.requirements_min,
+         recommended: req.body.requirements_rec
+       }
+       // Obtiene checkboxes seleccionados
+       let getSelectedChbox = (store) => {
+        //Obtiene los tags con el "name" correspondiente
+        var inpfields = store.getElementsByName('store');
 
-       const currentProduct = productsDemo.find(p => p.id == id);
-       currentProduct.name = req.body.name;
-       currentProduct.price = req.body.price;
-       currentProduct.discount = req.body.discount;
-       currentProduct.categories = categories
-       currentProduct.about = req.body.about;
-       // res.send(products);
-       // reescribir json
-       fs.writeFileSync(productsFilePathDemo, JSON.stringify(productsDemo, null, ' '));
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) store.push(inpfields[i].value);
+        }
+        return store;
+      }
 
-       // volver al detalle
-       res.redirect('/');
+      categories = categories.split(",");
+      developers = developers.split(",");
+
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
+        }
+      }
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
+
+      const currentProduct = productsDB.find(p => p.id == id);
+      currentProduct.name = req.body.name;
+      currentProduct.price = req.body.price;
+      currentProduct.discount = req.body.discount;
+      currentProduct.released = req.body.released;
+      currentProduct.background_image = req.files[0].filename;
+      currentProduct.about = req.body.about;
+      currentProduct.developers = developers;
+      currentProduct.store = store;
+      currentProduct.metacritic = req.body.metacritic;
+      currentProduct.rating_bub = req.body.rating_bub;
+      currentProduct.ratings = null;
+      currentProduct.categories = categories;
+      currentProduct.game_trailer = game_trailer;
+      currentProduct.game_gameplay = game_gameplay;
+      currentProduct.game_review = game_review;
+      currentProduct.requirements = requirements;
+      //console.log(currentProduct);
+      // reescribir json
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(productsDB, null, ' '));
+
+      // volver al detalle
+      res.redirect('/');
      },
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
       id = req.params.id;
-      let newProducts = productsDemo.filter(p => p.id != id);
-      fs.writeFileSync(productsFilePathDemo, JSON.stringify(newProducts, null, ' '));
+      let newProducts = productsDB.filter(p => p.id != id);
+      fs.writeFileSync(productsFilePathDB, JSON.stringify(newProducts, null, ' '));
       res.redirect('/');
     },
 

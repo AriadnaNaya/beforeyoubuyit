@@ -30,7 +30,7 @@ router.get('/create', productsController.create); /* GET - Form to create */
 router.post('/create', upload.any(), productsController.store); /* POST - Store in DB */
 /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id', productsController.edit); /* GET - Form to create */
-router.put('/edit/:id', productsController.update); /* PUT - Update in DB */
+router.put('/edit/:id', upload.any(), productsController.update); /* PUT - Update in DB */
 /* GET detalle page. */
 /*** DELETE ONE PRODUCT***/
 router.delete('/delete/:id', productsController.destroy); /* DELETE - Delete from DB */
