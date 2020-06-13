@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const { check, validationResult, body } = require('express-validator');
 
 
 
@@ -12,6 +13,16 @@ const controller = {
 		res.render('register');
 	},
 	store: (req, res, next) => {
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			console.log(errors.errors);
+			
+			res.send('Ok');
+			// return res.render('register', {
+			// 	errors: errors.errors
+			// });
+		}
+
 		const newID = users.length + 1;
 		const newUser = {
 			id: newID,
