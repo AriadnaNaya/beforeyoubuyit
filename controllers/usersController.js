@@ -9,9 +9,11 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
+	//Ir a registro
 	root: (req, res) => {
 		res.render('register');
 	},
+	//Guardar usuario creado
 	store: (req, res, next) => {
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
@@ -22,7 +24,6 @@ const controller = {
 				errors: errors.errors
 			});
 		}
-
 		const newUser = {
 			id: users[users.length - 1].id + 1,
 			name: req.body.name,
@@ -31,11 +32,19 @@ const controller = {
 			email: req.body.email,
 			image: 'default-img.jpg'
 		};
-
 		const finalUser = [...users, newUser];
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
 		res.redirect('/');
 	},
+	// Ir al perfil de usuario
+	profile: (req, res) => {
+		id = req.params.userId;
+		const user = users.find(p => p.id == id);
+		res.render('profile', {
+			user: user
+		});
+	},
+	//ir a pantalla de editar usuario
 	edit: (req, res) => {
 
 		id = req.params.userId;
@@ -46,7 +55,7 @@ const controller = {
 		});
 
 	},
-
+	//Actualizar JSON
 	update: (req, res, next) => {
 
 		id = req.params.userId;
@@ -61,17 +70,18 @@ const controller = {
 
 		res.redirect('/');
 	},
-
+	//Borrar usuario
 	destroy: (req, res) => {
 		id = req.params.userId;
 		let newUser = users.filter(p => p.id != id);
 		fs.writeFileSync(usersFilePath, JSON.stringify(newUser, null, ' '));
 		res.redirect('/');
 	},
-
+	//Ir a login
 	login: (req, res) => {
 		res.render('/');
 	},
+	//Validación
 	validate: (req, res) => {
 
 		const email = req.body.email;

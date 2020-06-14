@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 /*** CREATE ONE user ***/
-
+router.get('/profile/:userId', usersController.profile); /* GET - user profile */
 router.get('/create', usersController.root); /* GET - Form to create */
 router.post('/create', [
   check('email').isEmail().withMessage('Debe ingresar un e-mail correcto'),
