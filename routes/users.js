@@ -22,11 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 /*** CREATE ONE user ***/
-// check('password').custom((value, {
-//   req
-// }) => {
-//   return req.body.password === req.body.passwordConfirm;
-// }).withMessage('La contraseña no coincide')
+
 router.get('/create', usersController.root); /* GET - Form to create */
 router.post('/create', [
   check('email').isEmail().withMessage('Debe ingresar un e-mail correcto'),
@@ -37,9 +33,11 @@ router.post('/create', [
   check('lastname').isLength({
     min: 4,
     max: 100
-  }).withMessage('El apellido es inválido')
-  
-], upload.any(), usersController.store); /* POST - Store in DB */
+  }).withMessage('El apellido es inválido'),
+  check('password').custom((value, {req}) => {
+    return value === req.body.passwordConfirm;
+  }).withMessage('La contraseña no coincide')
+], usersController.store); /* POST - Store in DB */
 
 router.get('/', usersController.login); /* GET - Form to create */
 router.post('/', usersController.validate); /* Post - Validation login */

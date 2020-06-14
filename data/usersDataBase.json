@@ -5,148 +5,30 @@
   "lastname": "Galope",
   "password": "$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe",
   "email": "felipe@gmail.com",
-  "avatar": "1589589791344.jpeg"
+  "image": "default-img.jpg"
  },
  {
   "id": 1,
-  "name": "Esteban Ezequiel",
+  "name": "Janio",
+  "lastname": "Isacura",
+  "password": "$2b$10$pPMCYDxms77OI64AfMNPNuls9XXB9.YCihD29wlsdq57Y0I6WCA5O",
+  "email": "janioisacura@gmail.com",
+  "image": "default-img.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Ezequiel",
   "lastname": "Turchetti",
-  "password": "$2b$10$OZPRB6rfyC.Jr4UaJJbUGu0mA73F0njD.d5orYT9zP8UgCCcu8u3K",
-  "email": "ezequiel.turchetti@gmail.com"
+  "password": "$2b$10$iip1pm2tW8rf7l8Pf6r82OdtUAtlsfPKhxqHdhIGLRBiTp0lzBWgK",
+  "email": "eze@turchetti.com",
+  "image": "1592093401353.jpg"
  },
  {
   "id": 3,
-  "name": "Esteban Ezequiel",
-  "lastname": "Turchetti",
-  "password": "$2b$10$PKAc8GnHAF4KafNPPNAd8.yvBVcMTVR4VjvucAJehXDlnFPai9X5.",
-  "email": "sda@cdt.com.ar"
- },
- {
-  "id": 4,
-  "name": "Esteban Ezequiel",
-  "lastname": "Turchetti",
-  "password": "$2b$10$/SZbvhBdD3ELJ9h9y/QL8Ocd7m9a1mMkYEFxUDVvBMHm4p872HeLO",
-  "email": "eze170484@hotmail.com",
-  "avatar": "1590772407901.png"
- },
- {
-  "id": 5,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$Vto6embenSsJ2LL9KB0qKut89dqKN8h.uZDcfvE4eDEeDlYVXzoJC",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090179984.jpg"
- },
- {
-  "id": 6,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$6qGTFWarPNAUEjyQNNPop.iLbu0y38XMeU1dkgttOrNCbKyo1rtB6",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090181324.jpg"
- },
- {
-  "id": 7,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$l.y5Gb92XNZsqzK18evaPuRpfINYAAOoQNytqXb87Dlw0HS.w04Ai",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090182653.jpg"
- },
- {
-  "id": 8,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$i0ZPaChRbBN4t0aOiCccj.vUvsXDPn2gCDlwgAH7mpoBI6AHhDuoO",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090183997.jpg"
- },
- {
-  "id": 9,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$ZAMrnNu7c7LvexaofmpTtewAj2H.i1huZBpgzOVvnUtJs2WV85yrq",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090185320.jpg"
- },
- {
-  "id": 10,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$asMIH2/tzgJmgvaMc8L7AutT.FtRUFEQrcZlUZbhPisDGLN4s/oKK",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090186645.jpg"
- },
- {
-  "id": 11,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$f1wGbPlviJbc4JohqN/LgOD4F20eV5WvKSkm.iIdG8gbAXm8inHM.",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090187977.jpg"
- },
- {
-  "id": 12,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$jYIrzXb2e9pcVV1TVx9yCefJqWbfdeHA3aRYel8TYK2vSoHHlWRMC",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090189297.jpg"
- },
- {
-  "id": 13,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$aKprFWoPszWV2BlLZrSn4uK5R41pqTccfRaZnm8WrzNEgYuW6I/1e",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090190621.jpg"
- },
- {
-  "id": 14,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$gGFKqYnUXa590ITxlZzy.ulsYhKg5k/iHD/BxrC3WFAcAuQxZVzz2",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090191953.jpg"
- },
- {
-  "id": 15,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$DTBoyzIgASl3Vt5bSAT3mep3U2yKrJimJ.Nj2QjNoaniIr9r2VnNq",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090193315.jpg"
- },
- {
-  "id": 16,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$Dn7fcfM0AgGbSmsAzCItcOQ2VtVHtIDQ4zArVbB/qeXTyZ0ohXEVq",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090194658.jpg"
- },
- {
-  "id": 17,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$RFzFNEHhnH499C2NV.3YHuyHY/tuvN3LGyMJCBNRA0nEXweMsWp6m",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090195878.jpg"
- },
- {
-  "id": 18,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$zmgY1mS674BQ4u5nogqIlu5jOyjebWBDf2PwtsqwPC2ePpxRL7hr.",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090196803.jpg"
- },
- {
-  "id": 19,
-  "name": "Janio",
-  "lastname": "Isacura",
-  "password": "$2b$10$JQIJtFdD3z4NFeRAmTPRBuXgok5mwJAXAhfGHTOVIA/W6kjXQNKLm",
-  "email": "janioisacura@gmail.com",
-  "avatar": "1592090198153.jpg"
+  "name": "Kiko",
+  "lastname": "De Zona Sur",
+  "password": "$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC",
+  "email": "kikozonasur@newells.com",
+  "image": "hqdefault.jpg"
  }
 ]

@@ -19,7 +19,7 @@
             <div class="form-group">
               <label for="name">Nombre</label>
               <div class="input-group">
-                <input class="form-control" type="text" name='name' id='name' tabindex="2" />
+                <input class="form-control" type="text" name='name' id='name' tabindex="1" value="<%= userToEdit.name %>" />
                 <span class="input-group-append"><i class="input-group-text fa fa-user"></i></span>
               </div>
               <div class="message invalid-feedback user">
@@ -30,7 +30,7 @@
             <div class="form-group">                     
               <label for="lastname">Apellido</label>
               <div class="input-group">
-                <input class="form-control" type="text" name='lastname' id='lastname' tabindex="2" />
+                <input class="form-control" type="text" name='lastname' id='lastname' tabindex="2" value="<%= userToEdit.lastname %>"/>
                 <span class="input-group-append"><i class="input-group-text fa fa-user"></i></span>
               </div>
               <div class="message invalid-feedback user">
@@ -40,7 +40,7 @@
             <div class="form-group">
               <label for="email">Email</label>
               <div class="input-group">
-                <input class="form-control" type="email" name='email' id='email' tabindex="2" />
+                <input class="form-control" type="email" name='email' id='email' tabindex="3" value="<%= userToEdit.email %>"/>
                 <span class="input-group-append"><i class="input-group-text fa fa-envelope"></i></span>
               </div>
               <div class="message invalid-feedback email">
@@ -50,7 +50,7 @@
             <div class="form-group">
               <label for="password">Contraseña</label>
               <div class="input-group">
-                <input class="form-control" type="password" name='password' id='password' tabindex="3" />
+                <input class="form-control" type="password" name='password' id='password' tabindex="4"/>
                 <span class="input-group-append"><i class="input-group-text fa fa-lock"></i></span>
               </div>
               <div class="message invalid-feedback password">
@@ -59,13 +59,13 @@
             </div>
 
             <div class="input-group">
-              <label for="Avatar" class="form-label">Imagen de perfil : </label>
-              <input  type="file" id="avatar" name="avatar">
+              <label for="image" class="form-label">Imagen de perfil : </label>
+              <input type="file" id="image" name="image" tabindex="5">
             </div>
             
             
             <div class="form-group">
-              <button type="submit"  class="btn btn-default btn-block" tabindex="4">Guardar Cambios</button>
+              <button type="submit"  class="btn btn-default btn-block" tabindex="6">Guardar Cambios</button>
             </div>
           </form>
         </div>

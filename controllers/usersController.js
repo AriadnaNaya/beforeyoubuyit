@@ -15,22 +15,21 @@ const controller = {
 	store: (req, res, next) => {
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
-			console.log(errors.errors);
+			// console.log(errors);
+			// res.send('OK');
 			
-			res.send('Ok');
-			// return res.render('register', {
-			// 	errors: errors.errors
-			// });
+			return res.render('register', {
+				errors: errors.errors
+			});
 		}
 
-		const newID = users.length + 1;
 		const newUser = {
-			id: newID,
+			id: users[users.length - 1].id + 1,
 			name: req.body.name,
 			lastname: req.body.lastname,
 			password: bcrypt.hashSync(req.body.password, 10),
 			email: req.body.email,
-			avatar: req.files[0].filename
+			image: 'default-img.jpg'
 		};
 
 		const finalUser = [...users, newUser];
