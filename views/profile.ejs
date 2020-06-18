@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head', {title: 'Perfil de usuario'}) %>
+</head>
+
+<body class="detail">
+  <!-- navbar header -->
+  <%- include('partials/header') %>
+  <!-- /.navbar header -->
+
+  <!-- detaik content -->
+
+  <!-- product detail -->
+  <div class="container products-wrapper">
+    <div class="product-detail">
+      <div class="row">
+        <div class="col-6 col-lg-4">
+          <img src="/assets/img/users/<%= user.image %>" alt="user image" class="product-detail-img mt-5">
+        </div>
+        <div class="col-6 col-lg-8">
+          <article class="product-detail-info">
+            <h2 class="product-detail-price">
+              <%= user.name %> <%= user.lastname %>
+            </h2>
+            <p><%= user.email %></p>
+            <hr>
+
+            <form class="btn-group" action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+              <a href="/users/edit/<%= user.id %>" class="btn btn-orange">EDITAR USUARIO</a>
+              <button type="submit" class="btn btn-danger">ELIMINAR</button>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /product detail -->
+
+  <!-- /.detaik content -->
+  <%- include('partials/footer') %>
+
+  <%- include('partials/scripts') %>
+</body>
+
+</html>

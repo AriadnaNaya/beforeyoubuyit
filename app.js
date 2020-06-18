@@ -35,6 +35,11 @@ app.use('/assets', [
   express.static(__dirname + '/public/images/')
 ]);
 
+app.use(session({
+  secret: 'Secret!',
+  resave: true,
+  saveUninitialized: true
+}));
 
 // view engine setup
 app.set('view engine', 'ejs');
