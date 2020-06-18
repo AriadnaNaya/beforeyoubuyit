@@ -4,9 +4,13 @@ const multer = require('multer');
 const path = require('path');
 const { check, validationResult, body } = require('express-validator');
 
+const loggedUser = require('../middlewares/loggedUser');
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
+
+const logsMiddleware = require('../middlewares/logsDbMiddleware'); // Middleware de logs en 
+
 
 
 // ************ Code Multer ************
@@ -20,6 +24,10 @@ const storage = multer.diskStorage({
   }
 });
 const upload = multer({ storage: storage })
+
+/*** Get user Profile  ***/
+
+router.get('/profile/:userId', loggedUser,usersController.profile); /* GET - user profile */
 
 /*** CREATE ONE user ***/
 router.get('/profile/:userId', usersController.profile); /* GET - user profile */
@@ -44,9 +52,8 @@ router.post('/', usersController.validate); /* Post - Validation login */
 
 /*** EDIT ONE USER ***/
 router.get('/edit/:userId', usersController.edit); /* GET - Form to create */
-router.put('/edit/:userId', upload.any(), usersController.update); /* PUT - Update in DB */
-
-router.delete('/delete/:userId', usersController.destroy); /* DELETE - Delete from DB */
+router.put('/edit/:userId', upload.any(), logsMiddleware, usersController.update); /* PUT - Update in DB */
+router.delete('/delete/:userId', logsMiddleware, usersController.destroy); /* DELETE - Delete from DB */
 
 
 module.exports = router;
