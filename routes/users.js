@@ -27,11 +27,9 @@ const upload = multer({ storage: storage })
 
 /*** Get user Profile  ***/
 
-router.get('/profile/:userId', loggedUser,usersController.profile); /* GET - user profile */
-
 /*** CREATE ONE user ***/
-router.get('/profile/:userId', usersController.profile); /* GET - user profile */
-router.get('/create', usersController.root); /* GET - Form to create */
+
+router.get('/create', usersController.create); /* GET - Form to create */
 router.post('/create', [
   check('email').isEmail().withMessage('Debe ingresar un e-mail correcto'),
   check('name').isLength({
@@ -47,8 +45,9 @@ router.post('/create', [
   }).withMessage('La contraseña no coincide')
 ], usersController.store); /* POST - Store in DB */
 
-router.get('/', usersController.login); /* GET - Form to create */
-router.post('/', usersController.validate); /* Post - Validation login */
+router.get('/login', usersController.login); /* GET - Form to create */
+router.post('/login', usersController.logUser); /* Post - Validation login */
+router.get('/profile/:userId', loggedUser, usersController.profile); /* GET - user profile */
 
 /*** EDIT ONE USER ***/
 router.get('/edit/:userId', usersController.edit); /* GET - Form to create */
