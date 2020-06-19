@@ -1,7 +1,7 @@
 <!-- navbar header -->
 <header class="navbar">
   <nav class="container">
-    <a class="navbar-brand" href="products"><i class="icon-bub text-sunflower"></i>BUB</a>
+    <a class="navbar-brand" href="/"><i class="icon-bub text-sunflower"></i>BUB</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
           <a class="nav-link" href="home">Home</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="products">Home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="products/create">Carga</a>
@@ -23,14 +23,21 @@
         </li>
       </ul>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="/" class="nav-link">Login</a>
-        </li>
-        <li class="nav-item">
-          <a href="#HOME" class="nav-link">
-            <strong>HOMERO THOMPSON</strong>        
-                   </a>
-        </li>
+        <% if(typeof user != 'undefined' ) { %>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">
+              <strong><%= user.name %> <%= user.lastname %></strong>
+            </a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="users/create">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a href="/users/login" class="nav-link">Login</a>
+          </li>
+        <% } %>
+        
         <li class="nav-item">
           <img src="assets/misc/morgado.jpg" alt="">
         </li>

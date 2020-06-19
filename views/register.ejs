@@ -13,13 +13,17 @@
       <div class="row ">
         <div class="col-12 col-md-4 login-screen">
           <div id="logo-container">
-
-          <form action="/users/create" method="POST" id="loginForm" enctype="multipart/form-data">
+          <% if (typeof errors != 'undefined') { %>
+            <% for (error of errors) { %>
+              <div class="badge badge-danger"><%= error.msg %></div>
+            <% } %>
+          <% } %>
+          <form action="/users/create" method="POST" id="loginForm">
                      
             <div class="form-group">
               <label for="name">Nombre</label>
               <div class="input-group">
-                <input class="form-control" type="text" name='name' id='name' tabindex="2" />
+                <input class="form-control" type="text" name='name' id='name' tabindex="1" />
                 <span class="input-group-append"><i class="input-group-text fa fa-user"></i></span>
               </div>
               <div class="message invalid-feedback user">
@@ -40,7 +44,7 @@
             <div class="form-group">
               <label for="email">Email</label>
               <div class="input-group">
-                <input class="form-control" type="email" name='email' id='email' tabindex="2" />
+                <input class="form-control" type="text" name='email' id='email' tabindex="3" />
                 <span class="input-group-append"><i class="input-group-text fa fa-envelope"></i></span>
               </div>
               <div class="message invalid-feedback email">
@@ -50,7 +54,7 @@
             <div class="form-group">
               <label for="password">Contraseña</label>
               <div class="input-group">
-                <input class="form-control" type="password" name='password' id='password' tabindex="3" />
+                <input class="form-control" type="password" name='password' id='password' tabindex="4" />
                 <span class="input-group-append"><i class="input-group-text fa fa-lock"></i></span>
               </div>
               <div class="message invalid-feedback password">
@@ -58,17 +62,29 @@
               </div>
             </div>
 
-            <div class="input-group">
-              <label for="Avatar" class="form-label">Imagen de perfil : </label>
-              <input  type="file" id="avatar" name="avatar">
+            <div class="form-group">
+              <label for="passwordConfirm">Repetir Contraseña</label>
+              <div class="input-group">
+                <input class="form-control" type="password" name='passwordConfirm' id='passwordConfirm' tabindex="5" />
+                <span class="input-group-append"><i class="input-group-text fa fa-lock"></i></span>
+              </div>
+              <div class="message invalid-feedback password">
+                <small class="">Clave incorrecta</small>
+              </div>
             </div>
+
+
+            <!-- <div class="input-group">
+              <label for="Avatar" class="form-label">Imagen de perfil : </label>
+              <input  type="file" id="avatar" name="avatar" tabindex="6">
+            </div> -->
             
             <p>
               <small class="mb-3 text-pink">Al Registrarte, aceptas nuestras condiciones de uso y políticas de privacidad</small>
             </p>
             
             <div class="form-group">
-              <button type="submit"  class="btn btn-default btn-block" tabindex="4">Registrate</button>
+              <button type="submit"  class="btn btn-default btn-block" tabindex="7">Registrate</button>
             </div>
           </form>
         </div>

@@ -19368,6 +19368,11 @@ footer {
   width: 100%; }
 
 /* Detalle page */
+.product-detail-img {
+  width: 70%;
+  display: block;
+  margin: auto; }
+
 .product-detail {
   padding: 10px;
   margin: 10px; }
