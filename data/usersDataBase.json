@@ -30,5 +30,13 @@
   "password": "$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC",
   "email": "kikozonasur@newells.com",
   "image": "hqdefault.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Ariadna",
+  "lastname": "Naya",
+  "password": "$2b$10$3CiDjWFAT73G8Jnqa8PI0u.YHyb4DzBt77vje6rHfrsp9mw1D3lN.",
+  "email": "ariadnanaya2016@gmail.com",
+  "image": "default-img.jpg"
  }
 ]
