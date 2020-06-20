@@ -17,50 +17,50 @@
       <h4 class="title">Compra exitosa</h4>
     </div>
     <div method="GET" action="confirmacion" class="cart-wrapper">
-      <% for(var i = 0; i < carritoList.results.length; i++) { %>
+      <% for(var i = 0; i < 5; i++) { %>
       <div class="in-cart w-100">
         <div class="col-12 col-md-2 img-wrapper"
-          style="background-image: url('<%= carritoList.results[i].background_image %>');">
+          style="background-image: url('<%= carritoList[i].background_image %>');">
         </div>
         <div class="col-12 col-md-3">
-          <p class="in-cart-title"><%=  carritoList.results[i].name%></p>
+          <p class="in-cart-title"><%=  carritoList[i].name%></p>
           <p class="bold-case">
-            <% if ( carritoList.results[i].platform === 'steam') { %>
+            <% if ( carritoList[i].store === 'steam') { %>
             <i class="icon-steam"></i> Steam Key
             <% } %>
           </p>
           <p class="bold-case">
-            <% if ( carritoList.results[i].platform === 'epic-games') { %>
+            <% if ( carritoList[i].store === 'epic-games') { %>
             <i class="icon-epic"></i> Epic Games Key
             <% } %>
           </p>
           <p class="bold-case">
-            <% if ( carritoList.results[i].platform === 'gog') { %>
+            <% if ( carritoList[i].store === 'gog') { %>
             <i class="icon-gog"></i> GOG Key
             <% } %>
           </p>
           <p class="bold-case">
-            <% if ( carritoList.results[i].platform === 'xbox-store') { %>
+            <% if ( carritoList[i].store === 'xbox-store') { %>
             <i class="icon-xbox"></i> Xbox Store Key
             <% } %>
           </p>
 
           <p class="bold-case mb-3">Activación global</p>
-          <a href="products" class="text-secondary">Seguir comprando</a>
+          <a href="/" class="text-secondary">Seguir comprando</a>
         </div>
         <div class="col-12 col-md-7 text-small">
-          <h4 class="bold-case mb-0"><%= carritoList.results[i].key %></h4>
+          <h4 class="bold-case mb-0"><%= carritoList[i].key %></h4>
           <small class="lighten">Código de activación</small>
-          <p class="mt-3">Sigue estas instrucciones para activar una copia física o digital de un juego en <%= carritoList.results[i].platform %>:</p>
+          <p class="mt-3">Sigue estas instrucciones para activar una copia física o digital de un juego en <%= carritoList[i].store %>:</p>
           <ol>
             <li>
-              Abre el cliente de <%= carritoList.results[i].platform %> e inicia sesión en tu cuenta.
+              Abre el cliente de <%= carritoList[i].store %> e inicia sesión en tu cuenta.
             </li>
             <li>
               Haz clic en el menú Juegos.
             </li>
             <li>
-              Selecciona Activar un producto en <%= carritoList.results[i].platform %>.
+              Selecciona Activar un producto en <%= carritoList[i].store %>.
             </li>
             <li>
               Sigue las instrucciones en pantalla para completar el proceso.

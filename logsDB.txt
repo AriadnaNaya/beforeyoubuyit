@@ -1,0 +1,2 @@
+Se ingresó en /delete/4?_method=DELETE
+Se ingresó en /delete/4?_method=DELETE

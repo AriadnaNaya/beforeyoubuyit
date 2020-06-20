@@ -8,7 +8,7 @@ const controller = require ("../controllers/productsController")
 
 
 
-router.get('/', controller.carrito);
+router.get('/userId', controller.carrito);
 
 
 module.exports = router;
