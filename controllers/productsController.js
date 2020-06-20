@@ -31,7 +31,9 @@ const controller = {
       {
         products: productsDB,
         finalPrice: finalPrice,
-        toThousand: toThousand
+        toThousand: toThousand, 
+        user: req.session.user
+        
       });
     },
 
@@ -46,7 +48,9 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
-     res.render('create-form');
+     res.render('create-form', {
+		  user: req.session.user
+		});
     },
 
     // Create -  Method to store
@@ -124,7 +128,8 @@ const controller = {
       const productToEdit = productsDB.find(p => p.id == id);
       //renderizar el formulario de edición con los datos obtenidos
       res.render('edit-form', {
-        productToEdit: productToEdit
+        productToEdit: productToEdit,
+        user: req.session.user
       });
 
     },
@@ -234,21 +239,23 @@ const controller = {
             title: 'Carrito',
             carritoList: productsDB,
             finalPrice: finalPrice,
-            toThousand: toThousand
+            toThousand: toThousand,
+            user: req.session.user
         });
     },
 
     confirmacionCompra: (req, res, next) => {
+      console.log (productsDB)
         res.render('confirmacion', {
             nombre: 'Homero',
             apellido: 'Thompson',
             title: 'GAME List',
-            carritoList: productsDB
+            carritoList: productsDB,
+            user: req.session.user
         });
     },
 
     detail: (req, res, next) => {
-          
           let idJuego = req.params.id-1;
           let gameList = productsDB;
           let gameRatings = () => {
@@ -271,7 +278,8 @@ const controller = {
               juego: gameList[idJuego],
               finalPrice: finalPrice,
               toThousand: toThousand,
-              rating: gameRatings()
+              rating: gameRatings(),
+              user: req.session.user
             });
      },
 

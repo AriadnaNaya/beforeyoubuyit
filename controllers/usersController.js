@@ -41,7 +41,8 @@ const controller = {
 		const userToEdit = users.find(p => p.id == id);
 
 		res.render('user-edit-form', {
-			userToEdit: userToEdit
+			userToEdit: userToEdit,
+			user: req.session.user
 		});
 
 	},
@@ -58,7 +59,9 @@ const controller = {
 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 
-		res.redirect('/users/login');
+		res.redirect('/users/login',{
+			user: req.session.user
+		});
 	},
 	//Borrar usuario
 	destroy: (req, res) => {

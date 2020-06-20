@@ -25,9 +25,12 @@
       <ul class="navbar-nav">
         <% if(typeof user != 'undefined' ) { %>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">
+            <a href="/users/profile/<%= user.id %>" class="nav-link">
               <strong><%= user.name %> <%= user.lastname %></strong>
             </a>
+          </li>
+          <li class="nav-item">
+            <img src="assets/users/<%= user.image %> " alt="">
           </li>
         <% } else { %>
           <li class="nav-item">
@@ -39,10 +42,7 @@
         <% } %>
         
         <li class="nav-item">
-          <img src="assets/misc/morgado.jpg" alt="">
-        </li>
-        <li class="nav-item">
-          <a href="carrito" class="nav-link cart">
+          <a href="/carrito/userId" class="nav-link cart">
             <i class="material-icons">shopping_cart</i>
           </a>
         </li>
