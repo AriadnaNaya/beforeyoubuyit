@@ -99,7 +99,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (0, 'Felipe', 'Galope', '$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe', 'felipe@gmail.com', 'default-img.jpg', 1),	(1, 'Janio', 'Isacura', '$2b$10$pPMCYDxms77OI64AfMNPNuls9XXB9.YCihD29wlsdq57Y0I6WCA5O', 'janioisacura@gmail.com', 'default-img.jpg',2 ),	(2, 'Ezequiel', 'Turchetti', '$2b$10$iip1pm2tW8rf7l8Pf6r82OdtUAtlsfPKhxqHdhIGLRBiTp0lzBWgK', 'eze@turchetti.com', '1592093401353.jpg', 3),	(3, 'Kiko', 'De Zona Sur', '$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC', 'kikozonasur@newells.com', 'hqdefault.jpg', 4),	(4, 'Ariadna', 'Naya', '$2b$10$B65a16VQXpJv2g7fQ0qNp.nnFrlGTG4eLSwqzV85NN8UQ.wk8eg1q', 'ariadnanaya2016@gmail.com', 'default-img.jpg', 5)	;
+INSERT INTO `users` VALUES (1, 'Felipe', 'Galope', '$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe', 'felipe@gmail.com', 'default-img.jpg', 1),	(2, 'Janio', 'Isacura', '$2b$10$pPMCYDxms77OI64AfMNPNuls9XXB9.YCihD29wlsdq57Y0I6WCA5O', 'janioisacura@gmail.com', 'default-img.jpg',2 ),	(3, 'Ezequiel', 'Turchetti', '$2b$10$iip1pm2tW8rf7l8Pf6r82OdtUAtlsfPKhxqHdhIGLRBiTp0lzBWgK', 'eze@turchetti.com', '1592093401353.jpg', 3),	(4, 'Kiko', 'De Zona Sur', '$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC', 'kikozonasur@newells.com', 'hqdefault.jpg', 4),	(5, 'Ariadna', 'Naya', '$2b$10$B65a16VQXpJv2g7fQ0qNp.nnFrlGTG4eLSwqzV85NN8UQ.wk8eg1q', 'ariadnanaya2016@gmail.com', 'default-img.jpg', 5)	;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
