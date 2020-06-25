@@ -7,7 +7,7 @@ const router = express.Router();
 const controller = require ("../controllers/productsController")
 
 
-router.get('/', controller.confirmacionCompra);
+router.get('/carrito', controller.confirmacionCompra);
 
 
 module.exports = router;

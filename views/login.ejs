@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body class="detail">
+  <!-- navbar header -->
+  <%- include('../partials/navbar')%>
+  <!-- /.navbar header -->
+
+  <!-- detaik content -->
+
+  <!-- product create -->
+  <div class="container products-wrapper">
+    <div class="row">
+      <div class="col-12 col-md-6 col-centered">
+        <h2 class="products-title">LOGIN</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-centered">
+        <% if(typeof error != 'undefined') { %>
+        <div class="badge badge-danger" role="alert">
+          <%= error %>
+        </div>
+        <% } %>
+        <form action="/users/login" method="POST">
+          <div class="row product-detail p-3">
+            <div class="col-12 form-group">
+              <label for="email" class="form-label">Email:</label>
+              <input class="form-control" type="email" name="email" placeholder="Ej: homerothompson@gmail.com">
+            </div>
+            <div class="col-12 form-group">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input class="form-control" type="password" name="password" placeholder="Ingrese una contraseña">
+            </div>
+            <div class="col-12 form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember">
+                <label class="form-check-label" for="remember">
+                  Recordar usuario
+                </label>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="submit" class="btn btn-primary">Ingresar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <!-- /product create -->
+
+  <!-- /.detaik content -->
+  <%- include('../partials/footer') %>
+
+  <%- include('../partials/scripts') %>
+</body>
+
+</html>

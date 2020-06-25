@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 // LiveReload dependencies
 const connectLivereload = require("connect-livereload");
@@ -35,6 +36,11 @@ app.use('/assets', [
   express.static(__dirname + '/public/images/')
 ]);
 
+app.use(session({
+  secret: 'Secret!',
+  resave: true,
+  saveUninitialized: true
+}));
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -57,10 +63,10 @@ liveReloadServer.server.once("connection", () => {
 });
 
 // Navigation
-app.use('/', indexRouter);
+app.use('/', productsRouter);
 app.use('/users', usersRouter);
 //app.use('/juegos', juegosRouter);
-app.use('/home', homeRouter);
+//app.use('/home', homeRouter);
 //app.use ('/detalle', detalleRouter);
 //app.use ('/key', keyRouter);
 app.use ('/carga', cargaRouter);
