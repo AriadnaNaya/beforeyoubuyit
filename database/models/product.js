@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "order";
+    let alias = "products";
 
     let cols = {
         id:{
@@ -43,6 +43,9 @@ module.exports = function(sequelize, dataTypes) {
         requirements_rec:{
             type: dataTypes.STRING
         },
+        product_key: {
+            type: dataTypes.STRING
+        },
         developers_id:{
             type: dataTypes.INTEGER
         }
@@ -56,7 +59,7 @@ module.exports = function(sequelize, dataTypes) {
     let product = sequelize.define(alias, cols, config);
 
     product.associate = function(models) {
-        product.hasMany(models.developer, {
+        product.belongsTo(models.developer, {
             as: "developers",
             foreignKey: "developers_id"
         });
@@ -67,7 +70,7 @@ module.exports = function(sequelize, dataTypes) {
             otherKey: "stores_id",
             timestamps: false
         });
-        product.belongsToMany(models.store, {
+        product.belongsToMany(models.categories, {
             as: "categories",
             through: "products_categories",
             foreignKey: "products_id",
