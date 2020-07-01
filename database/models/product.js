@@ -80,6 +80,10 @@ module.exports = function (sequelize, dataTypes) {
 			otherKey: "categories_id",
 			timestamps: false
 		});
+		//Crear modelo products_stores
+		//Crear modelo products_categories
+
+		//Borrar con asociaciones: Borrar el id de la tabla intermedia
 	}
 
 	return Product;
