@@ -221,7 +221,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'shooter'), (2,'TPS'),(3,'Open world'),(4,'Adventure'),(5,'Fantasy');
+INSERT INTO `categories` VALUES (1,'FPS'), (2,'TPS'),(3,'Mundo Abierto'),(4,'Aventura'),(5,'Fantasía'),(6, 'RPG'),(7,'Shooter'),(8,'Carreras'),(9, 'Peleas'), (10, 'Horror'), (11, 'Cirujas en tanga'), (12, 'Supervivencia'), (13, 'Simulación'), (14, 'Vielencia'), (15, 'Plataformas'), (16, 'Single Player'), (17, 'Multiplayer'), (18, 'Deportes'), (19, 'Estratégia'), (20, 'Retro'), (21, 'VR');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
