@@ -144,7 +144,7 @@ CREATE TABLE `products` (
   `price` decimal(7,2) DEFAULT NULL,
   `discount` int(10) unsigned NOT NULL,
   `release` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `backgroud_image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `background_image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `about` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `metacritic` int(10) unsigned NOT NULL,  
   `rating_bub` int(10) unsigned NOT NULL,

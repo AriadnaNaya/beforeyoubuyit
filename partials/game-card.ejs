@@ -32,17 +32,17 @@
       <p class="legend">
         <small>Disponible para:</small>
       </p>
-      <% for (var j=0; j< products[i].store.length; j++) { %>
-        <% if ( products[i].store[j] === 'Steam') { %>
+      <% for (var j=0; j< products[i].stores.length; j++) { %>
+        <% if ( products[i].stores[j].name === 'Steam') { %>
         <i class="icon-steam" title="Steam"></i>
         <% } %>
-        <% if ( products[i].store[j] === 'Epic games') { %>
+        <% if ( products[i].stores[j].name === 'Epic games') { %>
         <i class="icon-epic" title="Epic Games"></i>
         <% } %>
-        <% if ( products[i].store[j] === 'GOG') { %>
+        <% if ( products[i].stores[j].name === 'GOG') { %>
         <i class="icon-gog" title="GOG Galaxy"></i>
         <% } %>
-        <% if ( products[i].store[j] === 'X-Box Store') { %>
+        <% if ( products[i].stores[j].name === 'X-Box Store') { %>
         <i class="icon-xbox" title="X-Box Store"></i>
         <% } %>
       <% } %>
