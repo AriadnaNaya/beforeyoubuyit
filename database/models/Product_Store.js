@@ -13,6 +13,9 @@ module.exports = function (sequelize, dataTypes) {
     stores_id: {
       type: dataTypes.INTEGER
     },
+    product_key: {
+      type: dataTypes.STRING
+    },
   }
 
   let config = {
@@ -21,11 +24,15 @@ module.exports = function (sequelize, dataTypes) {
   }
 
   let Product_Store = sequelize.define(alias, cols, config);
+  Product_Store.associate = function (models) {
+    Product.belongsToMany(models.Store, {
+      through: Product_Store
+    });
+    Store.belongsToMany(models.Product, {
+      through: Product_Store
+    });
+  }
   
-  //Crear modelo products_stores
-  //Crear modelo products_categories
-
-  //Borrar con asociaciones: Borrar el id de la tabla intermedia
 
   return Product_Store;
 }

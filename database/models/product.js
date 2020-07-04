@@ -46,9 +46,6 @@ module.exports = function (sequelize, dataTypes) {
 		requirements_rec: {
 			type: dataTypes.STRING
 		},
-		product_key: {
-			type: dataTypes.STRING
-		},
 		developers_id: {
 			type: dataTypes.INTEGER
 		}
