@@ -25,10 +25,10 @@ module.exports = function (sequelize, dataTypes) {
 
   let Product_Store = sequelize.define(alias, cols, config);
   Product_Store.associate = function (models) {
-    Product.belongsToMany(models.Store, {
+    Product_Store.belongsTo(models.Product, {
       through: Product_Store
     });
-    Store.belongsToMany(models.Product, {
+    Product_Store.belongsTo(models.Store, {
       through: Product_Store
     });
   }
