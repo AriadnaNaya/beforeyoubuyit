@@ -179,7 +179,7 @@ CREATE TABLE `stores` (
 
 LOCK TABLES `stores` WRITE;
 /*!40000 ALTER TABLE `stores` DISABLE KEYS */;
-INSERT INTO `stores` VALUES (1,'Steam'), (2,'X-Box Store'),(3,'GOG'),(4,'Epic Games'),(5,'PlayStation Store');
+INSERT INTO `stores` VALUES (1,'Steam'), (2,'X-Box Store'),(3,'GOG'),(4,'Epic Games');
 /*!40000 ALTER TABLE `stores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +196,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'FPS'), (2,'TPS'),(3,'Mundo Abierto'),(4,'Aventura'),(5,'Fantasía'),(6, 'RPG'),(7,'Shooter'),(8,'Carreras'),(9, 'Peleas'), (10, 'Horror'), (11, 'Cirujas en tanga'), (12, 'Supervivencia'), (13, 'Simulación'), (14, 'Vielencia'), (15, 'Plataformas'), (16, 'Single Player'), (17, 'Multiplayer'), (18, 'Deportes'), (19, 'Estratégia'), (20, 'Retro'), (21, 'VR'), (22, 'Cooperativo');
+INSERT INTO `categories` VALUES (1,'FPS'), (2,'TPS'),(3,'Mundo Abierto'),(4,'Aventura'),(5,'Fantasía'),(6, 'RPG'),(7,'Shooter'),(8,'Carreras'),(9, 'Peleas'), (10, 'Horror'), (11, 'Cirujas en tanga'), (12, 'Supervivencia'), (13, 'Simulación'), (14, 'Violencia'), (15, 'Plataformas'), (16, 'Single Player'), (17, 'Multiplayer'), (18, 'Deportes'), (19, 'Estratégia'), (20, 'Retro'), (21, 'VR'), (22, 'Cooperativo');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
