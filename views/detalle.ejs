@@ -97,13 +97,13 @@
 						<% } %>
 					</p>
 					<% if (juego.release) { %>
-						<p>Fecha de Lanzamiento: <%= juego.release %></p>
+						<p>Fecha de Lanzamiento: <%= formatReleaseDate(juego.release) %></p>
 					<% } %>
 
 					<!-- tags -->
 					<% if (juego.categories) { %>
 					<div class="my-2">
-						<h1 class="badge badge-secondary"><%= juego.categories.name %></h1>
+						<h3><span class="badge badge-secondary"><%= juego.categories.name %></span></h3>
 					</div>
 					<% } %>
 					<!-- //tags -->
@@ -268,7 +268,7 @@
 	</div>
 
 	<!-- comments -->
-	<div class="hero-wrapper">
+	<!-- <div class="hero-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -334,7 +334,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- //comments -->
 	<!-- /.home content -->
 

@@ -25,6 +25,21 @@ const finalPrice = (price, discount) => {
   return toThousand(price);
 }
 
+const formatReleaseDate = (date) => {
+  let parts = date.split('-');
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+  // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
+  // January - 0, February - 1, etc.
+  var mydate = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+  //mydate = mydate.toLocaleDateString('es-ES', options);
+  mydate = mydate.toDateString('es-ES');
+  return mydate;
+}
 
 const controller = {
 
@@ -66,11 +81,13 @@ const controller = {
       const getDevelopers = await db.Developer.findAll({
         order:[['name', 'ASC']]
       });
-      Promise.all([getCategories, getDevelopers])
-      .then(([categores, developers]) => {
+      const getStores = await db.Store.findAll();
+      Promise.all([getCategories, getDevelopers, getStores])
+      .then(([categores, developers, stores]) => {
         res.render('create-form', {
           categories: categores,
           developers: developers,
+          stores: stores,
           user: req.session.user
         });
       });
@@ -80,12 +97,6 @@ const controller = {
   },
 
   // Create -  Method to store
-
-  // 1 - Create producto
-  // 2 - Sacar id de producto en una promesa
-  // 2 - then --> categoría por req.body.categoria
-  // 4 - then --> developers por req.body.developers 
-  // 3 - then --> pasarle array de tiendas
   store: (req, res) => {
     try {
       //Crear objeto con todas las propiedades del form
@@ -124,8 +135,8 @@ const controller = {
         developers_id: req.body.developers,
         categories_id: req.body.categories,
         discount: req.body.discount,
-        released: req.body.released,
-        background_image: 'default-image.png',
+        release: req.body.release,
+        background_image: 'default-image.svg',
         about: req.body.about,
         metacritic: req.body.metacritic,
         rating_bub: req.body.rating_bub,
@@ -147,8 +158,6 @@ const controller = {
           
         }
         // Obtiene checkboxes seleccionados
-        
-
         db.Product_Store.bulkCreate(storeSelected);
         //Escribir en la tabla pivot --> Necesitamos el id de newProduct
         //res.send(storeSelected);
@@ -285,10 +294,12 @@ const controller = {
           {association: 'categories'}
         ]
       });
+      
       res.render('detalle', {
         juego: gameList,
         finalPrice: finalPrice,
         toThousand: toThousand,
+        formatReleaseDate: formatReleaseDate,
         user: req.session.user
       });
       
@@ -299,17 +310,3 @@ const controller = {
 }
 
 module.exports = controller;
-
-// "Product_Stores": {
-//   "products_id": 4,
-//   "stores_id": 6,
-//   "product_key": false
-// }
-
-
-
-// 1 - Create producto
-// 2 - Sacar id de producto en una promesa
-// 2 - then --> categoría por req.body.categoria
-// 4 - then --> developers por req.body.developers 
-// 3 - then --> pasarle array de tiendas
