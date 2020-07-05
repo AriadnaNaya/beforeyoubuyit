@@ -7,6 +7,12 @@ module.exports = function (sequelize, dataTypes) {
 			primaryKey: true,
 			autoIncrement: true
 		},
+		developers_id: {
+			type: dataTypes.INTEGER
+		},
+		categories_id: {
+			type: dataTypes.INTEGER
+		},
 		name: {
 			type: dataTypes.STRING
 		},
@@ -45,9 +51,6 @@ module.exports = function (sequelize, dataTypes) {
 		},
 		requirements_rec: {
 			type: dataTypes.STRING
-		},
-		developers_id: {
-			type: dataTypes.INTEGER
 		}
 	}
 
@@ -70,12 +73,9 @@ module.exports = function (sequelize, dataTypes) {
 			otherKey: "stores_id",
 			timestamps: false
 		});
-		Product.belongsToMany(models.Category, {
+		Product.belongsTo(models.Category, {
 			as: "categories",
-			through: "products_categories",
-			foreignKey: "products_id",
-			otherKey: "categories_id",
-			timestamps: false
+			foreignKey: "categories_id"
 		});
 		//Crear modelo products_stores
 		//Crear modelo products_categories

@@ -9,9 +9,6 @@ module.exports = function (sequelize, dataTypes) {
     },
     name: {
       type: dataTypes.STRING
-    },
-    products_id: {
-      type: dataTypes.INTEGER
     }
   }
 

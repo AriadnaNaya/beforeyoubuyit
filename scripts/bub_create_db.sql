@@ -155,20 +155,16 @@ DROP TABLE IF EXISTS `developers`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `developers` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `products_id` int(10) unsigned NOT NULL,
   `name` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `developers_products_products_id_foreign` (`products_id`),
-  CONSTRAINT `developers_products_products_id_foreign` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `developers` WRITE;
 /*!40000 ALTER TABLE `developers` DISABLE KEYS */;
-INSERT INTO `developers` VALUES (1,1,'Rockstar Games'), (2,2,'Valve'),(3,3,'CD Projekt Red'),(4,4,'Crystal Dynamics'),(5,5,'Bethesda');
+INSERT INTO `developers` VALUES (1,'Rockstar Games'), (2,'Valve'),(3,'CD Projekt Red'),(4,'Crystal Dynamics'),(5,'Bethesda'),(6,'Capcom'), (7,'EA'),(8,'Netherealm Studios'),(9,'Blizzard'),(10,'Epic Games'),(11,'Ubisoft'),(12,'Konami'),(13,'2K'),(14,'Mojang'),(15,'Nintendo'),(16,'Sega'),(17,'Sony'),(18,'Telltale Games'),(19,'Unknown Worlds Entertainment'),(20,'WB Games'),(21,'Kalypso Media Digital'),(22,'Hasbro Interactive'),(23,'Activision');
 /*!40000 ALTER TABLE `developers` ENABLE KEYS */;
 UNLOCK TABLES;
-
 
 DROP TABLE IF EXISTS `stores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

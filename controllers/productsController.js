@@ -59,80 +59,104 @@ const controller = {
 
   // Create - Form to create
   create: async (req, res) => {
-    let getCategories = await db.Category.findAll();
-    res.render('create-form', {
-      categories: getCategories,
-      user: req.session.user
-    });
+    try {
+      const getCategories = await db.Category.findAll({
+        order: [['name', 'ASC']]
+      });
+      const getDevelopers = await db.Developer.findAll({
+        order:[['name', 'ASC']]
+      });
+      Promise.all([getCategories, getDevelopers])
+      .then(([categores, developers]) => {
+        res.render('create-form', {
+          categories: categores,
+          developers: developers,
+          user: req.session.user
+        });
+      });
+    } catch(err){
+      console.log(err);
+    }
   },
 
   // Create -  Method to store
+
+  // 1 - Create producto
+  // 2 - Sacar id de producto en una promesa
+  // 2 - then --> categoría por req.body.categoria
+  // 4 - then --> developers por req.body.developers 
+  // 3 - then --> pasarle array de tiendas
   store: (req, res) => {
-    //Crear objeto con todas las propiedades del form
-    const newId = productsDB.length + 1;
-    let categories = req.body.categories;
-    let developers = req.body.developers;
-    let store = req.body.store;
-    let requirements = {
-      minimum: req.body.requirements_min,
-      recommended: req.body.requirements_rec
-    }
-    // Obtiene checkboxes seleccionados
-    let getSelectedChbox = (store) => {
-      //Obtiene los tags con el "name" correspondiente
-      var inpfields = store.getElementsByName('store');
+    try {
+      //Crear objeto con todas las propiedades del form
+      //const newId = productsDB.length + 1;
 
-      // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
-      for (var i = 0; i < inpfields.length; i++) {
-        if (inpfields[i].checked == true) store.push(inpfields[i].value);
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
+        }
       }
-      return store;
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
+      let store = req.body.store;
+      let getSelectedChbox = (store) => {
+        //Obtiene los tags con el "name" correspondiente
+        var inpfields = store.getElementsByName('store');
+
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) {
+            store.push(inpfields[i].value);
+          }
+        }
+        return store;
+      };
+
+      db.Product.create({
+        name: req.body.name,
+        price: req.body.price,
+        developers_id: req.body.developers,
+        categories_id: req.body.categories,
+        discount: req.body.discount,
+        released: req.body.released,
+        background_image: 'default-image.png',
+        about: req.body.about,
+        metacritic: req.body.metacritic,
+        rating_bub: req.body.rating_bub,
+        game_trailer: game_trailer,
+        game_gameplay: game_gameplay,
+        game_review: game_review,
+        requirements_min: req.body.requirements_min,
+        requirements_rec: req.body.requirements_rec
+      })
+      .then((product) => {
+        let storeSelected = [];
+        let productId = product.id;
+        for (let j = 0; j < store.length; j++) {
+          storeSelected.push({
+            products_id: productId,
+            stores_id: store[j],
+            product_key: req.body.product_key
+          })
+          
+        }
+        // Obtiene checkboxes seleccionados
+        
+
+        db.Product_Store.bulkCreate(storeSelected);
+        //Escribir en la tabla pivot --> Necesitamos el id de newProduct
+        //res.send(storeSelected);
+        res.redirect('/');
+      });
+    } catch(err){
+      console.log(err);
     }
-
-    categories = categories.split(",");
-    developers = developers.split(",");
-
-    function extractVideoID(url) {
-      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-      var match = url.match(regExp);
-      if (match && match[7].length == 11) {
-        return match[7];
-      } else {
-        alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
-      }
-    }
-
-    let game_trailer = extractVideoID(req.body.game_trailer);
-    let game_review = extractVideoID(req.body.game_review);
-    let game_gameplay = extractVideoID(req.body.game_gameplay);
-
-    const newProduct = {
-      id: newId,
-      name: req.body.name,
-      price: req.body.price,
-      discount: req.body.discount,
-      released: req.body.released,
-      background_image: req.files[0].filename,
-      about: req.body.about,
-      developers: developers,
-      store: store,
-      metacritic: req.body.metacritic,
-      rating_bub: req.body.rating_bub,
-      ratings: null,
-      categories: categories,
-      game_trailer: game_trailer,
-      game_gameplay: game_gameplay,
-      game_review: game_review,
-      requirements: requirements
-    };
-    // Lo agregamos al objeto original
-    const finalProduct = [...productsDB, newProduct];
-    //console.log(newProduct);
-    //Esto crea un nuevo array con todos los onjetos del array y agrega una nueva posicion con el objeto que creamos
-    // Sobrescrivimos el JSON
-    fs.writeFileSync(productsFilePathDB, JSON.stringify(finalProduct, null, ' '));
-    // redirigimos a la productos
-    res.redirect('/');
   },
   edit: (req, res) => {
     //obtener id del producto
@@ -281,3 +305,11 @@ module.exports = controller;
 //   "stores_id": 6,
 //   "product_key": false
 // }
+
+
+
+// 1 - Create producto
+// 2 - Sacar id de producto en una promesa
+// 2 - then --> categoría por req.body.categoria
+// 4 - then --> developers por req.body.developers 
+// 3 - then --> pasarle array de tiendas
