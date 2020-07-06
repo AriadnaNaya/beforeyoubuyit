@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "categories";
+    let alias = "Category";
 
     let cols = {
         id:{
@@ -18,10 +18,10 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let categories = sequelize.define(alias, cols, config);
+    let Category = sequelize.define(alias, cols, config);
 
-    categories.associate = function(models) {
-        store.belongsToMany(models.product, {
+    Category.associate = function(models) {
+        Category.belongsToMany(models.Product, {
             as: "products",
             through: "products_categories",
             foreignKey: "categories_id",
@@ -31,5 +31,5 @@ module.exports = function(sequelize, dataTypes) {
 
     
 }
-return categories;
+return Category;
 }

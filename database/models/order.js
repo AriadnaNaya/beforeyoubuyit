@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "order";
+    let alias = "Order";
 
     let cols = {
         id:{
@@ -23,17 +23,17 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let order = sequelize.define(alias, cols, config);
+    let Order = sequelize.define(alias, cols, config);
 
-    order.associate = function(models) {
-        order.hasMany(models.user, {
+    Order.associate = function(models) {
+        Order.hasMany(models.User, {
             as: "user",
             foreignKey: "user_id"
         });
 }
         
-    order.associate = function(models) {
-        order.belongsToMany(models.product, {
+    Order.associate = function(models) {
+        Order.belongsToMany(models.Product, {
             as: "product",
             through: "orders_products",
             foreignKey: "order_id",
@@ -41,5 +41,5 @@ module.exports = function(sequelize, dataTypes) {
             timestamps: false
         });
     }
-return order;
+return Order;
 }

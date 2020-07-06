@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "developers";
+    let alias = "Developer";
 
     let cols = {
         id:{
@@ -20,15 +20,15 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let developers = sequelize.define(alias, cols, config);
+    let Developer = sequelize.define(alias, cols, config);
 
-    developers.associate = function(models) {
-        developers.hasMany(models.products, {
+    Developer.associate = function(models) {
+        Developer.hasMany(models.Product, {
             as: "products",
             foreignKey: "products_id"
         });
     
     
     }
-return order;
+return Developer;
 }

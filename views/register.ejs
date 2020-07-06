@@ -18,7 +18,7 @@
               <div class="badge badge-danger"><%= error.msg %></div>
             <% } %>
           <% } %>
-          <form action="/users/create" method="POST" id="loginForm">
+          <form action="/users/create" method="POST" id="loginForm" enctype = "multipart/form-data">
                      
             <div class="form-group">
               <label for="name">Nombre</label>
@@ -74,10 +74,10 @@
             </div>
 
 
-            <!-- <div class="input-group">
+           <div class="input-group">
               <label for="Avatar" class="form-label">Imagen de perfil : </label>
-              <input  type="file" id="avatar" name="avatar" tabindex="6">
-            </div> -->
+              <input  type="file" accept = "image/*" id="avatar" name="avatar" tabindex="6">
+           </div> 
             
             <p>
               <small class="mb-3 text-pink">Al Registrarte, aceptas nuestras condiciones de uso y políticas de privacidad</small>

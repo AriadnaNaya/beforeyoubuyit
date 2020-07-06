@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "products";
+    let alias = "Product";
 
     let cols = {
         id:{
@@ -56,21 +56,21 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let product = sequelize.define(alias, cols, config);
+    let Product = sequelize.define(alias, cols, config);
 
-    product.associate = function(models) {
-        product.belongsTo(models.developer, {
+    Product.associate = function(models) {
+        Product.belongsTo(models.Developer, {
             as: "developers",
             foreignKey: "developers_id"
         });
-        product.belongsToMany(models.store, {
+        Product.belongsToMany(models.Store, {
             as: "stores",
             through: "products_stores",
             foreignKey: "products_id",
             otherKey: "stores_id",
             timestamps: false
         });
-        product.belongsToMany(models.categories, {
+        Product.belongsToMany(models.Category, {
             as: "categories",
             through: "products_categories",
             foreignKey: "products_id",
@@ -79,5 +79,5 @@ module.exports = function(sequelize, dataTypes) {
         });
     }
     
-return product;
+return Product;
 }
