@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
-let db = require('../database/models/User');
+let db = require('../database/models');
 
 const {
 	check,
@@ -31,13 +31,13 @@ const controller = {
 				errors: errors.errors
 			});
 		};
+		console.log(req.body.name + ' ' + req.body.lastname + ' ' + req.body.password + ' ' + req.body.email)
 		db.User.create({
 			name: req.body.name,
 			lastname: req.body.lastname,
 			password: bcrypt.hashSync(req.body.password, 10),
-			remember_token: bcrypt.hashSync(req.body.passwordConfirm, 10),
 			email: req.body.email,
-			image: req.files[0].filename
+			image: 'default-img.jpg'
 		});
 
 		res.redirect("/users/login");
@@ -58,7 +58,6 @@ const controller = {
 				name: req.body.name,
 				lastname: req.body.lastname,
 				password: bcrypt.hashSync(req.body.password, 10),
-				remember_token: bcrypt.hashSync(req.body.passwordConfirm, 10),
 				email: req.body.email,
 				image: 'default-img.jpg'
 			}, {
