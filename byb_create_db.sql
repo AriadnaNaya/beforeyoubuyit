@@ -38,6 +38,13 @@ CREATE TABLE `orders_products` (
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+LOCK TABLES `orders_products` WRITE;
+/*!40000 ALTER TABLE `orders_products` DISABLE KEYS */;
+INSERT INTO `orders_products` VALUES ( 1, 1, 1 ),( 2, 2,  1),( 3, 1, 2),( 4, 2, 3),( 5, 5, 4),( 6, 2, 4),( 7, 1, 4);
+/*!40000 ALTER TABLE `orders_products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 DROP TABLE IF EXISTS `products_stores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -52,6 +59,13 @@ CREATE TABLE `products_stores` (
   CONSTRAINT `products_stores_stores_id_foreign` FOREIGN KEY (`stores_id`) REFERENCES `stores` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `products_stores` WRITE;
+/*!40000 ALTER TABLE `products_stores` DISABLE KEYS */;
+INSERT INTO `products_stores` VALUES ( 1, 1, 1 ),( 2, 1,  2),( 3, 1, 3),( 4, 1, 4),( 5, 2, 1),( 6, 3, 1),( 7, 3, 2),( 8, 3, 3),( 9, 4, 1),( 10, 4, 2),( 11, 4, 3),( 12, 5, 1),( 13, 5, 2);
+/*!40000 ALTER TABLE `products_stores` ENABLE KEYS */;
+UNLOCK TABLES;
+
 
 DROP TABLE IF EXISTS `products_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -68,18 +82,31 @@ CREATE TABLE `products_categories` (
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+LOCK TABLES `products_categories` WRITE;
+/*!40000 ALTER TABLE `products_categories` DISABLE KEYS */;
+INSERT INTO `products_categories` VALUES ( 1, 1, 1 ),( 2, 1,  2),( 3, 1, 3),( 4, 2, 1),( 5, 2, 2),( 6, 2, 3),( 7, 3, 1),(8, 3, 2),( 9, 3, 3),( 10, 3, 5),( 11, 4, 1),( 12, 4, 2),( 13, 4, 3),( 14, 5, 1),( 15, 5, 2),( 16, 5, 3);
+/*!40000 ALTER TABLE `products_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
 DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `users_id` int(10) unsigned DEFAULT NULL,
   `estado` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `cantidad` int(10) unsigned NOT NULL,
-  `users_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `orders_users_id_foreign` (`users_id`),
   CONSTRAINT `orders_users_id_foreign` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES ( 1, 1, 'Activo', 2 ),( 2, 2, 'Activo', 1),( 3, 3, 'Activo', 1),( 4, 5, 'Activo', 3);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

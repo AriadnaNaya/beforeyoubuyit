@@ -43,7 +43,7 @@ router.post('/create', [
   check('password').custom((value, {req}) => {
     return value === req.body.passwordConfirm;
   }).withMessage('La contraseña no coincide')
-], usersController.store); /* POST - Store in DB */
+], upload.single ('avatar'), usersController.store); /* POST - Store in DB */
 
 router.get('/login', usersController.login); /* GET - Form to create */
 router.post('/login', usersController.logUser); /* Post - Validation login */

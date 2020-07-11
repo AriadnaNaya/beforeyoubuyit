@@ -93,21 +93,17 @@
 					<h4 class="product-title"><%= juego.name %></h4>
 					<p><span>Desarrollado por: </span>
 						<% if (juego.developers != null) { %>
-							<% for (var i=0; i< juego.developers.length; i++) { %>
-							<span><%= juego.developers[i] %></span>
-							<% } %>
+							<span><%= juego.developers.name %></span>
 						<% } %>
 					</p>
-					<% if (juego.released) { %>
-						<p>Fecha de Lanzamiento: <%= juego.released %></p>
+					<% if (juego.release) { %>
+						<p>Fecha de Lanzamiento: <%= formatReleaseDate(juego.release) %></p>
 					<% } %>
 
 					<!-- tags -->
 					<% if (juego.categories) { %>
 					<div class="my-2">
-						<% for (var i=0; i< juego.categories.length; i++) { %>
-						<span class="badge badge-secondary"><%= juego.categories[i].name %></span>
-						<% } %>
+						<h3><span class="badge badge-secondary"><%= juego.categories.name %></span></h3>
 					</div>
 					<% } %>
 					<!-- //tags -->
@@ -122,19 +118,19 @@
 								<h3><strong>$<%= finalPrice(juego.price, juego.discount) %></strong></h3>
 							</div>
 							<div class="dropdown-menu">
-								<% for (var j=0; j< juego.store.length; j++) { %>
-								<% if ( juego.store[j] === 'Steam') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam" title="<%= juego.store[j]%>"></i> Steam</a>
+								<% for (var j=0; j< juego.stores.length; j++) { %>
+								<% if ( juego.stores[j].name === 'Steam') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-steam" title="<%= juego.stores[j].name%>"></i> Steam</a>
 								<% } %>
-								<% if ( juego.store[j] === 'Epic Games') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic" title="<%= juego.store[j]%>"></i> Epic
+								<% if ( juego.stores[j].name === 'Epic Games') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-epic" title="<%= juego.stores[j].name%>"></i> Epic
 									Games</a>
 								<% } %>
-								<% if ( juego.store[j] === 'GOG') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog" title="<%= juego.store[j]%>"></i> GOG</a>
+								<% if ( juego.stores[j].name === 'GOG') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-gog" title="<%= juego.stores[j].name%>"></i> GOG</a>
 								<% } %>
-								<% if ( juego.store[j] === 'X-Box Store') { %>
-								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox" title="<%= juego.store[j]%>"></i> X-Box
+								<% if ( juego.stores[j].name === 'X-Box Store') { %>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="icon-xbox" title="<%= juego.stores[j].name%>"></i> X-Box
 									Store</a>
 								<% } %>
 								<% } %>
@@ -165,7 +161,7 @@
 		<div class="container">
 			<div class="row">
 				<% if (juego.metacritic) { %>
-				<div class="col-12 col-md-4 hero-item">
+				<div class="col-12 col-md-6 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
 							<h4><%= juego.metacritic %></h4>
@@ -177,7 +173,7 @@
 				</div>
 				<% } %>
 				<% if (juego.rating_bub) { %>
-				<div class="col-12 col-md-4 hero-item">
+				<div class="col-12 col-md-6 hero-item">
 					<div class="hero-item">
 						<div class="alert alert-pink" role="alert">
 							<h4><%= juego.rating_bub %></h4>
@@ -189,7 +185,7 @@
 				</div>
 				<% } %>
 
-				<% if (juego.ratings) { %>
+				<!-- <% if (juego.ratings) { %>
 				<div class="col-12 col-md-4 hero-item">
 					<div class="hero-item">
 						<div class="alert emoji" role="alert">
@@ -211,7 +207,7 @@
 						</div>
 					</div>
 				</div>
-				<% } %>
+				<% } %> -->
 			</div>
 		</div>
 	</div>
@@ -247,10 +243,9 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<strong>MINIMO</strong>
-					<% if (juego.requirements) { %>
-						<p><%= juego.requirements.minimum %></p>
-					<% } %>
-					<%if (!juego.requirements) { %>
+					<% if (juego.requirements_min) { %>
+						<p><%= juego.requirements_min %></p>
+					<% } else { %>
 					<h1>Sorry :(</h1>
 					<p>Este juego no tiene requisitos para mostrar </p>
 					<% } %>
@@ -258,10 +253,9 @@
 				</div>
 				<div class="col-12 col-md-6">
 					<strong>RECOMENDADO</strong>
-					<% if (juego.requirements) { %>
-						<p><%= juego.requirements.recommended %></p>
-					<% } %>
-					<%if (!juego.requirements) { %>
+					<% if (juego.requirements_rec) { %>
+						<p><%= juego.requirements_rec %></p>
+					<% } else { %>
 					<br> </br>
 					<h1>Sorry :(</h1>
 					<p>Este juego no tiene requisitos para mostrar </p>
@@ -274,7 +268,7 @@
 	</div>
 
 	<!-- comments -->
-	<div class="hero-wrapper">
+	<!-- <div class="hero-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -340,7 +334,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- //comments -->
 	<!-- /.home content -->
 
