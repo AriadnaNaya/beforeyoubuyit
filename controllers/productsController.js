@@ -167,90 +167,136 @@ const controller = {
       console.log(err);
     }
   },
+  //obtener id del producto
+  // id = req.params.id;
+  // const productToEdit = productsDB.find(p => p.id == id);
+  //renderizar el formulario de edición con los datos obtenidos
   edit: (req, res) => {
-    //obtener id del producto
-    id = req.params.id;
-    const productToEdit = productsDB.find(p => p.id == id);
-    //renderizar el formulario de edición con los datos obtenidos
-    res.render('edit-form', {
-      productToEdit: productToEdit,
-      user: req.session.user
-    });
+    
+    try {
+      const getProduct = db.Product.findByPk(req.params.id);
+      const getCategories = db.Category.findAll({
+        order: [
+          ['name', 'ASC']
+        ]
+      });
+      const getDevelopers = db.Developer.findAll({
+        order: [
+          ['name', 'ASC']
+        ]
+      });
+      const getStores = db.Store.findAll();
+      Promise.all([getProduct, getCategories, getDevelopers, getStores])
+        .then(([product, categories, developers, stores]) => {
+          res.render('edit-form', {
+            productToEdit: product,
+            categories: categories,
+            developers: developers,
+            stores: stores,
+            user: req.session.user
+          });
+        });
+    } catch (err) {
+      console.log(err);
+    }
+    
 
   },
 
   // Update - Method to update
   update: (req, res) => {
     // editar producto con id obtenido
-    id = req.params.id;
+    //id = req.params.id;
 
-    let categories = req.body.categories;
-    let developers = req.body.developers;
-    let store = req.body.store;
-    let requirements = {
-      minimum: req.body.requirements_min,
-      recommended: req.body.requirements_rec
-    }
-    // Obtiene checkboxes seleccionados
-    let getSelectedChbox = (store) => {
-      //Obtiene los tags con el "name" correspondiente
-      var inpfields = store.getElementsByName('store');
-
-      // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
-      for (var i = 0; i < inpfields.length; i++) {
-        if (inpfields[i].checked == true) store.push(inpfields[i].value);
+    try {
+      function extractVideoID(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+          return match[7];
+        } else {
+          alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
+        }
       }
-      return store;
+
+      let game_trailer = extractVideoID(req.body.game_trailer);
+      let game_review = extractVideoID(req.body.game_review);
+      let game_gameplay = extractVideoID(req.body.game_gameplay);
+      let store = req.body.store;
+      let getSelectedChbox = (store) => {
+        //Obtiene los tags con el "name" correspondiente
+        var inpfields = store.getElementsByName('store');
+
+        // Itera con los checkboxes, guardando los que tienen el estado checked y se pushean a store
+        for (var i = 0; i < inpfields.length; i++) {
+          if (inpfields[i].checked == true) {
+            store.push(inpfields[i].value);
+          }
+        }
+        return store;
+      };
+
+      db.Product.update({
+          name: req.body.name,
+          price: req.body.price,
+          developers_id: req.body.developers,
+          categories_id: req.body.categories,
+          discount: req.body.discount,
+          release: req.body.release,
+          background_image: req.files[0].filename,
+          about: req.body.about,
+          metacritic: req.body.metacritic,
+          rating_bub: req.body.rating_bub,
+          game_trailer: game_trailer,
+          game_gameplay: game_gameplay,
+          game_review: game_review,
+          requirements_min: req.body.requirements_min,
+          requirements_rec: req.body.requirements_rec
+        }, {
+          where: {
+            id: req.params.id
+          }
+        })
+        .then((product) => {
+          let storeSelected = [];
+          let productId = product.id;
+          for (let j = 0; j < store.length; j++) {
+            storeSelected.push({
+              products_id: productId,
+              stores_id: store[j],
+              product_key: req.body.product_key
+            })
+
+          }
+          // Obtiene checkboxes seleccionados
+          db.Product_Store.bulkCreate(storeSelected, {
+            //updateOnDuplicate: ["name"]
+            updateOnDuplicate: ['products_id', 'stores_id', 'product_key']
+          });
+          //Escribir en la tabla pivot --> Necesitamos el id de newProduct
+          //res.send(storeSelected);
+          res.redirect('/');
+        });
+    } catch(err){
+      console.log(err);
     }
-
-    //categories = categories.split(",");
-    developers = developers.split(",");
-
-    function extractVideoID(url) {
-      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-      var match = url.match(regExp);
-      if (match && match[7].length == 11) {
-        return match[7];
-      } else {
-        alert("No se pudo extaer ID del video! Debes ingresar una dirección de youtube!");
-      }
-    }
-
-    let game_trailer = extractVideoID(req.body.game_trailer);
-    let game_review = extractVideoID(req.body.game_review);
-    let game_gameplay = extractVideoID(req.body.game_gameplay);
-
-    const currentProduct = productsDB.find(p => p.id == id);
-    currentProduct.name = req.body.name;
-    currentProduct.price = req.body.price;
-    currentProduct.discount = req.body.discount;
-    currentProduct.released = req.body.released;
-    currentProduct.background_image ='default-image.png';
-    currentProduct.about = req.body.about;
-    currentProduct.developers = developers;
-    currentProduct.store = store;
-    currentProduct.metacritic = req.body.metacritic;
-    currentProduct.rating_bub = req.body.rating_bub;
-    currentProduct.ratings = null;
-    currentProduct.categories = categories;
-    currentProduct.game_trailer = game_trailer;
-    currentProduct.game_gameplay = game_gameplay;
-    currentProduct.game_review = game_review;
-    currentProduct.requirements = requirements;
-    //console.log(currentProduct);
-    // reescribir json
-    fs.writeFileSync(productsFilePathDB, JSON.stringify(productsDB, null, ' '));
-
-    // volver al detalle
-    res.redirect('/');
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    id = req.params.id;
-    let newProducts = productsDB.filter(p => p.id != id);
-    fs.writeFileSync(productsFilePathDB, JSON.stringify(newProducts, null, ' '));
-    res.redirect('/');
+    try {
+      db.Product.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then((response)=>{
+        console.log(response);
+        res.redirect('/');
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 
   order: async (req, res, next) => {
@@ -261,8 +307,6 @@ const controller = {
         }]
       });
       res.render('carrito', {
-        nombre: 'Homero',
-        apellido: 'Thompson',
         title: 'Carrito',
         carritoList: product,
         finalPrice: finalPrice,
