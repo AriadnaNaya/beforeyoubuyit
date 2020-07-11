@@ -19,26 +19,33 @@
 				<h4>EDICIÓN DE PRODUCTO</h4>
 			</div>
 		</div>
-		<form class="row" action="/products/edit/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+		<form class="row" action="/products/edit/<%= productToEdit.id %>?_method=PUT" enctype="multipart/form-data"
+			method="POST">
 			<div class="col-6 col-md-6">
 
 				<div class="form-group">
 					<label for="name">Título</label>
-					<input type="text" class="form-control" name="name" value="<%= productToEdit.name %>" required>
+					<input type="text" class="form-control" name="name" required value="<%= productToEdit.name %>">
 				</div>
 				<div class="form-group">
-					<label for="developers">Developers</label>
-					<input type="text" class="form-control" name="developers" value="<%= productToEdit.developers %>">
-					<small>Puede agregar más de uno y separarlos con una coma ","</small>
+					<label for="developers">Desarrolladores</label>
+					<select class="custom-select" name="developers" id="developers">
+						<% for (developer of developers) { %>
+						<option value="<%= developer.id %>"><%= developer.name %></option>
+						<% } %>
+					</select>
 				</div>
 				<div class="form-group">
-					<label for="released">Fecha de lanzamiento</label>
-					<input type="text" class="form-control" name="released" value="<%= productToEdit.released %>">
-					<small>Formato YYYY-MM-DD Ej: 2020-06-30</small>
+					<label for="product_key">Llave de producto</label>
+					<input type="text" class="form-control" name="product_key" value="<%= productToEdit.product_key %>">
+				</div>
+				<div class="form-group">
+					<label for="release">Fecha de lanzamiento</label>
+					<input type="date" class="form-control" name="release" value="<%= productToEdit.release %>">
 				</div>
 				<div class="form-group">
 					<label for="rating_bub">Nuestro rating</label>
-					<input type="number" class="form-control" name="rating_bub" value="<%= productToEdit.rating_bub %>" required>
+					<input type="number" class="form-control" name="rating_bub" required value="<%= productToEdit.rating_bub %>">
 					<small>Debe introducir números del 1 al 100</small>
 				</div>
 				<div class="form-group">
@@ -46,27 +53,14 @@
 					<input type="number" class="form-control" name="metacritic" value="<%= productToEdit.metacritic %>">
 					<small>Debe introducir números del 1 al 100</small>
 				</div>
-				<div class="btn-group mt-3 mb-4">
-					<input type="file" class="btn btn-primary" name="background_image">
-				</div>
 				<div class="form-group">
 					<label>Plataforma: </label>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="checkbox" name="store" value="Steam">
-						<label class="form-check-label" for="Steam">Steam</label>
+					<% for (store of stores) { %>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" name="store" value="<%= store.id %>">
+						<label class="form-check-label" for="<%= store.name %>"><%= store.name %></label>
 					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="checkbox" name="store" value="Epic Games">
-						<label class="form-check-label" for="Epic Games">Epic Games</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="checkbox" name="store" value="X-Box Store">
-						<label class="form-check-label" for="X-Box Store">X-Box Store</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="checkbox" name="store" value="GOG">
-						<label class="form-check-label" for="GOG">GOG</label>
-					</div>
+					<% } %>
 				</div>
 				<div class="form-group">
 					<label for="about">Acerca del juego</label>
@@ -74,53 +68,57 @@
 				</div>
 				<div class="form-group">
 					<label for="requirements_min">Requisitos del sistema mínimos</label>
-					<textarea class="form-control" name="requirements_min"
-						rows="3"><%= productToEdit.requirements.minimum %></textarea>
+					<textarea class="form-control" name="requirements_min" rows="3"><%= productToEdit.requirements_min %></textarea>
 				</div>
 				<div class="form-group">
 					<label for="requirements_rec">Requisitos del sistema recomendados</label>
-					<textarea class="form-control" name="requirements_rec"
-						rows="3"><%= productToEdit.requirements.recommended %></textarea>
+					<textarea class="form-control" name="requirements_rec" rows="3"><%= productToEdit.requirements_rec %></textarea>
 				</div>
 				<div class="form-group">
 					<label for="categories">Categorías</label>
-					<input type="text" class="form-control" name="categories" value="<%= productToEdit.categories %>" required>
-					<small>Puede agregar más de una y separarlas con una coma ","</small>
+					<select class="custom-select" name="categories" id="categories">
+						<% for (category of categories) { %>
+						<option value="<%= category.id %>"><%= category.name %></option>
+						<% } %>
+					</select>
 				</div>
-
+				<div class="btn-group mt-3 mb-4">
+					<input type="file" class="btn btn-primary" name="background_image">
+				</div>
 				<div class="row">
 					<div class="form-group col my-3">
 						<label for="price">Precio en ARS$</label>
-						<input type="text" class="form-control" name="price" value="<%= productToEdit.price %>" required>
+						<input type="text" class="form-control" placeholder="" name="price" required value="<%= productToEdit.price %>">
 					</div>
 					<div class="form-group col my-3">
 						<label for="descuento">Descuento (%)</label>
-						<input type="text" class="form-control" name="discount" value="<%= productToEdit.discount %>" required>
+						<input type="text" class="form-control" placeholder="" name="discount" required value="<%= productToEdit.discount %>">
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
-						<label for="urlTrailer">URL Trailer</label>
-						<input type="text" class="form-control" value="https://www.youtube.com/watch?v=<%= productToEdit.game_trailer %>" name="game_trailer" required>
+						<label for="urlTrailer">Youtube URL Trailer ID</label>
+						<input type="text" class="form-control" placeholder="" name="game_trailer" required
+							value="https://www.youtube.com/watch?v=<%= productToEdit.game_trailer %>">
 						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
-						<label for="game_gameplay">URL Gameplay</label>
-						<input type="text" class="form-control" name="game_gameplay" value="https://www.youtube.com/watch?v=<%= productToEdit.game_gameplay %>">
+						<label for="urlGameplay">Youtube URL Gameplay ID</label>
+						<input type="text" class="form-control" placeholder="" name="game_gameplay" value="https://www.youtube.com/watch?v=<%= productToEdit.game_gameplay %>">
 						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col my-3">
-						<label for="urlReview">URL Review</label>
-						<input type="text" class="form-control" name="game_review" value="https://www.youtube.com/watch?v=<%= productToEdit.game_review %>">
+						<label for="urlReview">Youtube URL Review ID</label>
+						<input type="text" class="form-control" placeholder="" name="game_review" value="https://www.youtube.com/watch?v=<%= productToEdit.game_review %>">
 						<small>Introduce una dirección de youtube Ej: https://www.youtube.com/watch?v=lQFZC6dzauM&t=7s</small>
 					</div>
 				</div>
 				<div class="btn-group mt-3">
-					<button type="submit" class="btn btn-primary">Guardar cambios</button>
+					<button type="submit" class="btn btn-primary">Actualizar producto</button>
 				</div>
 
 			</div>
