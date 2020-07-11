@@ -26,10 +26,13 @@ module.exports = function (sequelize, dataTypes) {
   let Product_Store = sequelize.define(alias, cols, config);
   Product_Store.associate = function (models) {
     Product_Store.belongsTo(models.Product, {
-      through: Product_Store
+      through: Product_Store,
+      onDelete: "CASCADE"
+      
     });
     Product_Store.belongsTo(models.Store, {
-      through: Product_Store
+      through: Product_Store,
+      onDelete: "CASCADE"
     });
   }
   

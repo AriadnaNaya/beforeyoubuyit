@@ -284,10 +284,19 @@ const controller = {
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
-    id = req.params.id;
-    let newProducts = productsDB.filter(p => p.id != id);
-    fs.writeFileSync(productsFilePathDB, JSON.stringify(newProducts, null, ' '));
-    res.redirect('/');
+    try {
+      db.Product.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then((response)=>{
+        console.log(response);
+        res.redirect('/');
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
 
   order: async (req, res, next) => {

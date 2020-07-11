@@ -55,8 +55,8 @@ CREATE TABLE `products_stores` (
   PRIMARY KEY (`id`),
   KEY `products_stores_products_id_foreign` (`products_id`),
   KEY `products_stores_stores_id_foreign` (`stores_id`),
-  CONSTRAINT `products_stores_products_id_foreign` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `products_stores_stores_id_foreign` FOREIGN KEY (`stores_id`) REFERENCES `stores` (`id`)
+  CONSTRAINT `products_stores_products_id_foreign` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_stores_stores_id_foreign` FOREIGN KEY (`stores_id`) REFERENCES `stores` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
