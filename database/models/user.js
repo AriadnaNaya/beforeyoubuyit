@@ -10,7 +10,7 @@ module.exports = function (sequelize, dataTypes) {
 		name: {
 			type: dataTypes.STRING
 		},
-		last_name: {
+		lastname: {
 			type: dataTypes.STRING
 		},
 		password: {
@@ -21,9 +21,6 @@ module.exports = function (sequelize, dataTypes) {
 		},
 		image: {
 			type: dataTypes.STRING
-		},
-		order_id: {
-			type: dataTypes.INTEGER
 		}
 	}
 
@@ -33,13 +30,6 @@ module.exports = function (sequelize, dataTypes) {
 	}
 
 	let User = sequelize.define(alias, cols, config);
-
-	User.associate = function (models) {
-		User.hasMany(models.Order, {
-			as: "order",
-			foreignKey: "order_id"
-		});
-
-	}
+	
 	return User;
 }
