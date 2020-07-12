@@ -92,22 +92,19 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `orders_id` int(10) unsigned NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `image` LONGBLOB NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `users_orders_users_id_foreign` (`orders_id`),
-  CONSTRAINT `users_orders_users_id_foreign` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1, 1, 'Felipe', 'Galope', '$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe', 'felipe@gmail.com', 'default-img.jpg'),(2, 2, 'Janio', 'Isacura', '$2b$10$pPMCYDxms77OI64AfMNPNuls9XXB9.YCihD29wlsdq57Y0I6WCA5O', 'janioisacura@gmail.com', 'default-img.jpg'),(3,3, 'Ezequiel', 'Turchetti', '$2b$10$iip1pm2tW8rf7l8Pf6r82OdtUAtlsfPKhxqHdhIGLRBiTp0lzBWgK', 'eze@turchetti.com', '1592093401353.jpg'),(4,4 ,'Kiko', 'De Zona Sur', '$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC', 'kikozonasur@newells.com', 'hqdefault.jpg'),(5,5, 'Ariadna', 'Naya', '$2b$10$B65a16VQXpJv2g7fQ0qNp.nnFrlGTG4eLSwqzV85NN8UQ.wk8eg1q', 'ariadnanaya2016@gmail.com', 'default-img.jpg')	;
+INSERT INTO `users` VALUES (1, 'Felipe', 'Galope', '$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe', 'felipe@gmail.com', 'default-img.jpg'),(2, 'Janio', 'Isacura', '$2b$10$pPMCYDxms77OI64AfMNPNuls9XXB9.YCihD29wlsdq57Y0I6WCA5O', 'janioisacura@gmail.com', 'default-img.jpg'),(3, 'Ezequiel', 'Turchetti', '$2b$10$iip1pm2tW8rf7l8Pf6r82OdtUAtlsfPKhxqHdhIGLRBiTp0lzBWgK', 'eze@turchetti.com', '1592093401353.jpg'),(4,'Kiko', 'De Zona Sur', '$2b$10$KYlVtaln5Y7NiWH751HOe.lOU7njsajRRvr5BowbnsvyZlMowZKDC', 'kikozonasur@newells.com', 'hqdefault.jpg'),(5,'Ariadna', 'Naya', '$2b$10$B65a16VQXpJv2g7fQ0qNp.nnFrlGTG4eLSwqzV85NN8UQ.wk8eg1q', 'ariadnanaya2016@gmail.com', 'default-img.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 

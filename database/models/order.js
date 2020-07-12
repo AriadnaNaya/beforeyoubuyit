@@ -13,7 +13,7 @@ module.exports = function (sequelize, dataTypes) {
     cantidad: {
       type: dataTypes.INTEGER
     },
-    user_id: {
+    users_id: {
       type: dataTypes.INTEGER
     }
   }
@@ -25,20 +25,20 @@ module.exports = function (sequelize, dataTypes) {
 
   let Order = sequelize.define(alias, cols, config);
 
-  Order.associate = function (models) {
-    Order.hasMany(models.User, {
-      as: "user",
-      foreignKey: "user_id"
-    });
+  // Order.associate = function (models) {
+  //   Order.hasMany(models.User, {
+  //     as: "user",
+  //     foreignKey: "users_id"
+  //   });
 
-    Order.belongsToMany(models.Product, {
-      as: "product",
-      through: "orders_products",
-      foreignKey: "order_id",
-      otherKey: "product_id",
-      timestamps: false
-    });
-  }
+  //   Order.belongsToMany(models.Product, {
+  //     as: "product",
+  //     through: "orders_products",
+  //     foreignKey: "order_id",
+  //     otherKey: "product_id",
+  //     timestamps: false
+  //   });
+  // }
   
   return Order;
 }
