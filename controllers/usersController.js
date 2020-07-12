@@ -44,10 +44,12 @@ const controller = {
 	},
 	//ir a pantalla de editar usuario
 	edit: (req, res) => {
-		db.User.findByPk(req.params.id)
+		// console.log(req.params.userId);
+		db.User.findByPk(req.params.userId)
 			.then(function (user) {
+				console.log(user);
 				res.render("user-edit-form", {
-					user: user
+					userToEdit: user
 				});
 			});
 
@@ -59,14 +61,14 @@ const controller = {
 				lastname: req.body.lastname,
 				password: bcrypt.hashSync(req.body.password, 10),
 				email: req.body.email,
-				image: 'default-img.jpg'
+				image: req.files[0].filename
 			}, {
 				where: {
-					id: req.params.id
+					id: req.params.userId
 				}
 			})
 			.then(function (user) {
-				res.redirect("/users/login" + req.params.id, {
+				res.redirect("/users/profile" + req.params.userId, {
 					user: req.session.user
 				})
 			});
@@ -75,7 +77,7 @@ const controller = {
 	destroy: (req, res) => {
 		db.User.destroy({
 			where: {
-				id: req.params.id
+				id: req.params.userId
 			}
 		});
 		res.redirect("/users/login")
@@ -88,43 +90,46 @@ const controller = {
 
 	// Loguea usuario
 	logUser: (req, res) => {
-		//Validar que exista el mail
-
-		let pedidoUsuario = db.User.findByPk(req.params.id)
-
-		/*	const theUser = users.find((user) => {
-			return user.email === req.body.email;
-		});*/
-
-		if (pedidoUsuario.email != undefined) {
-			//Si existe el mail validamos que el password coincida usando bcrypt
-			if (bcrypt.compareSync(req.body.password, pedidoUsuario.password)) {
-				//Si coincide generamos la sesión del usuario
-				req.session.user = pedidoUsuario;
-				//Si recordar usuario está checheado guardamos la sesión en una cookie
-				if (req.body.remember) {
-					//1er parametro: nombre, 2: valor, 3: Duración em ms
-					//Para guardar la cookie debe hacerse en singular (res.cookie.nombreCookie)
-					res.cookie('user', pedidoUsuario.id, {
-						maxAge: 999999999999999
-					});
-					//Para requerir la cookie debe hacerse en plural (req.cookies.nombreCookie)
-					console.log(req.cookies.user);
+		try {
+			db.User.findOne({
+				where: {
+					email: req.body.email
 				}
-				//Si la contraseña coincide redirigimos al perfil pasandole el ID de la sesión
-				res.redirect('/users/profile/' + req.session.user.id);
-				//si la pass no coincide lo mandamos a login con error
-			} else {
-				res.render('login', {
-					error: 'Usuario incorrecto'
-				});
-			}
-		} else {
-			res.render('login', {
-				error: 'Usuario incorrecto'
+			})
+			.then((pedidoUsuario) => {
+				console.log(pedidoUsuario);
+				if (pedidoUsuario.email != undefined) {
+					//Si existe el mail validamos que el password coincida usando bcrypt
+					if (bcrypt.compareSync(req.body.password, pedidoUsuario.password)) {
+						//Si coincide generamos la sesión del usuario
+						req.session.user = pedidoUsuario;
+						//Si recordar usuario está checheado guardamos la sesión en una cookie
+						if (req.body.remember) {
+							//1er parametro: nombre, 2: valor, 3: Duración em ms
+							//Para guardar la cookie debe hacerse en singular (res.cookie.nombreCookie)
+							res.cookie('user', pedidoUsuario.id, {
+								maxAge: 999999999999999
+							});
+							//Para requerir la cookie debe hacerse en plural (req.cookies.nombreCookie)
+							console.log(req.cookies.user);
+						}
+						//Si la contraseña coincide redirigimos al perfil pasandole el ID de la sesión
+						res.redirect('/users/profile/' + req.session.user.id);
+						//si la pass no coincide lo mandamos a login con error
+					} else {
+						res.render('login', {
+							error: 'Usuario incorrecto'
+						});
+					}
+				} else {
+					res.render('login', {
+						error: 'Usuario incorrecto'
+					});
+				}
 			});
+		} catch(err){
+			console.log(err);
 		}
-		//res.redirect('/');
 	},
 
 	// Show user profile

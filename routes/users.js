@@ -51,8 +51,8 @@ router.get('/profile/:userId', loggedUser, usersController.profile); /* GET - us
 
 /*** EDIT ONE USER ***/
 router.get('/edit/:userId', usersController.edit); /* GET - Form to create */
-router.put('/edit/:userId', upload.any(), logsMiddleware, usersController.update); /* PUT - Update in DB */
-router.delete('/delete/:userId', logsMiddleware, usersController.destroy); /* DELETE - Delete from DB */
+router.put('/edit/:userId', upload.any(), usersController.update); /* PUT - Update in DB */
+router.delete('/delete/:userId', usersController.destroy); /* DELETE - Delete from DB */
 
 
 module.exports = router;
