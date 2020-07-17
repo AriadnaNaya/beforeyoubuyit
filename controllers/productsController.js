@@ -1,16 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
 const carritoModel = require("../models/carritoModel");
-const juegosModel = require("../models/juegosModel");
-
-const productsFilePath = path.join(__dirname, '../data/juegos.json');
-const productsFilePathDemo = path.join(__dirname, '../data/juegosDemo.json');
-const productsFilePathDB = path.join(__dirname, '../data/juegosDB.json');
-
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const productsDemo = JSON.parse(fs.readFileSync(productsFilePathDemo, 'utf-8'));
-const productsDB = JSON.parse(fs.readFileSync(productsFilePathDB, 'utf-8'));
 
 const db = require('../database/models');
 
