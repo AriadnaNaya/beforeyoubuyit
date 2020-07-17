@@ -56,6 +56,7 @@ router.post('/login', [
     max: 16
   }).withMessage('La contraseña debe tener entre 4 - 16 caracteres')
 ], usersController.logUser); /* Post - Validation login */
+router.get('/logout', usersController.logout); /* DELETE - Delete from DB */
 router.get('/profile/:userId', loggedUser, usersController.profile); /* GET - user profile */
 
 /*** EDIT ONE USER ***/

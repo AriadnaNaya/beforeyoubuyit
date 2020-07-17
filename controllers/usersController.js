@@ -167,6 +167,12 @@ const controller = {
 		}
 	},
 
+	// Cerrar sesión
+	logout: (req, res) => {
+		req.session.destroy();
+		return res.render('login');
+	},
+
 	// Show user profile
 	profile: (req, res) => {
 		if (req.session.user === undefined) {
