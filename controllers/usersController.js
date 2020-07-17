@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcrypt');
 
 let db = require('../database/models');
@@ -10,8 +8,6 @@ const {
 	body
 } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const Image = db.images;
 
@@ -22,32 +18,34 @@ const controller = {
 	},
 	//Guardar usuario creado
 	store: (req, res, next) => {
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			// console.log(errors);
-			// res.send('OK');
+		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
 
-			return res.render('register', {
-				errors: errors.errors
+				return res.render('register', {
+					errors: errors.errors
+				});
+			};
+			db.User.create({
+				name: req.body.name,
+				lastname: req.body.lastname,
+				password: bcrypt.hashSync(req.body.password, 10),
+				email: req.body.email,
+				image: 'default-img.jpg'
 			});
-		};
-		console.log(req.body.name + ' ' + req.body.lastname + ' ' + req.body.password + ' ' + req.body.email)
-		db.User.create({
-			name: req.body.name,
-			lastname: req.body.lastname,
-			password: bcrypt.hashSync(req.body.password, 10),
-			email: req.body.email,
-			image: 'default-img.jpg'
-		});
 
-		res.redirect("/users/login");
+			res.redirect("/users/login");
+		} catch(err){
+			console.log(err);
+		}
 	},
 	//ir a pantalla de editar usuario
 	edit: (req, res) => {
 		// console.log(req.params.userId);
 		db.User.findByPk(req.params.userId)
 			.then(function (user) {
-				console.log(user);
 				res.render("user-edit-form", {
 					userToEdit: user
 				});
@@ -56,6 +54,15 @@ const controller = {
 	},
 	//Actualizar JSON
 	update: (req, res, next) => {
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			// console.log(errors);
+			// res.send('OK');
+
+			return res.render('login', {
+				errors: errors.errors
+			});
+		};
 		db.User.update({
 				name: req.body.name,
 				lastname: req.body.lastname,
@@ -97,8 +104,7 @@ const controller = {
 				}
 			})
 			.then((pedidoUsuario) => {
-				console.log(pedidoUsuario);
-				if (pedidoUsuario.email != undefined) {
+				if (pedidoUsuario != undefined || pedidoUsuario != null) {
 					//Si existe el mail validamos que el password coincida usando bcrypt
 					if (bcrypt.compareSync(req.body.password, pedidoUsuario.password)) {
 						//Si coincide generamos la sesión del usuario
@@ -111,7 +117,7 @@ const controller = {
 								maxAge: 999999999999999
 							});
 							//Para requerir la cookie debe hacerse en plural (req.cookies.nombreCookie)
-							console.log(req.cookies.user);
+							console.log('Cookie desde controller ' + req.cookies.user);
 						}
 						//Si la contraseña coincide redirigimos al perfil pasandole el ID de la sesión
 						res.redirect('/users/profile/' + req.session.user.id);
