@@ -13,7 +13,11 @@
       <div class="row ">
         <div class="col-12 col-md-4 login-screen">
           <div id="logo-container">
-
+          <% if (typeof errors != 'undefined') { %>
+            <% for (error of errors) { %>
+              <div class="badge badge-danger"><%= error.msg %></div>
+            <% } %>
+          <% } %>
           <form action="/users/edit/<%= userToEdit.id %>?_method=PUT" method="POST" id="loginForm" enctype="multipart/form-data">
                      
             <div class="form-group">

@@ -20,6 +20,9 @@
               <div class="badge badge-danger"><%= error.msg %></div>
             <% } %>
           <% } %>
+          <% if (typeof customError != 'undefined') { %>
+            <div class="badge badge-danger"><%= customError %></div>
+          <% } %>
           <!-- enctype="multipart/form-data" -->
           <form action="/users/create" method="POST" id="loginForm" >
             <div class="form-group">

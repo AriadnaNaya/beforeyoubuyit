@@ -28,15 +28,28 @@ const controller = {
 					errors: errors.errors
 				});
 			};
-			db.User.create({
-				name: req.body.name,
-				lastname: req.body.lastname,
-				password: bcrypt.hashSync(req.body.password, 10),
-				email: req.body.email,
-				image: 'default-img.jpg'
-			});
+			db.User.findOne({
+				where: {
+					email: req.body.email
+				}
+			})
+			.then((confirmUser)=>{
+				if (confirmUser == null || confirmUser.email != req.body.email) {
+					db.User.create({
+						name: req.body.name,
+						lastname: req.body.lastname,
+						password: bcrypt.hashSync(req.body.password, 10),
+						email: req.body.email,
+						image: 'default-img.jpg'
+					});
 
-			res.redirect("/users/login");
+					res.redirect("/users/login");
+				} else {
+					return res.render('register', {
+						customError: 'Debes registrarte con otra dirección de email'
+					})
+				}
+			})
 		} catch(err){
 			console.log(err);
 		}
