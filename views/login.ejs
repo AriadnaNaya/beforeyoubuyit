@@ -31,6 +31,11 @@
           <%= error %>
         </div>
         <% } %>
+        <% if(typeof customMessage !== 'undefined') { %>
+        <div class="badge badge-info" role="alert">
+          <%= customMessage %>
+        </div>
+        <% } %>
         <form action="/users/login" method="POST">
           <div class="row product-detail p-3">
             <div class="col-12 form-group">

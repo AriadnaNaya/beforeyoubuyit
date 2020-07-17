@@ -1,5 +1,4 @@
 const bcrypt = require('bcrypt');
-
 let db = require('../database/models');
 
 const {
@@ -67,16 +66,17 @@ const controller = {
 	},
 	//Actualizar JSON
 	update: (req, res, next) => {
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			// console.log(errors);
-			// res.send('OK');
+		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
 
-			return res.render('login', {
-				errors: errors.errors
-			});
-		};
-		db.User.update({
+				return res.render('login', {
+					errors: errors.errors
+				});
+			};
+			db.User.update({
 				name: req.body.name,
 				lastname: req.body.lastname,
 				password: bcrypt.hashSync(req.body.password, 10),
@@ -88,8 +88,17 @@ const controller = {
 				}
 			})
 			.then(function (user) {
-				res.redirect("/users/profile/" + req.params.userId)
+				// req.session.user = user;
+				// console.log('The user is: ' + user);
+				// res.redirect("/users/profile/" + req.params.userId);
+				req.session.destroy();
+				return res.render('login', {
+					customMessage: 'Debes loguearte para continuar!'
+				});
 			});
+		} catch(err) {
+			console.log(err);
+		}
 	},
 	//Borrar usuario
 	destroy: (req, res) => {
