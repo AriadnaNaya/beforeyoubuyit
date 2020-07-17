@@ -88,9 +88,7 @@ const controller = {
 				}
 			})
 			.then(function (user) {
-				res.redirect("/users/profile" + req.params.userId, {
-					user: req.session.user
-				})
+				res.redirect("/users/profile/" + req.params.userId)
 			});
 	},
 	//Borrar usuario
@@ -110,6 +108,15 @@ const controller = {
 
 	// Loguea usuario
 	logUser: (req, res) => {
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			// console.log(errors);
+			// res.send('OK');
+
+			return res.render('register', {
+				errors: errors.errors
+			});
+		}
 		try {
 			db.User.findOne({
 				where: {
