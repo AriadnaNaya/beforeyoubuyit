@@ -18,6 +18,11 @@
               <div class="badge badge-danger"><%= error.msg %></div>
             <% } %>
           <% } %>
+          <% if(typeof customMessage !== 'undefined') { %>
+          <div class="badge badge-info" role="alert">
+            <%= customMessage %>
+          </div>
+          <% } %>
           <form action="/users/edit/<%= userToEdit.id %>?_method=PUT" method="POST" id="loginForm" enctype="multipart/form-data">
                      
             <div class="form-group">

@@ -76,29 +76,41 @@ const controller = {
 					errors: errors.errors
 				});
 			};
-			db.User.update({
-				name: req.body.name,
-				lastname: req.body.lastname,
-				password: bcrypt.hashSync(req.body.password, 10),
-				email: req.body.email,
-				image: req.files[0].filename
-			}, {
-				where: {
-					id: req.params.userId
-				}
-			})
-			.then(function (user) {
-				// req.session.user = user;
-				// console.log('The user is: ' + user);
-				// res.redirect("/users/profile/" + req.params.userId);
-				req.session.destroy();
-				return res.render('login', {
-					customMessage: 'Debes loguearte para continuar!'
-				});
-			});
+			console.log(req.files[0].mimetype);
+			if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg") {
+				db.User.update({
+						name: req.body.name,
+						lastname: req.body.lastname,
+						password: bcrypt.hashSync(req.body.password, 10),
+						email: req.body.email,
+						image: req.files[0].filename
+					}, {
+						where: {
+							id: req.params.userId
+						}
+					})
+					.then(function (user) {
+						// req.session.user = user;
+						// console.log('The user is: ' + user);
+						// res.redirect("/users/profile/" + req.params.userId);
+						req.session.destroy();
+						return res.render('login', {
+							customMessage: 'Debes loguearte para continuar!'
+						});
+					});
+			} else {
+				db.User.findByPk(req.params.userId)
+					.then(function (user) {
+						res.render("user-edit-form", {
+							userToEdit: user,
+							customMessage: 'Debes subir un archivo de imagen válido'
+						});
+					});
+			}
 		} catch(err) {
 			console.log(err);
 		}
+		
 	},
 	//Borrar usuario
 	destroy: (req, res) => {
