@@ -50,7 +50,12 @@ router.post('/create', [
 ], usersController.store); /* POST - Store in DB */
 // upload.single('image')
 router.get('/login', usersController.login); /* GET - Form to create */
-router.post('/login', usersController.logUser); /* Post - Validation login */
+router.post('/login', [
+  check('password').isLength({
+    min: 4,
+    max: 16
+  }).withMessage('La contraseña debe tener entre 4 - 16 caracteres')
+], usersController.logUser); /* Post - Validation login */
 router.get('/profile/:userId', loggedUser, usersController.profile); /* GET - user profile */
 
 /*** EDIT ONE USER ***/

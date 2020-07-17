@@ -26,7 +26,7 @@
         <div class="badge badge-danger"><%= error.msg %></div>
         <% } %>
         <% } %>
-        <% if(typeof error !== 'undefined') { %>
+        <% if(typeof error !== 'undefined' && typeof errors == 'undefined') { %>
         <div class="badge badge-danger" role="alert">
           <%= error %>
         </div>

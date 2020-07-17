@@ -108,16 +108,16 @@ const controller = {
 
 	// Loguea usuario
 	logUser: (req, res) => {
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			// console.log(errors);
-			// res.send('OK');
-
-			return res.render('register', {
-				errors: errors.errors
-			});
-		}
 		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
+
+				return res.render('login', {
+					errors: errors.errors
+				});
+			};
 			db.User.findOne({
 				where: {
 					email: req.body.email
