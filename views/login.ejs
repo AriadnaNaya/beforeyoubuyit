@@ -21,9 +21,19 @@
     </div>
     <div class="row">
       <div class="col-12 col-md-6 col-centered">
-        <% if(typeof error != 'undefined') { %>
+        <% if (typeof errors != 'undefined') { %>
+        <% for (error of errors) { %>
+        <div class="badge badge-danger"><%= error.msg %></div>
+        <% } %>
+        <% } %>
+        <% if(typeof error !== 'undefined' && typeof errors == 'undefined') { %>
         <div class="badge badge-danger" role="alert">
           <%= error %>
+        </div>
+        <% } %>
+        <% if(typeof customMessage !== 'undefined') { %>
+        <div class="badge badge-info" role="alert">
+          <%= customMessage %>
         </div>
         <% } %>
         <form action="/users/login" method="POST">

@@ -1,20 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-
 const carritoModel = require("../models/carritoModel");
-const juegosModel = require("../models/juegosModel");
-
-const productsFilePath = path.join(__dirname, '../data/juegos.json');
-const productsFilePathDemo = path.join(__dirname, '../data/juegosDemo.json');
-const productsFilePathDB = path.join(__dirname, '../data/juegosDB.json');
-
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const productsDemo = JSON.parse(fs.readFileSync(productsFilePathDemo, 'utf-8'));
-const productsDB = JSON.parse(fs.readFileSync(productsFilePathDB, 'utf-8'));
 
 const db = require('../database/models');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const {
+  check,
+  validationResult,
+  body
+} = require('express-validator');
 
 const finalPrice = (price, discount) => {
   if (discount > 0) {
@@ -97,10 +91,36 @@ const controller = {
   },
 
   // Create -  Method to store
-  store: (req, res) => {
+  store: async (req, res) => {
     try {
       //Crear objeto con todas las propiedades del form
       //const newId = productsDB.length + 1;
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        // console.log(errors);
+        // res.send('OK');
+        const getCategories = await db.Category.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getDevelopers = await db.Developer.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getStores = await db.Store.findAll();
+        Promise.all([getCategories, getDevelopers, getStores])
+          .then(([categores, developers, stores]) => {
+            res.render('create-form', {
+              categories: categores,
+              developers: developers,
+              stores: stores,
+              user: req.session.user,
+              errors: errors.errors
+            });
+          });
+      };
 
       function extractVideoID(url) {
         var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
@@ -205,10 +225,35 @@ const controller = {
 
   // Update - Method to update
   update: (req, res) => {
-    // editar producto con id obtenido
-    //id = req.params.id;
-
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        
+
+        const getProduct = db.Product.findByPk(req.params.id);
+        const getCategories = db.Category.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getDevelopers = db.Developer.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getStores = db.Store.findAll();
+        Promise.all([getProduct, getCategories, getDevelopers, getStores])
+          .then(([product, categories, developers, stores]) => {
+            res.render('edit-form', {
+              productToEdit: product,
+              categories: categories,
+              developers: developers,
+              stores: stores,
+              user: req.session.user,
+              errors: errors.errors
+            });
+          });
+      };
       function extractVideoID(url) {
         var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
         var match = url.match(regExp);
@@ -235,8 +280,8 @@ const controller = {
         }
         return store;
       };
-
-      db.Product.update({
+      if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg") {
+        db.Product.update({
           name: req.body.name,
           price: req.body.price,
           developers_id: req.body.developers,
@@ -277,6 +322,32 @@ const controller = {
           //res.send(storeSelected);
           res.redirect('/');
         });
+      } else {
+        const getProduct = db.Product.findByPk(req.params.id);
+        const getCategories = db.Category.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getDevelopers = db.Developer.findAll({
+          order: [
+            ['name', 'ASC']
+          ]
+        });
+        const getStores = db.Store.findAll();
+        Promise.all([getProduct, getCategories, getDevelopers, getStores])
+          .then(([product, categories, developers, stores]) => {
+            res.render('edit-form', {
+              productToEdit: product,
+              categories: categories,
+              developers: developers,
+              stores: stores,
+              user: req.session.user,
+              customMessage: 'Debes subir un archivo de imagen válido'
+            });
+          });
+      }
+      
     } catch(err){
       console.log(err);
     }
