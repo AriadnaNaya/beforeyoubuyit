@@ -76,7 +76,6 @@ const controller = {
 					errors: errors.errors
 				});
 			};
-			console.log(req.files[0].mimetype);
 			if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg") {
 				db.User.update({
 						name: req.body.name,
