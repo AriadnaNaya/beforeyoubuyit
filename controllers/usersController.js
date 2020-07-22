@@ -1,7 +1,4 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcrypt');
-
 let db = require('../database/models');
 
 const {
@@ -10,8 +7,6 @@ const {
 	body
 } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const Image = db.images;
 
@@ -22,32 +17,47 @@ const controller = {
 	},
 	//Guardar usuario creado
 	store: (req, res, next) => {
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			// console.log(errors);
-			// res.send('OK');
+		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
 
-			return res.render('register', {
-				errors: errors.errors
-			});
-		};
-		console.log(req.body.name + ' ' + req.body.lastname + ' ' + req.body.password + ' ' + req.body.email)
-		db.User.create({
-			name: req.body.name,
-			lastname: req.body.lastname,
-			password: bcrypt.hashSync(req.body.password, 10),
-			email: req.body.email,
-			image: 'default-img.jpg'
-		});
+				return res.render('register', {
+					errors: errors.errors
+				});
+			};
+			db.User.findOne({
+				where: {
+					email: req.body.email
+				}
+			})
+			.then((confirmUser)=>{
+				if (confirmUser == null || confirmUser.email != req.body.email) {
+					db.User.create({
+						name: req.body.name,
+						lastname: req.body.lastname,
+						password: bcrypt.hashSync(req.body.password, 10),
+						email: req.body.email,
+						image: 'default-img.jpg'
+					});
 
-		res.redirect("/users/login");
+					res.redirect("/users/login");
+				} else {
+					return res.render('register', {
+						customError: 'Debes registrarte con otra dirección de email'
+					})
+				}
+			})
+		} catch(err){
+			console.log(err);
+		}
 	},
 	//ir a pantalla de editar usuario
 	edit: (req, res) => {
 		// console.log(req.params.userId);
 		db.User.findByPk(req.params.userId)
 			.then(function (user) {
-				console.log(user);
 				res.render("user-edit-form", {
 					userToEdit: user
 				});
@@ -56,22 +66,50 @@ const controller = {
 	},
 	//Actualizar JSON
 	update: (req, res, next) => {
-		db.User.update({
-				name: req.body.name,
-				lastname: req.body.lastname,
-				password: bcrypt.hashSync(req.body.password, 10),
-				email: req.body.email,
-				image: req.files[0].filename
-			}, {
-				where: {
-					id: req.params.userId
-				}
-			})
-			.then(function (user) {
-				res.redirect("/users/profile" + req.params.userId, {
-					user: req.session.user
-				})
-			});
+		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
+
+				return res.render('login', {
+					errors: errors.errors
+				});
+			};
+			if (req.files[0].mimetype == "image/png" || req.files[0].mimetype == "image/jpg" || req.files[0].mimetype == "image/jpeg") {
+				db.User.update({
+						name: req.body.name,
+						lastname: req.body.lastname,
+						password: bcrypt.hashSync(req.body.password, 10),
+						email: req.body.email,
+						image: req.files[0].filename
+					}, {
+						where: {
+							id: req.params.userId
+						}
+					})
+					.then(function (user) {
+						// req.session.user = user;
+						// console.log('The user is: ' + user);
+						// res.redirect("/users/profile/" + req.params.userId);
+						req.session.destroy();
+						return res.render('login', {
+							customMessage: 'Debes loguearte para continuar!'
+						});
+					});
+			} else {
+				db.User.findByPk(req.params.userId)
+					.then(function (user) {
+						res.render("user-edit-form", {
+							userToEdit: user,
+							customMessage: 'Debes subir un archivo de imagen válido'
+						});
+					});
+			}
+		} catch(err) {
+			console.log(err);
+		}
+		
 	},
 	//Borrar usuario
 	destroy: (req, res) => {
@@ -91,14 +129,22 @@ const controller = {
 	// Loguea usuario
 	logUser: (req, res) => {
 		try {
+			const errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				// console.log(errors);
+				// res.send('OK');
+
+				return res.render('login', {
+					errors: errors.errors
+				});
+			};
 			db.User.findOne({
 				where: {
 					email: req.body.email
 				}
 			})
 			.then((pedidoUsuario) => {
-				console.log(pedidoUsuario);
-				if (pedidoUsuario.email != undefined) {
+				if (pedidoUsuario != undefined || pedidoUsuario != null) {
 					//Si existe el mail validamos que el password coincida usando bcrypt
 					if (bcrypt.compareSync(req.body.password, pedidoUsuario.password)) {
 						//Si coincide generamos la sesión del usuario
@@ -111,7 +157,7 @@ const controller = {
 								maxAge: 999999999999999
 							});
 							//Para requerir la cookie debe hacerse en plural (req.cookies.nombreCookie)
-							console.log(req.cookies.user);
+							console.log('Cookie desde controller ' + req.cookies.user);
 						}
 						//Si la contraseña coincide redirigimos al perfil pasandole el ID de la sesión
 						res.redirect('/users/profile/' + req.session.user.id);
@@ -130,6 +176,12 @@ const controller = {
 		} catch(err){
 			console.log(err);
 		}
+	},
+
+	// Cerrar sesión
+	logout: (req, res) => {
+		req.session.destroy();
+		return res.render('login');
 	},
 
 	// Show user profile
