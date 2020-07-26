@@ -19,7 +19,7 @@
         <h2 class="products-title">LOGIN</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row container user-login-form">
       <div class="col-12 col-md-6 col-centered">
         <% if (typeof errors != 'undefined') { %>
         <% for (error of errors) { %>
@@ -36,6 +36,9 @@
           <%= customMessage %>
         </div>
         <% } %>
+        <div class="errors-feedback row">
+                        
+        </div>
         <form action="/users/login" method="POST">
           <div class="row product-detail p-3">
             <div class="col-12 form-group">

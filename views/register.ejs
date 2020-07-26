@@ -11,7 +11,7 @@
   <!-- /.navbar header -->
 
   <!-- home content -->
-  <div class="container">
+  <div class="container user-register-form">
     <div class="row ">
       <div class="col-12 col-md-4 login-screen">
         <div id="logo-container">
@@ -23,6 +23,9 @@
           <% if (typeof customError != 'undefined') { %>
             <div class="badge badge-danger"><%= customError %></div>
           <% } %>
+          <div class="errors-feedback row">
+                        
+          </div>
           <!-- enctype="multipart/form-data" -->
           <form action="/users/create" method="POST" id="loginForm" >
             <div class="form-group">
