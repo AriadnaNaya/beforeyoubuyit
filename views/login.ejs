@@ -19,7 +19,7 @@
         <h2 class="products-title">LOGIN</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row container user-login-form">
       <div class="col-12 col-md-6 col-centered">
         <% if (typeof errors != 'undefined') { %>
         <% for (error of errors) { %>
@@ -36,15 +36,19 @@
           <%= customMessage %>
         </div>
         <% } %>
-        <form action="/users/login" method="POST">
+        <div class="errors-feedback row">
+                        
+        </div>
+
+        <form  class="row container user-login-form" action="/users/login" method="POST">
           <div class="row product-detail p-3">
             <div class="col-12 form-group">
               <label for="email" class="form-label">Email:</label>
-              <input class="form-control" type="email" name="email" placeholder="Ej: homerothompson@gmail.com">
+              <input class="form-control email" type="email" name="email" placeholder="Ej: homerothompson@gmail.com">
             </div>
             <div class="col-12 form-group">
               <label for="password" class="form-label">Contraseña:</label>
-              <input class="form-control" type="password" name="password" placeholder="Ingrese una contraseña">
+              <input class="form-control password" type="password" name="password" placeholder="Ingrese una contraseña">
             </div>
             <div class="col-12 form-group">
               <div class="form-check">
