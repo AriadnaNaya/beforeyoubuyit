@@ -31,6 +31,9 @@ const controller = {
       .then(([getProducts, getCountByCategory]) => {
         for (let i = 0; i < getProducts.length; i++) {
           getProducts[i].setDataValue('endpoint', '/api/products/' + getProducts[i].id);
+          if (!getProducts[i].background_image.includes('http')) {
+            getProducts[i].setDataValue('background_image', 'http://localhost:5555/assets/products/' + getProducts[i].background_image);
+          }
         }
         console.log(getCountByCategory);
         let countByCategory = {};
