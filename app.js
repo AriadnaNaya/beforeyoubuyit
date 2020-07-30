@@ -21,6 +21,9 @@ const homeRouter = require('./routes/home');
 const carritoRouter = require('./routes/carrito');
 const confirmacionRouter = require('./routes/confirmacion');
 const productsRouter = require('./routes/products');
+//API Constrollers
+const apiProductsRouter = require('./routes/api/products');
+const apiUsersRouter = require('./routes/api/users');
 
 const app = express();
 app.use(connectLivereload());
@@ -73,6 +76,9 @@ app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
 app.use('/confirmacion', confirmacionRouter);
 app.use('/products', productsRouter);
+// API Navigation
+app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
