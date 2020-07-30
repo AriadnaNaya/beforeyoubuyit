@@ -27,8 +27,9 @@ const controller = {
         ]
 
       });
-      Promise.all([getProducts, getCountByCategory])
-      .then(([getProducts, getCountByCategory]) => {
+      let totalCategories = await db.Category.count();
+      Promise.all([getProducts, getCountByCategory, totalCategories])
+      .then(([getProducts, getCountByCategory, totalCategories]) => {
         for (let i = 0; i < getProducts.length; i++) {
           getProducts[i].setDataValue('endpoint', '/api/products/' + getProducts[i].id);
           if (!getProducts[i].background_image.includes('http')) {
@@ -44,6 +45,7 @@ const controller = {
           meta: {
             status: 200,
             totalProducts: getProducts.length,
+            totalCategories: totalCategories,
             getCountByCategory: countByCategory,
             url: '/api/products'
           },
