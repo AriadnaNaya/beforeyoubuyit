@@ -36,7 +36,6 @@ const controller = {
             getProducts[i].setDataValue('background_image', 'http://localhost:5555/assets/products/' + getProducts[i].background_image);
           }
         }
-        console.log(getCountByCategory);
         let countByCategory = {};
         for (let j = 0; j < getCountByCategory.length; j++) {
           countByCategory[getCountByCategory[j].name] = getCountByCategory[j].count;
