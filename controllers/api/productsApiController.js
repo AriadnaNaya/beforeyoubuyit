@@ -1,61 +1,82 @@
 const db = require('../../database/models');
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const finalPrice = (price, discount) => {
-  if (discount > 0) {
-    price = price - (price * discount / 100);
-  } else {
-    price = price;
-  }
-  return toThousand(price);
-}
-
-const formatReleaseDate = (date) => {
-  let parts = date.split('-');
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  };
-  // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
-  // January - 0, February - 1, etc.
-  var mydate = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
-  //mydate = mydate.toLocaleDateString('es-ES', options);
-  mydate = mydate.toDateString('es-ES');
-  return mydate;
-}
-
+const sequelize = require('sequelize');
+const {
+  QueryTypes
+} = require('sequelize');
 
 const controller = {
-  root: async (req, res) => {
+  list: async (req, res) => {
     try {
+      let getCountByCategory = await db.sequelize.query(
+        'select count(categories.name) as count, categories.name from products inner join categories on categories.id = categories_id group by categories_id', {
+          replacements: {
+            status: 'active'
+          },
+          type: QueryTypes.SELECT
+        });
       let getProducts = await db.Product.findAll({
         include: [{
-          association: 'stores'
-        }]
-      });
-      for (let i = 0; i < getProducts.length; i++) {
-        getProducts[i].setDataValue('endpoint', '/api/products/' + getProducts[i].id);
+            association: 'stores'
+          },
+          {
+            association: 'developers'
+          },
+          {
+            association: 'categories'
+          }
+        ]
 
-      }
-      let products = {
-        meta: {
-          status: 200,
-          totalProducts: getProducts.length,
-          url: '/api/products'
-        },
-        data: getProducts
-      }
-      res.json(products)
-      // res.render('products', {
-      //   products: product
-      // });
+      });
+      Promise.all([getProducts, getCountByCategory])
+      .then(([getProducts, getCountByCategory]) => {
+        for (let i = 0; i < getProducts.length; i++) {
+          getProducts[i].setDataValue('endpoint', '/api/products/' + getProducts[i].id);
+        }
+        console.log(getCountByCategory);
+        let countByCategory = {};
+        for (let j = 0; j < getCountByCategory.length; j++) {
+          countByCategory[getCountByCategory[j].name] = getCountByCategory[j].count;
+        }
+        let products = {
+          meta: {
+            status: 200,
+            totalProducts: getProducts.length,
+            getCountByCategory: countByCategory,
+            url: '/api/products'
+          },
+          data: getProducts
+        }
+        res.json(products);
+      })
+      
     } catch (err) {
       console.log(err);
 
     }
   },
+  find: async (req, res, next) => {
+    try {
+      let idJuego = req.params.id;
+      let gameList = await db.Product.findByPk(idJuego, {
+        include: [{
+            association: 'stores'
+          },
+          {
+            association: 'developers'
+          },
+          {
+            association: 'categories'
+          }
+        ]
+      });
+      res.json(gameList);
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 }
+
 
 module.exports = controller;

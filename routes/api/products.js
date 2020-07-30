@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const productsApiController = require('../../controllers/api/productsApiController');
 
-router.get('/', productsApiController.root);
+router.get('/', productsApiController.list);
+router.get('/:id', productsApiController.find);
 
 module.exports = router;

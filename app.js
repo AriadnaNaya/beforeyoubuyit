@@ -78,7 +78,7 @@ app.use('/confirmacion', confirmacionRouter);
 app.use('/products', productsRouter);
 // API Navigation
 app.use('/api/products', apiProductsRouter);
-// app.use('/api/users', apiUsersRouter);
+app.use('/api/users', apiUsersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
