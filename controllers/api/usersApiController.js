@@ -7,6 +7,18 @@ const controller = {
 
       let getUsers = await db.User.findAll();
       let usersArr = [];
+      let lastId = Math.max.apply(Math, getUsers.map(function (o) { return o.id; }));
+      let lastAddedUser = getUsers.find(function (user) {
+        return user.id == lastId
+      });
+      lastUserObj = {
+        id: lastAddedUser.id,
+          name: lastAddedUser.name,
+          lastname: lastAddedUser.lastname,
+          email: lastAddedUser.email,
+          image: 'http://localhost:5555/assets/users/' + lastAddedUser.image
+      };
+      
       for (let i = 0; i < getUsers.length; i++) {
         //getUsers[i].setDataValue('endpoint', '/api/users/' + getUsers[i].id);
         // if (!getUsers[i].image.includes('http')) {
@@ -25,6 +37,7 @@ const controller = {
         meta: {
           status: 200,
           totalUsers: usersArr.length,
+          lastAdded: lastUserObj,
           url: '/api/users'
         },
         data: usersArr
