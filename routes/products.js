@@ -31,7 +31,7 @@ router.post('/create', [
   check('name').notEmpty().withMessage('Debe tener un nombre'),
   check('about').isLength({
     min: 20,
-    max: 200
+    max: 1000
   }).withMessage('La descripción debe tener al menos 20 caracteres'),
   check('price').notEmpty().withMessage('El juego debe tener un precio'),
   check('game_trailer').notEmpty().withMessage('Debes ingresar un trailer válido'),
@@ -45,7 +45,7 @@ router.put('/edit/:id', upload.any(),
   check('name').notEmpty().withMessage('Debe tener un nombre'),
   check('about').isLength({
     min: 20,
-    max: 200
+    max: 1000
   }).withMessage('La descripción debe tener al menos 20 caracteres'),
   check('price').notEmpty().withMessage('El juego debe tener un precio'),
   check('game_trailer').notEmpty().withMessage('Debes ingresar un trailer válido'),
