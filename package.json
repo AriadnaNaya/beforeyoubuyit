@@ -41,7 +41,7 @@
     "path": "^0.12.7",
     "sequelize": "^6.2.0",
     "sequelize-cli": "^6.0.0",
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "browserify": "^16.5.1",
